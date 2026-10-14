@@ -1,10 +1,10 @@
 === PixVisualize - Before After Image Comparison Slider ===
 Contributors: inaridigit
-Tags: before-after, image comparison, gutenberg, elementor, woocommerce
+Tags: before-after, image-comparison, gutenberg, elementor, woocommerce
 Requires at least: 6.8
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.0.12
+Stable tag: 1.0.13
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -88,6 +88,9 @@ Nothing without your consent. On activation, an opt-in screen (skippable) offers
 
 == Upgrade Notice ==
 
+= 1.0.13 =
+Maintenance release (docs only, no code change): fixes Tags for WordPress.org compliance (image comparison to image-comparison).
+
 = 1.0.12 =
 Maintenance release (docs only, no code change): Development link now points to the public Free mirror for WordPress.org review.
 
@@ -122,6 +125,9 @@ Maintenance release. Recommended update: commercial docs cleanup plus WooCommerc
 Maintenance release. Recommended update: fixes Pro activation when Free is still active.
 
 == Changelog ==
+
+= 1.0.13 =
+* Maintenance release (docs only, no functional change): Tags fixed for WordPress.org guideline #12 (image-comparison with hyphen instead of space).
 
 = 1.0.12 =
 * Maintenance release (docs only, no functional change): Development link points to the public Free mirror (https://github.com/narisoa/pixvisualize-free) for WordPress.org guideline #4.

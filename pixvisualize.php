@@ -12,7 +12,7 @@
 Plugin Name: PixVisualize - Before After Image Comparison Slider
 Plugin URI: https://i-naridigit.com/products/pixvisualize/
 Description: Before/After image comparison slider for Gutenberg, Elementor, shortcodes and WooCommerce. Fast, responsive, Pro-ready.
-Version: 1.0.12
+Version: 1.0.13
 Requires at least: 6.8
 Requires PHP: 7.4
 Author: i-NariDigit

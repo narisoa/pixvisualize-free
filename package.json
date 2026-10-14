@@ -1,6 +1,6 @@
 {
 	"name": "pixvisualize",
-	"version": "1.0.12",
+	"version": "1.0.13",
 	"description": "Interactive Gutenberg block (React) to compare two images with a Before/After slider.",
 	"author": "Narisoa Denis RANDRIANARIVELO",
 	"license": "GPL-2.0-or-later",
