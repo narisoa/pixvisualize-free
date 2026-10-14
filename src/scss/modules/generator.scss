@@ -1,0 +1,659 @@
+.pixvisualize-generator {
+
+	h3 {
+		margin-top: 4px;
+	}
+
+	h4 {
+		font-weight: 600;
+		margin: 24px 0 12px;
+	}
+}
+
+/* Live preview (same look as the Elementor/WooCommerce previews). */
+.pixvisualize-generator-preview {
+	position: relative;
+	overflow: hidden;
+	background: #f1f3f5;
+	border-radius: 4px;
+	cursor: ew-resize;
+	max-width: 100%;
+
+	/* No min-height: the box keeps its ratio-driven height so the grey
+	scroll area stays visible around it (container shadow preview),
+	whatever the ratio (16/9, 21/9, 9/16…). */
+}
+
+/* Scroll area around the comparator: stretches to fill the column. */
+.pixvisualize-generator-preview-wrap {
+	flex: 1 1 auto;
+	min-height: 0;
+	overflow: auto;
+	background: #f1f3f5;
+	border-radius: 4px;
+
+	/* Breathing room so the container box-shadow is not clipped by the
+	scroll container (offsets, blur and spread extend past the box). */
+	padding: 32px;
+}
+
+.pixvisualize-generator-preview[data-orientation="vertical"] {
+	cursor: ns-resize;
+}
+
+.pixvisualize-generator-preview .pixvisualize-elementor-preview__image {
+	position: absolute;
+	top: 0;
+	left: 0;
+	max-width: none !important;
+	width: 100% !important;
+	height: 100% !important;
+	object-fit: cover;
+	display: block;
+}
+
+.pixvisualize-generator-preview .pixvisualize-elementor-preview__after {
+	z-index: 1;
+}
+
+.pixvisualize-generator-preview .pixvisualize-elementor-preview__before {
+	z-index: 2;
+}
+
+.pixvisualize-generator-preview .pixvisualize-elementor-preview__handle {
+	position: absolute;
+	z-index: 3;
+}
+
+.pixvisualize-generator-preview .pixvisualize-elementor-preview__handle--horizontal {
+	top: 0;
+	bottom: 0;
+	left: var(--pc-pos, 50%);
+	transform: translateX(-50%);
+}
+
+.pixvisualize-generator-preview .pixvisualize-elementor-preview__handle--vertical {
+	left: 0;
+	right: 0;
+	top: var(--pc-pos, 50%);
+	transform: translateY(-50%);
+}
+
+.pixvisualize-generator-preview .pixvisualize-elementor-preview__handle-line {
+	background-color: #fff;
+}
+
+.pixvisualize-generator-preview .pixvisualize-elementor-preview__handle-icon {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 24px;
+	height: 24px;
+	border-radius: 50%;
+	background: #fff;
+	color: #666;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 12px;
+	font-weight: 700;
+	border: none;
+	box-shadow: none;
+	overflow: hidden;
+}
+
+.pixvisualize-generator-preview .pixvisualize-elementor-preview__handle-icon svg {
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+
+// Chevron paint for the DEFAULT arrows only: never override a custom SVG
+// (fill="currentColor" must survive so it inherits Handle Arrows Color).
+.pixvisualize-generator-preview .pixvisualize-elementor-preview__handle-icon .pixvisualize-elementor-preview__arrows svg {
+	fill: none;
+	stroke: currentcolor;
+	stroke-width: 2;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+}
+
+.pixvisualize-generator-preview .pixvisualize-elementor-preview__arrows {
+	display: block;
+	font-size: 12px;
+	line-height: 1;
+}
+
+.pixvisualize-generator-preview .pixvisualize-elementor-preview__label {
+	position: absolute;
+	z-index: 4;
+}
+
+.pixvisualize-generator-preview.pixvisualize-elementor-preview--empty {
+	min-height: 200px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 40px;
+	cursor: default;
+}
+
+.pixvisualize-generator-preview .pixvisualize-generator-preview__empty {
+	color: #8c8f94;
+	font-size: 14px;
+	text-align: center;
+	padding: 20px;
+}
+
+.pixvisualize-generator-preview[data-orientation="horizontal"] .pixvisualize-elementor-preview__before {
+	clip-path: inset(0 calc(100% - var(--pc-pos, 50%)) 0 0);
+}
+
+.pixvisualize-generator-preview[data-orientation="vertical"] .pixvisualize-elementor-preview__after {
+	z-index: 2;
+	clip-path: inset(0 0 calc(100% - var(--pc-pos, 50%)) 0);
+}
+
+.pixvisualize-generator-preview[data-orientation="vertical"] .pixvisualize-elementor-preview__before {
+	z-index: 1;
+}
+
+.pixvisualize-generator-preview .pixvisualize-preview-magnifier {
+	position: absolute;
+	width: 160px;
+	height: 160px;
+	border-radius: 50%;
+	overflow: hidden;
+	border: 3px solid #fff;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+	z-index: 8;
+	pointer-events: none;
+	display: none;
+}
+
+.pixvisualize-generator-preview .pixvisualize-preview-magnifier__img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	max-width: none !important;
+	max-height: none !important;
+	display: block;
+	object-fit: cover;
+}
+
+/* Shortcode generator: sidebar configuration + sticky live preview. */
+.pixvisualize-generator-layout {
+	display: grid;
+	grid-template-columns: 264px minmax(0, 1fr);
+	gap: 24px;
+	align-items: start;
+}
+
+/* Sidebar overrides live at the end of this file (after the base rules). */
+
+.pixvisualize-generator-main {
+	position: sticky;
+	top: 32px;
+	display: flex;
+	flex-direction: column;
+	height: calc(100vh - 64px);
+}
+
+.pixvisualize-generator-main .pixvisualize-shortcode-heading {
+	margin-top: auto;
+	margin-bottom: 6px;
+	padding-top: 8px;
+}
+
+.pixvisualize-generator-main .pixvisualize-preview-note {
+	margin-top: 8px;
+	color: #646970;
+	font-size: 12px;
+	font-style: italic;
+}
+
+.pixvisualize-config-grid .pixvisualize-field textarea {
+	width: 100%;
+}
+
+@media (max-width: 1100px) {
+
+	.pixvisualize-generator-layout {
+		grid-template-columns: 1fr;
+	}
+
+	.pixvisualize-generator-main {
+		position: static;
+		display: block;
+		height: auto;
+	}
+
+	.pixvisualize-generator-main .pixvisualize-shortcode-heading {
+		margin-top: 8px;
+		padding-top: 0;
+	}
+
+	.pixvisualize-generator-preview-wrap {
+		flex: none;
+		max-height: 50vh;
+	}
+
+	.pixvisualize-generator-preview {
+		min-height: 0;
+	}
+}
+
+.pixvisualize-media-grid {
+	display: flex;
+	gap: 20px;
+
+	.pixvisualize-media-block {
+		flex: 1 1 0;
+		padding: 14px;
+		border: 1px solid #dcdcde;
+		border-radius: 4px;
+		background: #fff;
+	}
+
+	.pixvisualize-media-thumb {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 180px;
+		background: #f0f0f1;
+		border: 1px solid #dcdcde;
+		border-radius: 4px;
+		overflow: hidden;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+		}
+	}
+
+	.pixvisualize-media-placeholder {
+		font-size: 40px;
+		font-weight: 300;
+		color: #a7aaad;
+		line-height: 1;
+	}
+
+	.pixvisualize-media-name {
+		margin: 12px 0;
+		font-size: 13px;
+		color: #50575e;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+}
+
+.pixvisualize-config-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 16px;
+
+	.pixvisualize-field {
+
+		label {
+			display: block;
+			font-weight: 600;
+			margin-bottom: 6px;
+		}
+
+		input,
+		select {
+			width: 100%;
+		}
+
+		.description {
+			display: block;
+			margin-top: 6px;
+			color: #646970;
+			font-size: 12px;
+			font-style: italic;
+		}
+	}
+}
+
+.pixvisualize-code-row {
+	display: flex;
+	gap: 8px;
+	align-items: center;
+
+	.pixvisualize-shortcode-field {
+		flex: 1;
+		min-width: 0;
+		background: #f0f0f1;
+		border-color: #c3c4c7;
+		color: #1d2327;
+		font-family: Consolas, Monaco, monospace;
+		font-size: 12px;
+		padding: 2px 8px;
+		min-height: 28px;
+	}
+
+	.button-primary {
+		background: #2271b1;
+		border-color: #2271b1;
+		white-space: nowrap;
+	}
+
+	/* Compact icon buttons with hover tooltips (shortcode row). */
+	.pixvisualize-icon-button {
+		position: relative;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		padding: 0 5px;
+	}
+
+	.pixvisualize-icon-button .dashicons {
+		width: 16px;
+		height: 16px;
+		font-size: 16px;
+	}
+
+	.pixvisualize-icon-button:hover::after,
+	.pixvisualize-icon-button:focus-visible::after {
+		content: attr(data-tip);
+		position: absolute;
+		bottom: calc(100% + 6px);
+		left: 50%;
+		transform: translateX(-50%);
+		background: #1d2327;
+		color: #fff;
+		font-size: 12px;
+		line-height: 1.4;
+		padding: 4px 8px;
+		border-radius: 3px;
+		white-space: nowrap;
+		z-index: 10;
+		pointer-events: none;
+	}
+}
+
+.pixvisualize-footer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 24px;
+	padding-top: 12px;
+	border-top: 1px solid #dcdcde;
+	color: #50575e;
+	font-size: 12px;
+}
+
+/* Reload a pasted shortcode back into the generator (edit flow).
+   Collapsed by default + single-line field so the live preview above keeps
+   as much room as possible. */
+.pixvisualize-import-row {
+	margin-top: 8px;
+	padding: 4px 10px 6px;
+	border: 1px dashed #dcdcde;
+	border-radius: 4px;
+
+	.pixvisualize-import-title {
+		cursor: pointer;
+		font-size: 13px;
+		font-weight: 600;
+	}
+
+	.pixvisualize-import-text {
+		margin: 6px 0;
+		color: #646970;
+		font-size: 12px;
+		font-style: italic;
+	}
+
+	.pixvisualize-import-inline {
+		display: flex;
+		align-items: flex-start;
+		gap: 8px;
+	}
+
+	.pixvisualize-import-field {
+		flex: 1;
+		min-width: 0;
+		font-family: Consolas, Monaco, monospace;
+		font-size: 12px;
+	}
+
+	.pixvisualize-import-inline .pixvisualize-import-button {
+		flex-shrink: 0;
+		white-space: nowrap;
+	}
+
+	.pixvisualize-import-message {
+		display: block;
+		margin-top: 4px;
+		font-size: 12px;
+		font-weight: 600;
+	}
+}
+
+/* Sub-tabs inside the Shortcode Generator tab. */
+.pixvisualize-subnav {
+	display: flex;
+	gap: 8px;
+	margin: 12px 0 16px;
+
+	.pixvisualize-subnav-button {
+
+		&.is-active {
+			background: #2271b1;
+			border-color: #2271b1;
+			color: #fff;
+		}
+	}
+
+	.pixvisualize-subnav-count {
+		display: inline-block;
+		min-width: 20px;
+		padding: 0 6px;
+		margin-left: 4px;
+		background: rgba(0, 0, 0, 0.12);
+		border-radius: 10px;
+		font-size: 12px;
+		line-height: 1.6;
+		text-align: center;
+	}
+}
+
+.pixvisualize-subnav-button.is-active .pixvisualize-subnav-count {
+	background: rgba(255, 255, 255, 0.25);
+}
+
+/* Saved shortcode list. */
+.pixvisualize-saved-empty {
+	color: #646970;
+	font-style: italic;
+}
+
+.pixvisualize-saved-list {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}
+
+.pixvisualize-saved-item {
+	display: flex;
+	gap: 12px;
+	align-items: center;
+	padding: 12px;
+	background: #fff;
+	border: 1px solid #dcdcde;
+	border-radius: 4px;
+}
+
+.pixvisualize-saved-thumb {
+	width: 72px;
+	height: 48px;
+	flex-shrink: 0;
+	object-fit: cover;
+	border-radius: 3px;
+	background: #f0f0f1;
+}
+
+.pixvisualize-saved-meta {
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+	gap: 2px;
+	min-width: 0;
+}
+
+.pixvisualize-saved-head {
+	display: flex;
+	align-items: baseline;
+	gap: 8px;
+}
+
+.pixvisualize-saved-name {
+	flex: 1;
+	min-width: 0;
+	margin: 0 0 0 -6px;
+	padding: 2px 6px;
+	border: 1px solid transparent;
+	border-radius: 3px;
+	background: transparent;
+	color: #1d2327;
+	font-size: 13px;
+	font-weight: 600;
+}
+
+.pixvisualize-saved-name:hover {
+	border-color: #dcdcde;
+	background: #fff;
+}
+
+.pixvisualize-saved-name:focus {
+	border-color: #2271b1;
+	background: #fff;
+	outline: none;
+	box-shadow: 0 0 0 1px #2271b1;
+}
+
+.pixvisualize-saved-date {
+	display: block;
+	margin-left: auto;
+	color: #646970;
+	font-size: 12px;
+	white-space: nowrap;
+}
+
+.pixvisualize-saved-code {
+	width: 100%;
+	margin-top: 6px;
+	background: #f0f0f1;
+	border-color: #c3c4c7;
+	color: #1d2327;
+	font-family: Consolas, Monaco, monospace;
+	font-size: 12px;
+}
+
+.pixvisualize-saved-actions {
+	display: flex;
+	flex-shrink: 0;
+	gap: 6px;
+}
+
+.pixvisualize-feature-list {
+	margin: 8px 0 16px;
+	padding-left: 20px;
+	list-style-type: disc;
+
+	li {
+		margin-bottom: 4px;
+	}
+
+	code {
+		background: #f0f0f1;
+		border: 1px solid #dcdcde;
+		border-radius: 3px;
+		padding: 0 4px;
+	}
+}
+
+/* Sidebar overrides (kept after the base rules). */
+.pixvisualize-generator-side .pixvisualize-config-grid {
+	grid-template-columns: 1fr;
+}
+
+.pixvisualize-generator-side .pixvisualize-media-grid {
+	flex-direction: column;
+}
+
+/* Square generator checkboxes (the 100% input width does not apply). */
+.pixvisualize-config-grid .pixvisualize-field input[type="checkbox"] {
+	width: auto;
+	margin-right: 6px;
+	vertical-align: middle;
+}
+
+/* Collapsible setting sections (built by the generator script). */
+.pixvisualize-gen-section {
+	margin: 0 0 12px;
+	border: 1px solid #dcdcde;
+	border-radius: 4px;
+	background: #fff;
+	overflow: hidden;
+}
+
+.pixvisualize-gen-section__title {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 8px;
+	padding: 10px 12px;
+	font-weight: 600;
+	font-size: 13px;
+	cursor: pointer;
+	list-style: none;
+	border-bottom: 1px solid #dcdcde;
+}
+
+.pixvisualize-gen-section__title::-webkit-details-marker {
+	display: none;
+}
+
+.pixvisualize-gen-section__title::after {
+	content: "▾";
+	font-size: 14px;
+	opacity: 0.8;
+}
+
+.pixvisualize-gen-section:not([open]) .pixvisualize-gen-section__title::after {
+	content: "▸";
+}
+
+.pixvisualize-gen-section:not([open]) .pixvisualize-gen-section__title {
+	border-bottom: none;
+}
+
+.pixvisualize-gen-section .pixvisualize-config-grid {
+	padding: 14px;
+}
+
+/* Indigo / slate headers, alternating per section; content follows. */
+.pixvisualize-gen-section:nth-of-type(odd) .pixvisualize-gen-section__title {
+	background: #4f46e5;
+	color: #fff;
+	border-color: #c7d2fe;
+}
+
+.pixvisualize-gen-section:nth-of-type(even) .pixvisualize-gen-section__title {
+	background: #1e293b;
+	color: #fff;
+	border-color: #cbd5e1;
+}
+
+.pixvisualize-gen-section:nth-of-type(odd) .pixvisualize-config-grid {
+	background: #eef2ff;
+}
+
+.pixvisualize-gen-section:nth-of-type(even) .pixvisualize-config-grid {
+	background: #f1f5f9;
+}

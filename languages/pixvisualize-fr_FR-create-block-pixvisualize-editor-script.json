@@ -1,0 +1,555 @@
+{
+	"domain": "messages",
+	"locale_data": {
+		"messages": {
+			"": {
+				"domain": "messages",
+				"plural_forms": "nplurals=2; plural=(n != 1);",
+				"lang": "fr"
+			},
+			"Images & Content": [
+				"Images et contenu"
+			],
+			"Before Image": [
+				"Image avant"
+			],
+			"After Image": [
+				"Image après"
+			],
+			"Before Label": [
+				"Libellé avant"
+			],
+			"Before": [
+				"Avant"
+			],
+			"After Label": [
+				"Libellé après"
+			],
+			"After": [
+				"Après"
+			],
+			"Show Labels": [
+				"Afficher les libellés"
+			],
+			"Before Label Position": [
+				"Position du libellé avant"
+			],
+			"After Label Position": [
+				"Position du libellé après"
+			],
+			"Layout & Orientation": [
+				"Mise en page et orientation"
+			],
+			"Orientation": [
+				"Orientation"
+			],
+			"Horizontal": [
+				"Horizontal"
+			],
+			"Vertical": [
+				"Vertical"
+			],
+			"Aspect Ratio": [
+				"Format de l'image"
+			],
+			"Height": [
+				"Hauteur"
+			],
+			"Full Width": [
+				"Pleine largeur"
+			],
+			"Initial Position": [
+				"Position initiale"
+			],
+			"Responsive": [
+				"Responsive"
+			],
+			"Tablet Position": [
+				"Position sur tablette"
+			],
+			"Mobile Position": [
+				"Position sur mobile"
+			],
+			"Tablet Ratio": [
+				"Format sur tablette"
+			],
+			"Mobile Ratio": [
+				"Format sur mobile"
+			],
+			"Appearance": [
+				"Apparence"
+			],
+			"Handle Style": [
+				"Style de la poignée"
+			],
+			"Circle": [
+				"Cercle"
+			],
+			"Transparent": [
+				"Transparent"
+			],
+			"Line": [
+				"Ligne"
+			],
+			"Arrows": [
+				"Flèches"
+			],
+			"Custom SVG": [
+				"SVG personnalisé"
+			],
+			"Custom SVG Icon (<svg> tag…)": [
+				"Icône SVG personnalisée (balise <svg>…)"
+			],
+			"Colors": [
+				"Couleurs"
+			],
+			"Separator Thickness": [
+				"Épaisseur du séparateur"
+			],
+			"Separator Color": [
+				"Couleur du séparateur"
+			],
+			"Drop Shadow": [
+				"Ombre portée"
+			],
+			"Label Typography & Style": [
+				"Typographie et style des libellés"
+			],
+			"Label Background": [
+				"Fond des libellés"
+			],
+			"Text Color": [
+				"Couleur du texte"
+			],
+			"Border Radius": [
+				"Rayon des coins"
+			],
+			"Interactions": [
+				"Interactions"
+			],
+			"Move on Hover": [
+				"Déplacement au survol"
+			],
+			"Auto-Slide": [
+				"Défilement automatique"
+			],
+			"Auto-Slide Animation": [
+				"Animation de défilement automatique"
+			],
+			"Magnifier": [
+				"Loupe"
+			],
+			"Left": [
+				"Gauche"
+			],
+			"Center": [
+				"Centré"
+			],
+			"Right": [
+				"Droite"
+			],
+			"Border Width": [
+				"Épaisseur de bordure"
+			],
+			"Border Color": [
+				"Couleur de bordure"
+			],
+			"Inherit (desktop)": [
+				"Hériter (desktop)"
+			],
+			"Top Left": [
+				"En haut à gauche"
+			],
+			"Top Right": [
+				"En haut à droite"
+			],
+			"Bottom Left": [
+				"En bas à gauche"
+			],
+			"Bottom Right": [
+				"En bas à droite"
+			],
+			"Alignment": [
+				"Alignement"
+			],
+			"Thickness of the label text (400 = normal, 700 = bold).": [
+				"Épaisseur du texte des libellés (400 = normal, 700 = gras)."
+			],
+			"Auto-Slide Duration (ms)": [
+				"Durée du défilement automatique (ms)"
+			],
+			"How long the auto-slide takes to sweep from \"Before\" to \"After\".": [
+				"Temps que met le défilement automatique pour balayer de « Avant » à « Après »."
+			],
+			"Magnifier Zoom (x)": [
+				"Zoom de la loupe (x)"
+			],
+			"Zoom factor of the magnifier lens.": [
+				"Facteur de zoom de la lentille de la loupe."
+			],
+			"Change": [
+				"Modifier"
+			],
+			"Select": [
+				"Sélectionner"
+			],
+			"The labels are visible on the slider.": [
+				"Les libellés sont visibles sur le curseur."
+			],
+			"The labels are hidden on the slider.": [
+				"Les libellés sont masqués sur le curseur."
+			],
+			"The ratio is preserved: the height adapts automatically to the width.": [
+				"Le format est préservé : la hauteur s'adapte automatiquement à la largeur."
+			],
+			"When not full width, the width is calculated from the height and the ratio.": [
+				"Hors pleine largeur, la largeur est calculée à partir de la hauteur et du format."
+			],
+			"The block spans the full width of the content.": [
+				"Le bloc occupe toute la largeur du contenu."
+			],
+			"The block keeps a custom size (width matched to the ratio).": [
+				"Le bloc conserve une taille personnalisée (largeur adaptée au format)."
+			],
+			"Starting position of the divider: 0% = fully \"Before\", 100% = fully \"After\".": [
+				"Position de départ du séparateur : 0 % = entièrement « Avant », 100 % = entièrement « Après »."
+			],
+			"Divider position on tablets (768px–1024px): 0% = fully \"Before\", 100% = fully \"After\".": [
+				"Position du séparateur sur tablette (768px–1024px) : 0 % = entièrement « Avant », 100 % = entièrement « Après »."
+			],
+			"Divider position on phones (below 768px): 0% = fully \"Before\", 100% = fully \"After\".": [
+				"Position du séparateur sur mobile (moins de 768px) : 0 % = entièrement « Avant », 100 % = entièrement « Après »."
+			],
+			"Leave empty to inherit the desktop ratio.": [
+				"Laissez vide pour hériter du format desktop."
+			],
+			"Shape of the cursor that separates the two images.": [
+				"Forme du curseur qui sépare les deux images."
+			],
+			"Paste a valid <svg> tag. Without an SVG, the Circle style is used.": [
+				"Collez une balise <svg> valide. Sans SVG, le style Cercle est utilisé."
+			],
+			"A soft shadow is applied to the line.": [
+				"Une ombre douce est appliquée à la ligne."
+			],
+			"No shadow is applied to the line.": [
+				"Aucune ombre n'est appliquée à la ligne."
+			],
+			"Label Font Size": [
+				"Taille de police des libellés"
+			],
+			"Font size of the \"Before\" / \"After\" captions, in px.": [
+				"Taille de police des légendes « Avant » / « Après », en px."
+			],
+			"Label Font Weight": [
+				"Graisse de police des libellés"
+			],
+			"Label Padding (horizontal)": [
+				"Marge interne du libellé (horizontale)"
+			],
+			"Left/right inner spacing of the label, in px.": [
+				"Espacement interne gauche/droite du libellé, en px."
+			],
+			"Label Padding (vertical)": [
+				"Marge interne du libellé (verticale)"
+			],
+			"Top/bottom inner spacing of the label, in px.": [
+				"Espacement interne haut/bas du libellé, en px."
+			],
+			"Label Border Radius": [
+				"Rayon des coins du libellé"
+			],
+			"On hover, the cursor moves under the mouse, without clicking.": [
+				"Au survol, le curseur se déplace sous la souris, sans clic."
+			],
+			"The cursor only moves by clicking and dragging.": [
+				"Le curseur ne se déplace qu'en cliquant et en faisant glisser."
+			],
+			"The cursor automatically sweeps the images on load.": [
+				"Le curseur balaie automatiquement les images au chargement."
+			],
+			"No animation on load.": [
+				"Aucune animation au chargement."
+			],
+			"A magnifier enlarges the hovered area of the image.": [
+				"Une loupe agrandit la zone survolée de l'image."
+			],
+			"No magnifier effect on hover.": [
+				"Aucun effet de loupe au survol."
+			],
+			"Container Shadow": [
+				"Ombre du conteneur"
+			],
+			"Container Shadow Color": [
+				"Couleur de l'ombre du conteneur"
+			],
+			"Container Shadow Vertical Offset": [
+				"Décalage vertical de l'ombre du conteneur"
+			],
+			"A soft shadow is applied to the whole slider.": [
+				"Une ombre douce est appliquée à tout le curseur."
+			],
+			"No shadow is applied to the slider.": [
+				"Aucune ombre n'est appliquée au curseur."
+			],
+			"Container Shadow Horizontal Offset": [
+				"Décalage horizontal de l'ombre du conteneur"
+			],
+			"Container Shadow Blur Radius": [
+				"Rayon de flou de l'ombre du conteneur"
+			],
+			"Container Shadow Spread Radius": [
+				"Rayon d'étalement de l'ombre du conteneur"
+			],
+			"Container Shadow Opacity": [
+				"Opacité de l'ombre du conteneur"
+			],
+			"Horizontal distance of the shadow, in px.": [
+				"Distance horizontale de l'ombre, en px."
+			],
+			"Vertical distance of the shadow, in px.": [
+				"Distance verticale de l'ombre, en px."
+			],
+			"Blur softness of the shadow, in px.": [
+				"Douceur du flou de l'ombre, en px."
+			],
+			"How far the shadow spreads, in px.": [
+				"Jusqu'où l'ombre s'étend, en px."
+			],
+			"Shadow opacity, from 0 (transparent) to 100 (opaque).": [
+				"Opacité de l'ombre, de 0 (transparent) à 100 (opaque)."
+			],
+			"Border Style": [
+				"Style de bordure"
+			],
+			"Solid": [
+				"Continu"
+			],
+			"Dashed": [
+				"Tireté"
+			],
+			"Dotted": [
+				"Pointillé"
+			],
+			"Double": [
+				"Double"
+			],
+			"Top Left Radius": [
+				"Rayon en haut à gauche"
+			],
+			"Top Right Radius": [
+				"Rayon en haut à droite"
+			],
+			"Bottom Right Radius": [
+				"Rayon en bas à droite"
+			],
+			"Bottom Left Radius": [
+				"Rayon en bas à gauche"
+			],
+			"Container Border": [
+				"Bordure du conteneur"
+			],
+			"Thickness of the container border, in px.": [
+				"Épaisseur de la bordure du conteneur, en px."
+			],
+			"Show Border": [
+				"Afficher la bordure"
+			],
+			"A 2px solid gray border is applied to the container.": [
+				"Une bordure grise 2px solid est appliquée au conteneur."
+			],
+			"No border is applied to the container.": [
+				"Aucune bordure n'est appliquée au conteneur."
+			],
+			"Rounded Corners": [
+				"Coins arrondis"
+			],
+			"A 16px radius is applied to all corners.": [
+				"Un rayon de 16px est appliqué à tous les coins."
+			],
+			"The container corners stay square.": [
+				"Les coins du conteneur restent carrés."
+			],
+			"Corner radius of the container, in px.": [
+				"Rayon des coins du conteneur, en px."
+			],
+			"How long the auto-slide takes to sweep from 100% to 0% then back to the initial position.": [
+				"Temps que met le défilement automatique pour balayer de 100 % à 0 % puis revenir à la position initiale."
+			],
+			"Handle Size (px)": [
+				"Taille de la poignée (px)"
+			],
+			"Diameter of the handle: circle background, or glyph box without background. Arrows keep breathing room inside.": [
+				"Diamètre de la poignée : cercle avec fond, ou cadre du glyphe sans fond. Les flèches conservent une marge interne."
+			],
+			"Caption": [
+				"Légende"
+			],
+			"Show Caption": [
+				"Afficher la légende"
+			],
+			"Caption Title": [
+				"Titre de la légende"
+			],
+			"Caption Text": [
+				"Texte de la légende"
+			],
+			"Caption Background": [
+				"Fond de la légende"
+			],
+			"Caption Title Color": [
+				"Couleur du titre de la légende"
+			],
+			"Caption Text Color": [
+				"Couleur du texte de la légende"
+			],
+			"Caption Alignment": [
+				"Alignement de la légende"
+			],
+			"Caption Title Size (px)": [
+				"Taille du titre de la légende (px)"
+			],
+			"Caption Text Size (px)": [
+				"Taille du texte de la légende (px)"
+			],
+			"Caption Padding (px)": [
+				"Marge interne de la légende (px)"
+			],
+			"Caption Padding X (px)": [
+				"Marge interne de la légende – horizontale (px)"
+			],
+			"Left/right inner spacing of the caption.": [
+				"Marge interne gauche/droite de la légende."
+			],
+			"Caption Padding Y (px)": [
+				"Marge interne de la légende – verticale (px)"
+			],
+			"Top/bottom inner spacing of the caption: controls its height.": [
+				"Marge interne haut/bas de la légende : contrôle sa hauteur."
+			],
+			"Bold title displayed below the slider.": [
+				"Titre en gras affiché sous le curseur."
+			],
+			"Small text displayed under the caption title.": [
+				"Petit texte affiché sous le titre de la légende."
+			],
+			"The title / text block is visible below the slider.": [
+				"Le bloc titre / texte est visible sous le curseur."
+			],
+			"The title / text block below the slider is hidden.": [
+				"Le bloc titre / texte sous le curseur est masqué."
+			],
+			"Width / height proportion, always respected (contain): 21/9 fills the width, 9/21 fills the height.": [
+				"Proportion largeur / hauteur, toujours respectée (contain) : 21/9 remplit la largeur, 9/21 remplit la hauteur."
+			],
+			"Desired zone height, capped by a fixed parent height (contain).": [
+				"Hauteur de zone souhaitée, plafonnée par une hauteur parente fixe (contain)."
+			],
+			"Spans the content width (ratio kept, centered). Useless with a fixed parent height — contain already caps it.": [
+				"Occupe la largeur du contenu (format conservé, centré). Inutile avec une hauteur parente fixe — contain la plafonne déjà."
+			],
+			"Diameter of the handle circle: independent size control.": [
+				"Diamètre du cercle de la poignée : contrôle de taille indépendant."
+			],
+			"Handle Arrows Color": [
+				"Couleur des flèches de la poignée"
+			],
+			"Color of the arrows inside the handle (independent control).": [
+				"Couleur des flèches à l'intérieur de la poignée (contrôle indépendant)."
+			],
+			"Handle Padding (px)": [
+				"Marge interne de la poignée (px)"
+			],
+			"Thickness of the vertical bar: independent control.": [
+				"Épaisseur de la barre verticale : contrôle indépendant."
+			],
+			"Cursor & Handle Color": [
+				"Couleur du curseur et de la poignée"
+			],
+			"Single synchronized control: background of the vertical bar and the handle circle.": [
+				"Contrôle synchronisé unique : fond de la barre verticale et du cercle de la poignée."
+			],
+			"Grouped shadow on the whole cursor + handle (filter: drop-shadow, no seam at the junction).": [
+				"Ombre groupée sur l'ensemble curseur + poignée (filtre : drop-shadow, sans couture à la jonction)."
+			],
+			"PixVisualize Pro": [
+				"PixVisualize Pro"
+			],
+			"Advanced Elementor widget with full styling & live preview": [
+				"Widget Elementor avancé avec style complet et aperçu en direct"
+			],
+			"Advanced Gutenberg controls": [
+				"Réglages Gutenberg avancés"
+			],
+			"WooCommerce product gallery integration": [
+				"Intégration de la galerie produit WooCommerce"
+			],
+			"Generate, save, edit & reuse shortcodes": [
+				"Générez, enregistrez, modifiez et réutilisez des shortcodes"
+			],
+			"Hover, Auto-Scan & Magnifier interactions": [
+				"Interactions survol, Auto-Scan et loupe"
+			],
+			"Vertical orientation": [
+				"Orientation verticale"
+			],
+			"Responsive controls for every breakpoint": [
+				"Réglages responsive pour chaque point de rupture"
+			],
+			"Custom handles & SVG icons": [
+				"Poignées personnalisées et icônes SVG"
+			],
+			"Advanced separator & handle styling": [
+				"Style avancé du séparateur et de la poignée"
+			],
+			"Fully customizable Before/After labels": [
+				"Libellés avant/après entièrement personnalisables"
+			],
+			"Custom captions with advanced styling": [
+				"Légendes personnalisées avec style avancé"
+			],
+			"Advanced borders, shadows & corner radius controls": [
+				"Contrôles avancés des bordures, ombres et rayons des coins"
+			],
+			"Unlock advanced features to take your comparisons further:": [
+				"Débloquez des fonctionnalités avancées pour aller plus loin avec vos comparaisons :"
+			],
+			"Go Pro": [
+				"Passer à Pro"
+			],
+			"Inner spacing between the icon and the edge of the handle background, in px.": [
+				"Espacement interne entre l'icône et le bord du fond de la poignée, en px."
+			],
+			"Paste <svg viewBox=\"…\">…</svg> only: XML prolog, DOCTYPE, metadata and width/height are removed automatically. Use fill=\"currentColor\" so the icon inherits Handle Arrows Color. Without an SVG, the Circle style is used.": [
+				"Collez uniquement <svg viewBox=\"…\">…</svg> : prologue XML, DOCTYPE, métadonnées et width/height sont supprimés automatiquement. Utilisez fill=\"currentColor\" pour que l'icône hérite de la couleur des flèches de la poignée. Sans SVG, le style Cercle est utilisé."
+			],
+			"No shadow is applied to the cursor.": [
+				"Aucune ombre n'est appliquée au curseur."
+			],
+			"Please select both images for the comparator.": [
+				"Veuillez sélectionner les deux images pour le comparateur."
+			],
+			"Image comparison slider": [
+				"Curseur de comparaison d’images"
+			],
+			"Comparison Image": [
+				"Image de comparaison"
+			],
+			"1/1 (Square)": [
+				"1/1 (Carré)"
+			],
+			"Pro license active — install Pro": [
+				"Licence Pro active — installez Pro"
+			],
+			"Your Pro license is active on the Free code. Install pixvisualize-pro to unlock Hover, Auto-Scan and Magnifier on the site.": [
+				"Votre licence Pro est active sur le code Free. Installez pixvisualize-pro pour débloquer le survol, le balayage auto et la loupe sur le site."
+			],
+			"block title\u0004PixVisualize": [
+				"PixVisualize"
+			],
+			"block description\u0004A modern image comparison slider block.": [
+				"Un bloc de curseur de comparaison d'images moderne."
+			]
+		}
+	}
+}

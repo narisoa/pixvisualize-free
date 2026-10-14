@@ -1,0 +1,23 @@
+/* PixVisualize logo icon for the Elementor widget panel.
+ * The SVG lives in assets/images/. It is a black silhouette used as a CSS
+ * mask, tinted through currentColor so the icon behaves exactly like the
+ * native Elementor icons (28x28px, #6d7882 default, #2271b1 on hover). */
+i.pixvisualize-elementor-icon {
+	display: inline-block;
+	width: 28px;
+	height: 28px;
+	background-color: currentcolor;
+	color: #6d7882; /* native Elementor icon grey (fallback) */
+	-webkit-mask-image: url(../images/elementor-icon.svg);
+	mask-image: url(../images/elementor-icon.svg);
+	-webkit-mask-size: contain;
+	mask-size: contain;
+	-webkit-mask-repeat: no-repeat;
+	mask-repeat: no-repeat;
+	-webkit-mask-position: center;
+	mask-position: center;
+}
+
+.elementor-panel .elementor-element:hover .icon i.pixvisualize-elementor-icon {
+	color: #2271b1; /* native Elementor icon blue on hover */
+}

@@ -1,0 +1,2765 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PixVisualize 1.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-08-19 16:32+0000\n"
+"PO-Revision-Date: 2026-08-19 16:32+0000\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: scripts/i18n.mjs\n"
+"Language: fr_FR\n"
+
+#: inc/Api/Callbacks/ManagerCallbacks.php:43
+msgid ""
+"Manage the Sections and Features of this Plugin by activating the "
+"checkboxes from the following list."
+msgstr ""
+"Gérez les sections et fonctionnalités de ce plugin en activant les cases à "
+"cocher de la liste suivante."
+
+#: inc/Base/BaseController.php:28
+msgid "Activate PixVisualize Block"
+msgstr "Activer le bloc PixVisualize"
+
+#: inc/Base/BaseController.php:29
+msgid "Activate PixVisualize Elementor Widget"
+msgstr "Activer le widget Elementor PixVisualize"
+
+#: inc/Base/BaseController.php:30
+msgid "Activate PixVisualize Shortcodes"
+msgstr "Activer les shortcodes PixVisualize"
+
+#: inc/Base/BaseController.php:31
+msgid "Activate PixVisualize WooCommerce Gallery"
+msgstr "Activer la galerie WooCommerce PixVisualize"
+
+#: inc/Base/WooCommerceController.php:243
+#: inc/Elementor/PixVisualizeWidget.php:32
+#: inc/Pages/Dashboard.php:56
+#: inc/Pages/Dashboard.php:57
+#: templates/admin.php:2
+#: templates/admin.php:603
+#: templates/license.php:2
+msgid "PixVisualize"
+msgstr "PixVisualize"
+
+#: inc/Base/Notice.php:29
+msgid ""
+"PixVisualize Free was automatically deactivated because PixVisualize "
+"includes all of its features."
+msgstr ""
+"PixVisualize Free a été désactivé automatiquement car PixVisualize inclut "
+"toutes ses fonctionnalités."
+
+#: inc/Base/Notice.php:39
+msgid ""
+"PixVisualize Free was deactivated because PixVisualize is already active. "
+"Free and Pro cannot work together."
+msgstr ""
+"PixVisualize Free a été désactivé car PixVisualize est déjà actif. Free et "
+"Pro ne peuvent pas fonctionner ensemble."
+
+#: inc/Base/SettingsLinks.php:18
+#: inc/Base/Welcome.php:84
+msgid "Settings"
+msgstr "Réglages"
+
+#: inc/Base/WooCommerceController.php:216
+msgid "PixVisualize — Comparateur produit"
+msgstr "PixVisualize — Comparateur produit"
+
+#: inc/Elementor/PixVisualizeWidget.php:102
+#: templates/woocommerce-product-data.php:394
+#: src/pixvisualize/edit.js:277
+msgid "Images & Content"
+msgstr "Images et contenu"
+
+#: inc/Elementor/PixVisualizeWidget.php:109
+#: templates/woocommerce-product-data.php:398
+#: src/pixvisualize/edit.js:282
+msgid "Before Image"
+msgstr "Image avant"
+
+#: inc/Elementor/PixVisualizeWidget.php:118
+#: templates/woocommerce-product-data.php:402
+#: src/pixvisualize/edit.js:290
+msgid "After Image"
+msgstr "Image après"
+
+#: inc/Elementor/PixVisualizeWidget.php:127
+#: templates/admin.php:104
+#: templates/woocommerce-product-data.php:408
+#: src/pixvisualize/edit.js:297
+msgid "Before Label"
+msgstr "Libellé avant"
+
+#: inc/Base/BaseController.php:63
+#: inc/Base/ShortcodeController.php:41
+#: inc/Base/WooCommerceController.php:475
+#: inc/Base/WooCommerceController.php:909
+#: inc/Elementor/PixVisualizeWidget.php:129
+#: inc/Elementor/PixVisualizeWidget.php:1385
+#: inc/Elementor/PixVisualizeWidget.php:1587
+#: templates/admin.php:105
+#: templates/admin.php:551
+#: templates/woocommerce-product-data.php:29
+#: templates/woocommerce.php:26
+#: src/js/pixvisualize-admin.js:769
+#: src/pixvisualize/components/CompareSlider.jsx:16
+#: src/pixvisualize/components/CompareSlider.jsx:508
+#: src/pixvisualize/view.js:34
+#: assets/js/pixvisualize-woocommerce-metabox.js:743
+#: assets/js/pixvisualize-woocommerce-metabox.js:744
+msgid "Before"
+msgstr "Avant"
+
+#: inc/Elementor/PixVisualizeWidget.php:137
+#: templates/admin.php:110
+#: templates/woocommerce-product-data.php:413
+#: src/pixvisualize/edit.js:304
+msgid "After Label"
+msgstr "Libellé après"
+
+#: inc/Base/BaseController.php:64
+#: inc/Base/ShortcodeController.php:42
+#: inc/Base/WooCommerceController.php:476
+#: inc/Base/WooCommerceController.php:910
+#: inc/Elementor/PixVisualizeWidget.php:139
+#: inc/Elementor/PixVisualizeWidget.php:1386
+#: inc/Elementor/PixVisualizeWidget.php:1588
+#: templates/admin.php:111
+#: templates/admin.php:552
+#: templates/woocommerce-product-data.php:31
+#: templates/woocommerce.php:31
+#: src/js/pixvisualize-admin.js:786
+#: src/pixvisualize/components/CompareSlider.jsx:17
+#: src/pixvisualize/components/CompareSlider.jsx:493
+#: src/pixvisualize/view.js:37
+#: assets/js/pixvisualize-woocommerce-metabox.js:762
+#: assets/js/pixvisualize-woocommerce-metabox.js:763
+msgid "After"
+msgstr "Après"
+
+#: inc/Elementor/PixVisualizeWidget.php:147
+#: templates/admin.php:116
+#: templates/woocommerce-product-data.php:418
+#: src/pixvisualize/edit.js:311
+msgid "Show Labels"
+msgstr "Afficher les libellés"
+
+#: inc/Elementor/PixVisualizeWidget.php:831
+#: templates/admin.php:121
+#: templates/woocommerce-product-data.php:423
+#: src/pixvisualize/edit.js:331
+msgid "Before Label Position"
+msgstr "Position du libellé avant"
+
+#: inc/Elementor/PixVisualizeWidget.php:841
+#: templates/admin.php:131
+#: templates/woocommerce-product-data.php:432
+#: src/pixvisualize/edit.js:344
+msgid "After Label Position"
+msgstr "Position du libellé après"
+
+#: inc/Elementor/PixVisualizeWidget.php:202
+#: templates/admin.php:207
+#: templates/woocommerce-product-data.php:615
+#: src/pixvisualize/edit.js:525
+msgid "Layout & Orientation"
+msgstr "Mise en page et orientation"
+
+#: inc/Elementor/PixVisualizeWidget.php:209
+#: templates/admin.php:210
+#: templates/woocommerce-product-data.php:618
+#: src/pixvisualize/edit.js:529
+msgid "Orientation"
+msgstr "Orientation"
+
+#: inc/Elementor/PixVisualizeWidget.php:1354
+#: templates/admin.php:212
+#: templates/woocommerce-product-data.php:620
+#: src/pixvisualize/edit.js:535
+#: src/pixvisualize/edit.js:551
+msgid "Horizontal"
+msgstr "Horizontal"
+
+#: inc/Elementor/PixVisualizeWidget.php:1358
+#: templates/admin.php:213
+#: templates/woocommerce-product-data.php:621
+#: src/pixvisualize/edit.js:542
+msgid "Vertical"
+msgstr "Vertical"
+
+#: inc/Elementor/PixVisualizeWidget.php:219
+#: templates/admin.php:219
+#: templates/woocommerce-product-data.php:626
+#: src/pixvisualize/edit.js:564
+msgid "Aspect Ratio"
+msgstr "Format de l'image"
+
+#: inc/Elementor/PixVisualizeWidget.php:242
+#: src/pixvisualize/edit.js:576
+msgid "Height"
+msgstr "Hauteur"
+
+#: inc/Elementor/PixVisualizeWidget.php:262
+#: templates/admin.php:243
+#: templates/woocommerce-product-data.php:642
+#: src/pixvisualize/edit.js:587
+msgid "Full Width"
+msgstr "Pleine largeur"
+
+#: inc/Elementor/PixVisualizeWidget.php:272
+#: src/pixvisualize/edit.js:613
+msgid "Initial Position"
+msgstr "Position initiale"
+
+#: inc/Elementor/PixVisualizeWidget.php:293
+#: templates/admin.php:263
+#: templates/woocommerce-product-data.php:662
+#: src/pixvisualize/edit.js:628
+msgid "Responsive"
+msgstr "Responsive"
+
+#: inc/Elementor/PixVisualizeWidget.php:300
+#: src/pixvisualize/edit.js:631
+msgid "Tablet Position"
+msgstr "Position sur tablette"
+
+#: inc/Elementor/PixVisualizeWidget.php:319
+#: src/pixvisualize/edit.js:647
+msgid "Mobile Position"
+msgstr "Position sur mobile"
+
+#: inc/Elementor/PixVisualizeWidget.php:338
+#: templates/admin.php:278
+#: templates/woocommerce-product-data.php:677
+#: src/pixvisualize/edit.js:663
+msgid "Tablet Ratio"
+msgstr "Format sur tablette"
+
+#: inc/Elementor/PixVisualizeWidget.php:349
+#: templates/admin.php:296
+#: templates/woocommerce-product-data.php:687
+#: src/pixvisualize/edit.js:675
+msgid "Mobile Ratio"
+msgstr "Format sur mobile"
+
+#: templates/woocommerce-product-data.php:698
+#: src/pixvisualize/edit.js:690
+msgid "Appearance"
+msgstr "Apparence"
+
+#: inc/Elementor/PixVisualizeWidget.php:375
+#: inc/Elementor/PixVisualizeWidget.php:382
+#: templates/admin.php:317
+#: templates/woocommerce-product-data.php:701
+#: src/pixvisualize/edit.js:696
+#: src/pixvisualize/edit.js:699
+msgid "Handle Style"
+msgstr "Style de la poignée"
+
+#: inc/Elementor/PixVisualizeWidget.php:385
+#: templates/admin.php:319
+#: templates/woocommerce-product-data.php:703
+#: src/pixvisualize/edit.js:707
+msgid "Circle"
+msgstr "Cercle"
+
+#: inc/Elementor/PixVisualizeWidget.php:386
+#: templates/admin.php:320
+#: templates/woocommerce-product-data.php:704
+#: src/pixvisualize/edit.js:711
+msgid "Transparent"
+msgstr "Transparent"
+
+#: inc/Elementor/PixVisualizeWidget.php:387
+#: templates/admin.php:321
+#: templates/woocommerce-product-data.php:705
+#: src/pixvisualize/edit.js:718
+msgid "Line"
+msgstr "Ligne"
+
+#: inc/Elementor/PixVisualizeWidget.php:388
+#: templates/admin.php:322
+#: templates/woocommerce-product-data.php:706
+#: src/pixvisualize/edit.js:722
+msgid "Arrows"
+msgstr "Flèches"
+
+#: inc/Elementor/PixVisualizeWidget.php:389
+#: templates/admin.php:323
+#: templates/woocommerce-product-data.php:707
+#: src/pixvisualize/edit.js:726
+msgid "Custom SVG"
+msgstr "SVG personnalisé"
+
+#: inc/Elementor/PixVisualizeWidget.php:398
+#: templates/admin.php:329
+#: src/pixvisualize/edit.js:739
+msgid "Custom SVG Icon (<svg> tag…)"
+msgstr "Icône SVG personnalisée (balise <svg>…)"
+
+#: inc/Elementor/PixVisualizeWidget.php:461
+#: templates/woocommerce-product-data.php:735
+#: src/pixvisualize/edit.js:808
+msgid "Colors"
+msgstr "Couleurs"
+
+#: inc/Elementor/PixVisualizeWidget.php:468
+#: src/pixvisualize/edit.js:811
+msgid "Separator Thickness"
+msgstr "Épaisseur du séparateur"
+
+#: inc/Elementor/PixVisualizeWidget.php:372
+#: templates/woocommerce-product-data.php:439
+#: src/pixvisualize/edit.js:406
+msgid "Separator Color"
+msgstr "Couleur du séparateur"
+
+#: inc/Elementor/PixVisualizeWidget.php:499
+#: templates/admin.php:368
+#: templates/woocommerce-product-data.php:750
+#: src/pixvisualize/edit.js:846
+msgid "Drop Shadow"
+msgstr "Ombre portée"
+
+#: inc/Elementor/PixVisualizeWidget.php:852
+#: templates/woocommerce-product-data.php:845
+#: src/pixvisualize/edit.js:1164
+msgid "Label Typography & Style"
+msgstr "Typographie et style des libellés"
+
+#: inc/Elementor/PixVisualizeWidget.php:859
+#: templates/admin.php:467
+#: templates/woocommerce-product-data.php:848
+#: src/pixvisualize/edit.js:1171
+msgid "Label Background"
+msgstr "Fond des libellés"
+
+#: inc/Elementor/PixVisualizeWidget.php:869
+#: templates/admin.php:472
+#: templates/woocommerce-product-data.php:853
+#: src/pixvisualize/edit.js:1188
+msgid "Text Color"
+msgstr "Couleur du texte"
+
+#: inc/Elementor/PixVisualizeWidget.php:879
+msgid "Font Size"
+msgstr "Taille de police"
+
+#: inc/Elementor/PixVisualizeWidget.php:898
+msgid "Font Weight"
+msgstr "Graisse de police"
+
+#: inc/Elementor/PixVisualizeWidget.php:918
+msgid "Padding X"
+msgstr "Marge interne X"
+
+#: inc/Elementor/PixVisualizeWidget.php:937
+msgid "Padding Y"
+msgstr "Marge interne Y"
+
+#: inc/Elementor/PixVisualizeWidget.php:956
+#: src/pixvisualize/edit.js:1077
+msgid "Border Radius"
+msgstr "Rayon des coins"
+
+#: inc/Elementor/PixVisualizeWidget.php:1116
+#: templates/admin.php:503
+#: templates/woocommerce-product-data.php:885
+#: src/pixvisualize/edit.js:1280
+msgid "Interactions"
+msgstr "Interactions"
+
+#: inc/Elementor/PixVisualizeWidget.php:1124
+#: inc/Elementor/PixVisualizeWidget.php:1131
+#: templates/admin.php:506
+#: templates/woocommerce-product-data.php:888
+#: src/pixvisualize/edit.js:1284
+#: src/pixvisualize/edit.js:1287
+msgid "Move on Hover"
+msgstr "Déplacement au survol"
+
+#: inc/Elementor/PixVisualizeWidget.php:1141
+#: src/pixvisualize/edit.js:1305
+msgid "Auto-Slide"
+msgstr "Défilement automatique"
+
+#: inc/Elementor/PixVisualizeWidget.php:1148
+#: templates/admin.php:511
+#: templates/woocommerce-product-data.php:894
+#: src/pixvisualize/edit.js:1308
+msgid "Auto-Slide Animation"
+msgstr "Animation de défilement automatique"
+
+#: inc/Elementor/PixVisualizeWidget.php:1157
+msgid "Duration (ms)"
+msgstr "Durée (ms)"
+
+#: inc/Elementor/PixVisualizeWidget.php:1179
+#: inc/Elementor/PixVisualizeWidget.php:1186
+#: templates/admin.php:521
+#: templates/woocommerce-product-data.php:905
+#: src/pixvisualize/edit.js:1348
+#: src/pixvisualize/edit.js:1351
+msgid "Magnifier"
+msgstr "Loupe"
+
+#: inc/Elementor/PixVisualizeWidget.php:1195
+msgid "Zoom"
+msgstr "Zoom"
+
+#: inc/Elementor/PixVisualizeWidget.php:1226
+msgid "Widget Wrapper"
+msgstr "Enveloppe du widget"
+
+#: inc/Elementor/PixVisualizeWidget.php:1234
+msgid "Horizontal Alignment"
+msgstr "Alignement horizontal"
+
+#: inc/Elementor/PixVisualizeWidget.php:1020
+#: inc/Elementor/PixVisualizeWidget.php:1237
+#: templates/admin.php:178
+#: templates/admin.php:256
+#: templates/woocommerce-product-data.php:480
+#: templates/woocommerce-product-data.php:656
+#: src/pixvisualize/edit.js:253
+msgid "Left"
+msgstr "Gauche"
+
+#: inc/Elementor/PixVisualizeWidget.php:1021
+#: inc/Elementor/PixVisualizeWidget.php:1238
+#: templates/admin.php:179
+#: templates/admin.php:257
+#: templates/woocommerce-product-data.php:481
+#: templates/woocommerce-product-data.php:657
+#: src/pixvisualize/edit.js:254
+msgid "Center"
+msgstr "Centré"
+
+#: inc/Elementor/PixVisualizeWidget.php:1022
+#: inc/Elementor/PixVisualizeWidget.php:1239
+#: templates/admin.php:180
+#: templates/admin.php:258
+#: templates/woocommerce-product-data.php:482
+#: templates/woocommerce-product-data.php:658
+#: src/pixvisualize/edit.js:255
+msgid "Right"
+msgstr "Droite"
+
+#: inc/Elementor/PixVisualizeWidget.php:1248
+msgid "Margin"
+msgstr "Marge"
+
+#: inc/Elementor/PixVisualizeWidget.php:683
+#: src/pixvisualize/edit.js:1020
+msgid "Border Width"
+msgstr "Épaisseur de bordure"
+
+#: inc/Elementor/PixVisualizeWidget.php:702
+#: templates/admin.php:434
+#: src/pixvisualize/edit.js:1063
+msgid "Border Color"
+msgstr "Couleur de bordure"
+
+#: inc/Elementor/PixVisualizeWidget.php:1332
+#: templates/admin.php:280
+#: templates/admin.php:298
+#: templates/woocommerce-product-data.php:679
+#: templates/woocommerce-product-data.php:689
+#: src/pixvisualize/edit.js:269
+msgid "Inherit (desktop)"
+msgstr "Hériter (desktop)"
+
+#: inc/Elementor/PixVisualizeWidget.php:1370
+#: templates/admin.php:123
+#: templates/admin.php:133
+#: templates/woocommerce-product-data.php:343
+#: src/pixvisualize/edit.js:259
+msgid "Top Left"
+msgstr "En haut à gauche"
+
+#: inc/Elementor/PixVisualizeWidget.php:1371
+#: templates/admin.php:124
+#: templates/admin.php:134
+#: templates/woocommerce-product-data.php:344
+#: src/pixvisualize/edit.js:260
+msgid "Top Right"
+msgstr "En haut à droite"
+
+#: inc/Elementor/PixVisualizeWidget.php:1372
+#: templates/admin.php:125
+#: templates/admin.php:135
+#: templates/woocommerce-product-data.php:345
+#: src/pixvisualize/edit.js:261
+msgid "Bottom Left"
+msgstr "En bas à gauche"
+
+#: inc/Elementor/PixVisualizeWidget.php:1373
+#: templates/admin.php:126
+#: templates/admin.php:136
+#: templates/woocommerce-product-data.php:346
+#: src/pixvisualize/edit.js:263
+msgid "Bottom Right"
+msgstr "En bas à droite"
+
+#: inc/Elementor/PixVisualizeWidget.php:1837
+#: templates/admin.php:553
+#: templates/woocommerce-product-data.php:379
+msgid "Select your Before and After images to display the comparison slider."
+msgstr ""
+"Sélectionnez vos images avant et après pour afficher le curseur de "
+"comparaison."
+
+#: inc/Pages/Dashboard.php:38
+msgid "Dashboard"
+msgstr "Tableau de bord"
+
+#: inc/Pages/Dashboard.php:85
+#: templates/admin.php:670
+msgid "Settings Manager"
+msgstr "Gestionnaire des réglages"
+
+#: templates/admin.php:37
+#: templates/admin.php:50
+msgid "Manage Settings"
+msgstr "Gérer les réglages"
+
+#: templates/admin.php:39
+#: templates/admin.php:68
+#: templates/admin.php:74
+msgid "Shortcode Generator"
+msgstr "Générateur de shortcode"
+
+#: templates/admin.php:41
+#: templates/admin.php:595
+msgid "About"
+msgstr "À propos"
+
+#: templates/admin.php:52
+msgid ""
+"Enable or disable each PixVisualize feature globally. Block settings "
+"(images, labels, position, ratio) are saved by Gutenberg in your post "
+"content and are never affected by this page."
+msgstr ""
+"Activez ou désactivez chaque fonctionnalité PixVisualize globalement. Les "
+"réglages du bloc (images, libellés, position, format) sont enregistrés par "
+"Gutenberg dans le contenu de vos articles et ne sont jamais affectés par "
+"cette page."
+
+#: templates/admin.php:70
+msgid "Build a <code>[pixvisualize]</code> shortcode visually and copy it anywhere."
+msgstr ""
+"Créez visuellement un shortcode <code>[pixvisualize]</code> et copiez-le où "
+"vous voulez."
+
+#: templates/admin.php:81
+msgid "1. Select Images"
+msgstr "1. Sélectionner les images"
+
+#: templates/admin.php:87
+#: templates/admin.php:95
+#: src/js/pixvisualize-admin.js:912
+msgid "No image selected"
+msgstr "Aucune image sélectionnée"
+
+#: templates/admin.php:88
+#: templates/admin.php:96
+#: templates/woocommerce-picker.php:34
+#: src/js/pixvisualize-admin.js:920
+#: assets/js/pixvisualize-woocommerce-metabox.js:150
+msgid "Select Image"
+msgstr "Sélectionner une image"
+
+#: templates/admin.php:100
+msgid "2. Configuration"
+msgstr "2. Configuration"
+
+#: templates/admin.php:72
+msgid "Shape of the comparison area (width:height)."
+msgstr "Forme de la zone de comparaison (largeur:hauteur)."
+
+#: templates/admin.php:215
+msgid "Direction of the sliding cursor (left/right or top/bottom)."
+msgstr "Direction du curseur de glissement (gauche/droite ou haut/bas)."
+
+#: templates/admin.php:248
+msgid "Slider Position (%)"
+msgstr "Position du curseur (%)"
+
+#: templates/admin.php:250
+msgid ""
+"Starting position of the divider: 0 = fully \"Before\", 100 = fully "
+"\"After\"."
+msgstr ""
+"Position de départ du séparateur : 0 = entièrement « Avant », 100 = "
+"entièrement « Après »."
+
+#: templates/admin.php:237
+#: templates/woocommerce-product-data.php:636
+msgid "Slider Height (px)"
+msgstr "Hauteur du curseur (px)"
+
+#: templates/admin.php:93
+msgid "Height of the comparison area on the page."
+msgstr "Hauteur de la zone de comparaison sur la page."
+
+#: templates/admin.php:106
+msgid "Caption displayed on the \"Before\" side."
+msgstr "Légende affichée sur le côté « Avant »."
+
+#: templates/admin.php:112
+msgid "Caption displayed on the \"After\" side."
+msgstr "Légende affichée sur le côté « Après »."
+
+#: templates/admin.php:563
+msgid "3. Get Shortcode"
+msgstr "3. Obtenir le shortcode"
+
+#: templates/admin.php:566
+#: src/js/pixvisualize-admin.js:1257
+msgid "Copy Shortcode"
+msgstr "Copier le shortcode"
+
+#: templates/admin.php:568
+msgid "Clear Images"
+msgstr "Effacer les images"
+
+#: templates/admin.php:569
+msgid "Reset"
+msgstr "Réinitialiser"
+
+#: templates/admin.php:599
+msgid ""
+"<strong>PixVisualize</strong> is the complete Before/After image comparison "
+"suite for WordPress. Compare two images with an interactive sliding cursor "
+"through a native Gutenberg block, a dedicated Elementor widget, shortcodes "
+"and full WooCommerce integration."
+msgstr ""
+"<strong>PixVisualize</strong> est la suite complète de comparaison d'images "
+"avant/après pour WordPress. Comparez deux images avec un curseur de "
+"glissement interactif via un bloc Gutenberg natif, un widget Elementor "
+"dédié, des shortcodes et une intégration WooCommerce complète."
+
+#: templates/admin.php:614
+msgid "Pro Features"
+msgstr "Fonctionnalités Pro"
+
+#: templates/admin.php:618
+msgid ""
+"<strong>Advanced Elementor widget</strong> with visual controls and a live "
+"WYSIWYG preview."
+msgstr ""
+"<strong>Widget Elementor avancé</strong> avec contrôles visuels et aperçu "
+"WYSIWYG en direct."
+
+#: templates/admin.php:134
+msgid ""
+"<strong>Custom handle styles</strong>: circle, transparent, line, double "
+"arrows or your own SVG icon."
+msgstr ""
+"<strong>Styles de poignée personnalisés</strong> : cercle, transparent, "
+"ligne, double flèche ou votre propre icône SVG."
+
+#: templates/admin.php:626
+msgid "<strong>Advanced labels</strong>: position, typography, colors and margins."
+msgstr ""
+"<strong>Libellés avancés</strong> : position, typographie, couleurs et "
+"marges."
+
+#: templates/admin.php:136
+msgid ""
+"<strong>Separator</strong> with configurable thickness, color and drop "
+"shadow."
+msgstr ""
+"<strong>Séparateur</strong> avec épaisseur, couleur et ombre portée "
+"configurables."
+
+#: templates/admin.php:634
+msgid ""
+"<strong>Vertical orientation</strong> (Top/Bottom) in addition to "
+"horizontal."
+msgstr "<strong>Orientation verticale</strong> (haut/bas) en plus de l'horizontale."
+
+#: templates/admin.php:638
+msgid ""
+"<strong>Responsive per breakpoint</strong>: tablet/mobile position and "
+"ratio."
+msgstr ""
+"<strong>Responsive par point de rupture</strong> : position et format sur "
+"tablette/mobile."
+
+#: templates/admin.php:642
+msgid "<strong>Hover Mode</strong>: the cursor follows the pointer."
+msgstr "<strong>Mode survol</strong> : le curseur suit la souris."
+
+#: templates/admin.php:646
+msgid "<strong>Auto-Scan</strong> intro animation."
+msgstr "<strong>Auto-Scan</strong> : animation d'introduction."
+
+#: templates/admin.php:650
+msgid "<strong>Magnifier Glass</strong> zoom effect."
+msgstr "<strong>Loupe</strong> : effet de zoom."
+
+#: templates/admin.php:142
+msgid ""
+"<strong>Shortcode generator</strong>: build a <code>[pixvisualize]</code> "
+"shortcode visually."
+msgstr ""
+"<strong>Générateur de shortcode</strong> : créez un shortcode "
+"<code>[pixvisualize]</code> visuellement."
+
+#: templates/admin.php:658
+msgid ""
+"<strong>WooCommerce support</strong>: Before/After gallery on single "
+"product pages."
+msgstr ""
+"<strong>Support WooCommerce</strong> : galerie avant/après sur les pages "
+"produit."
+
+#: templates/admin.php:672
+msgid ""
+"The toggles above activate or deactivate each feature globally. Block "
+"settings (images, labels, position, ratio) are saved by Gutenberg in your "
+"post content and are never affected by this page. When an option is missing "
+"(fresh install), every feature stays active by default for full backward "
+"compatibility."
+msgstr ""
+"Les interrupteurs ci-dessus activent ou désactivent chaque fonctionnalité "
+"globalement. Les réglages du bloc (images, libellés, position, format) sont "
+"enregistrés par Gutenberg dans le contenu de vos articles et ne sont jamais "
+"affectés par cette page. Lorsqu'une option est absente (nouvelle "
+"installation), chaque fonctionnalité reste active par défaut pour une "
+"compatibilité ascendante totale."
+
+#: templates/admin.php:152
+msgid ""
+"Built natively with <strong>React</strong> and the "
+"<code>@wordpress/scripts</code> ecosystem, PixVisualize works both in the "
+"editor (back-office) and on the public site (front-office)."
+msgstr ""
+"Construit nativement avec <strong>React</strong> et l'écosystème "
+"<code>@wordpress/scripts</code>, PixVisualize fonctionne à la fois dans "
+"l'éditeur (back-office) et sur le site public (front-office)."
+
+#: templates/admin.php:168
+msgid "Plugin PixVisualize - WordPress"
+msgstr "Plugin PixVisualize - WordPress"
+
+#: templates/admin.php:169
+msgid "Version"
+msgstr "Version"
+
+#: templates/woocommerce-picker.php:37
+msgid "Remove"
+msgstr "Supprimer"
+
+#: templates/woocommerce-product-data.php:511
+msgid "Placement"
+msgstr "Emplacement"
+
+#: templates/woocommerce-product-data.php:514
+msgid "Product page placement"
+msgstr "Emplacement sur la page produit"
+
+#: templates/woocommerce-product-data.php:517
+msgid "Main image area"
+msgstr "Zone de l'image principale"
+
+#: templates/woocommerce-product-data.php:518
+msgid "Above the gallery"
+msgstr "Au-dessus de la galerie"
+
+#: templates/woocommerce-product-data.php:519
+msgid "Above the main image"
+msgstr "Au-dessus de l'image principale"
+
+#: templates/woocommerce-product-data.php:520
+msgid "Under the gallery thumbnails"
+msgstr "Sous les vignettes de la galerie"
+
+#: templates/woocommerce-product-data.php:524
+msgid "Summary & Buy Area (Right Column)"
+msgstr "Zone récapitulatif et achat (colonne de droite)"
+
+#: templates/woocommerce-product-data.php:525
+msgid "Before the product title"
+msgstr "Avant le titre du produit"
+
+#: templates/woocommerce-product-data.php:526
+msgid "Between the title and the rating"
+msgstr "Entre le titre et la note"
+
+#: templates/woocommerce-product-data.php:527
+msgid "Below the price"
+msgstr "Sous le prix"
+
+#: templates/woocommerce-product-data.php:528
+msgid "Below the short description"
+msgstr "Sous la description courte"
+
+#: templates/woocommerce-product-data.php:529
+msgid "Below the add to cart button"
+msgstr "Sous le bouton d'ajout au panier"
+
+#: templates/woocommerce-product-data.php:530
+msgid "End of the summary"
+msgstr "Fin du récapitulatif"
+
+#: templates/woocommerce-product-data.php:534
+msgid "After the summary"
+msgstr "Après le récapitulatif"
+
+#: templates/woocommerce-product-data.php:535
+msgid "Before the product tabs"
+msgstr "Avant les onglets produit"
+
+#: templates/woocommerce-product-data.php:536
+msgid "Between the tabs and the related products"
+msgstr "Entre les onglets et les produits associés"
+
+#: templates/woocommerce-product-data.php:537
+msgid "After the related products"
+msgstr "Après les produits associés"
+
+#: templates/woocommerce-product-data.php:541
+msgid "End of page"
+msgstr "Fin de page"
+
+#: templates/woocommerce-product-data.php:542
+msgid "End of the product page"
+msgstr "Fin de la page produit"
+
+#: templates/woocommerce-product-data.php:546
+msgid "Product tab"
+msgstr "Onglet produit"
+
+#: templates/woocommerce-product-data.php:547
+msgid "Add a dedicated custom tab for the comparison"
+msgstr "Ajouter un onglet personnalisé dédié à la comparaison"
+
+#: templates/woocommerce-product-data.php:551
+msgid "Where the comparison appears on the single product page."
+msgstr "Où la comparaison apparaît sur la page produit."
+
+#: templates/woocommerce-product-data.php:563
+msgid "Comparison tab"
+msgstr "Onglet de comparaison"
+
+#: templates/woocommerce-product-data.php:566
+msgid "Tab Title"
+msgstr "Titre de l'onglet"
+
+#: templates/woocommerce-product-data.php:568
+msgid "Title of the comparison tab on the single product page."
+msgstr "Titre de l'onglet de comparaison sur la page produit."
+
+#: templates/woocommerce-product-data.php:572
+msgid "Content"
+msgstr "Contenu"
+
+#: templates/woocommerce-product-data.php:575
+msgid "Description"
+msgstr "Description"
+
+#: templates/woocommerce-product-data.php:589
+msgid ""
+"Accompanying text displayed with the comparator, whatever the chosen "
+"placement."
+msgstr ""
+"Texte d'accompagnement affiché avec le comparateur, quel que soit "
+"l'emplacement choisi."
+
+#: templates/woocommerce-product-data.php:593
+msgid "Content layout"
+msgstr "Disposition du contenu"
+
+#: templates/woocommerce-product-data.php:595
+msgid "Description above the comparator"
+msgstr "Description au-dessus du comparateur"
+
+#: templates/woocommerce-product-data.php:596
+msgid "Description below the comparator"
+msgstr "Description sous le comparateur"
+
+#: templates/woocommerce-product-data.php:597
+msgid "2 columns: description on the left, comparator on the right"
+msgstr "2 colonnes : description à gauche, comparateur à droite"
+
+#: templates/woocommerce-product-data.php:598
+msgid "2 columns: comparator on the left, description on the right"
+msgstr "2 colonnes : comparateur à gauche, description à droite"
+
+#: templates/woocommerce-product-data.php:600
+msgid "Position of the description relative to the comparator."
+msgstr "Position de la description par rapport au comparateur."
+
+#: templates/woocommerce-product-data.php:347
+msgid "Shape of the comparison area."
+msgstr "Forme de la zone de comparaison."
+
+#: templates/woocommerce-product-data.php:358
+msgid "Stretch the comparator across the full container width."
+msgstr "Étirer le comparateur sur toute la largeur du conteneur."
+
+#: templates/woocommerce-product-data.php:648
+msgid "Initial Position (%)"
+msgstr "Position initiale (%)"
+
+#: templates/woocommerce-product-data.php:650
+msgid "Where the slider starts (0 = fully Before, 100 = fully After)."
+msgstr "Où le curseur démarre (0 = entièrement Avant, 100 = entièrement Après)."
+
+#: templates/admin.php:254
+#: templates/woocommerce-product-data.php:654
+#: src/pixvisualize/edit.js:605
+msgid "Alignment"
+msgstr "Alignement"
+
+#: templates/woocommerce-product-data.php:665
+msgid "Slider Position on Tablet (%)"
+msgstr "Position du curseur sur tablette (%)"
+
+#: templates/woocommerce-product-data.php:667
+msgid "Divider position on tablets: 0 = fully \"Before\", 100 = fully \"After\"."
+msgstr ""
+"Position du séparateur sur tablette : 0 = entièrement « Avant », 100 = "
+"entièrement « Après »."
+
+#: templates/woocommerce-product-data.php:671
+msgid "Slider Position on Mobile (%)"
+msgstr "Position du curseur sur mobile (%)"
+
+#: templates/woocommerce-product-data.php:673
+msgid "Divider position on phones: 0 = fully \"Before\", 100 = fully \"After\"."
+msgstr ""
+"Position du séparateur sur mobile : 0 = entièrement « Avant », 100 = "
+"entièrement « Après »."
+
+#: templates/woocommerce-product-data.php:712
+msgid "Custom SVG Icon"
+msgstr "Icône SVG personnalisée"
+
+#: templates/woocommerce-product-data.php:428
+msgid "Paste a valid <svg> tag. Only used when Handle Style is Custom SVG."
+msgstr ""
+"Collez une balise <svg> valide. Utilisée uniquement lorsque le style de "
+"poignée est SVG personnalisé."
+
+#: templates/admin.php:356
+#: templates/woocommerce-product-data.php:738
+msgid "Separator Thickness (px)"
+msgstr "Épaisseur du séparateur (px)"
+
+#: templates/woocommerce-product-data.php:858
+msgid "Font Size (px)"
+msgstr "Taille de police (px)"
+
+#: templates/woocommerce-product-data.php:863
+msgid "Font Weight (400–900)"
+msgstr "Graisse de police (400–900)"
+
+#: templates/woocommerce-product-data.php:865
+#: src/pixvisualize/edit.js:1219
+msgid "Thickness of the label text (400 = normal, 700 = bold)."
+msgstr "Épaisseur du texte des libellés (400 = normal, 700 = gras)."
+
+#: templates/woocommerce-product-data.php:869
+msgid "Label Padding – Horizontal (px)"
+msgstr "Marge interne du libellé – horizontale (px)"
+
+#: templates/woocommerce-product-data.php:874
+msgid "Label Padding – Vertical (px)"
+msgstr "Marge interne du libellé – verticale (px)"
+
+#: templates/woocommerce-product-data.php:879
+msgid "Border Radius (px)"
+msgstr "Rayon des coins (px)"
+
+#: templates/woocommerce-product-data.php:890
+msgid "Follow the cursor position over the image."
+msgstr "Suivre la position du curseur sur l'image."
+
+#: templates/admin.php:516
+#: templates/woocommerce-product-data.php:899
+#: src/pixvisualize/edit.js:1330
+msgid "Auto-Slide Duration (ms)"
+msgstr "Durée du défilement automatique (ms)"
+
+#: templates/woocommerce-product-data.php:504
+#: src/pixvisualize/edit.js:582
+msgid "How long the auto-slide takes to sweep from \"Before\" to \"After\"."
+msgstr ""
+"Temps que met le défilement automatique pour balayer de « Avant » à « Après "
+"»."
+
+#: templates/woocommerce-product-data.php:907
+msgid "Show a zoomed lens around the cursor while hovering the comparison."
+msgstr "Afficher une lentille zoomée autour du curseur au survol de la comparaison."
+
+#: templates/admin.php:526
+#: templates/woocommerce-product-data.php:911
+#: src/pixvisualize/edit.js:1370
+msgid "Magnifier Zoom (x)"
+msgstr "Zoom de la loupe (x)"
+
+#: templates/woocommerce-product-data.php:913
+#: src/pixvisualize/edit.js:1374
+msgid "Zoom factor of the magnifier lens."
+msgstr "Facteur de zoom de la lentille de la loupe."
+
+#: templates/woocommerce.php:21
+msgid ""
+"To edit the images, ratio or labels, go to the PixVisualize tab of the "
+"\"Product data\" section."
+msgstr ""
+"Pour modifier les images, le format ou les libellés, allez dans l'onglet "
+"PixVisualize de la section « Données produit »."
+
+#: src/js/pixvisualize-admin.js:921
+#: assets/js/pixvisualize-woocommerce-metabox.js:152
+msgid "Use this image"
+msgstr "Utiliser cette image"
+
+#: src/js/pixvisualize-admin.js:1150
+msgid "Reset the generator to its default values?"
+msgstr "Réinitialiser le générateur à ses valeurs par défaut ?"
+
+#: src/js/pixvisualize-admin.js:1483
+msgid "Copied!"
+msgstr "Copié !"
+
+#: src/pixvisualize/edit.js:44
+msgid "Change"
+msgstr "Modifier"
+
+#: src/pixvisualize/edit.js:45
+msgid "Select"
+msgstr "Sélectionner"
+
+#: src/pixvisualize/edit.js:314
+msgid "The labels are visible on the slider."
+msgstr "Les libellés sont visibles sur le curseur."
+
+#: src/pixvisualize/edit.js:318
+msgid "The labels are hidden on the slider."
+msgstr "Les libellés sont masqués sur le curseur."
+
+#: src/pixvisualize/edit.js:229
+msgid "The ratio is preserved: the height adapts automatically to the width."
+msgstr "Le format est préservé : la hauteur s'adapte automatiquement à la largeur."
+
+#: src/pixvisualize/edit.js:241
+msgid "When not full width, the width is calculated from the height and the ratio."
+msgstr ""
+"Hors pleine largeur, la largeur est calculée à partir de la hauteur et du "
+"format."
+
+#: src/pixvisualize/edit.js:254
+msgid "The block spans the full width of the content."
+msgstr "Le bloc occupe toute la largeur du contenu."
+
+#: src/pixvisualize/edit.js:594
+msgid "The block keeps a custom size (width matched to the ratio)."
+msgstr "Le bloc conserve une taille personnalisée (largeur adaptée au format)."
+
+#: src/pixvisualize/edit.js:614
+msgid ""
+"Starting position of the divider: 0% = fully \"Before\", 100% = fully "
+"\"After\"."
+msgstr ""
+"Position de départ du séparateur : 0 % = entièrement « Avant », 100 % = "
+"entièrement « Après »."
+
+#: src/pixvisualize/edit.js:635
+msgid ""
+"Divider position on tablets (768px–1024px): 0% = fully \"Before\", 100% = "
+"fully \"After\"."
+msgstr ""
+"Position du séparateur sur tablette (768px–1024px) : 0 % = entièrement « "
+"Avant », 100 % = entièrement « Après »."
+
+#: src/pixvisualize/edit.js:651
+msgid ""
+"Divider position on phones (below 768px): 0% = fully \"Before\", 100% = "
+"fully \"After\"."
+msgstr ""
+"Position du séparateur sur mobile (moins de 768px) : 0 % = entièrement « "
+"Avant », 100 % = entièrement « Après »."
+
+#: inc/Elementor/PixVisualizeWidget.php:339
+#: inc/Elementor/PixVisualizeWidget.php:350
+#: src/pixvisualize/edit.js:664
+#: src/pixvisualize/edit.js:676
+msgid "Leave empty to inherit the desktop ratio."
+msgstr "Laissez vide pour hériter du format desktop."
+
+#: templates/admin.php:325
+#: src/pixvisualize/edit.js:700
+msgid "Shape of the cursor that separates the two images."
+msgstr "Forme du curseur qui sépare les deux images."
+
+#: src/pixvisualize/edit.js:381
+msgid "Paste a valid <svg> tag. Without an SVG, the Circle style is used."
+msgstr "Collez une balise <svg> valide. Sans SVG, le style Cercle est utilisé."
+
+#: src/pixvisualize/edit.js:420
+msgid "A soft shadow is applied to the line."
+msgstr "Une ombre douce est appliquée à la ligne."
+
+#: src/pixvisualize/edit.js:424
+msgid "No shadow is applied to the line."
+msgstr "Aucune ombre n'est appliquée à la ligne."
+
+#: src/pixvisualize/edit.js:1199
+msgid "Label Font Size"
+msgstr "Taille de police des libellés"
+
+#: src/pixvisualize/edit.js:1203
+msgid "Font size of the \"Before\" / \"After\" captions, in px."
+msgstr "Taille de police des légendes « Avant » / « Après », en px."
+
+#: templates/admin.php:482
+#: src/pixvisualize/edit.js:1215
+msgid "Label Font Weight"
+msgstr "Graisse de police des libellés"
+
+#: src/pixvisualize/edit.js:1232
+msgid "Label Padding (horizontal)"
+msgstr "Marge interne du libellé (horizontale)"
+
+#: src/pixvisualize/edit.js:1236
+msgid "Left/right inner spacing of the label, in px."
+msgstr "Espacement interne gauche/droite du libellé, en px."
+
+#: src/pixvisualize/edit.js:1248
+msgid "Label Padding (vertical)"
+msgstr "Marge interne du libellé (verticale)"
+
+#: src/pixvisualize/edit.js:1252
+msgid "Top/bottom inner spacing of the label, in px."
+msgstr "Espacement interne haut/bas du libellé, en px."
+
+#: src/pixvisualize/edit.js:1264
+msgid "Label Border Radius"
+msgstr "Rayon des coins du libellé"
+
+#: templates/admin.php:507
+#: src/pixvisualize/edit.js:1290
+msgid "On hover, the cursor moves under the mouse, without clicking."
+msgstr "Au survol, le curseur se déplace sous la souris, sans clic."
+
+#: src/pixvisualize/edit.js:1294
+msgid "The cursor only moves by clicking and dragging."
+msgstr "Le curseur ne se déplace qu'en cliquant et en faisant glisser."
+
+#: src/pixvisualize/edit.js:1314
+msgid "The cursor automatically sweeps the images on load."
+msgstr "Le curseur balaie automatiquement les images au chargement."
+
+#: src/pixvisualize/edit.js:1318
+msgid "No animation on load."
+msgstr "Aucune animation au chargement."
+
+#: templates/admin.php:522
+#: src/pixvisualize/edit.js:1354
+msgid "A magnifier enlarges the hovered area of the image."
+msgstr "Une loupe agrandit la zone survolée de l'image."
+
+#: src/pixvisualize/edit.js:1358
+msgid "No magnifier effect on hover."
+msgstr "Aucun effet de loupe au survol."
+
+#: inc/Elementor/PixVisualizeWidget.php:521
+#: inc/Elementor/PixVisualizeWidget.php:528
+#: templates/admin.php:373
+#: templates/admin.php:376
+#: templates/woocommerce-product-data.php:758
+#: src/pixvisualize/edit.js:866
+#: src/pixvisualize/edit.js:869
+msgid "Container Shadow"
+msgstr "Ombre du conteneur"
+
+#: inc/Elementor/PixVisualizeWidget.php:538
+#: src/pixvisualize/edit.js:890
+msgid "Container Shadow Color"
+msgstr "Couleur de l'ombre du conteneur"
+
+#: inc/Elementor/PixVisualizeWidget.php:572
+#: src/pixvisualize/edit.js:923
+msgid "Container Shadow Vertical Offset"
+msgstr "Décalage vertical de l'ombre du conteneur"
+
+#: templates/admin.php:377
+#: src/pixvisualize/edit.js:872
+msgid "A soft shadow is applied to the whole slider."
+msgstr "Une ombre douce est appliquée à tout le curseur."
+
+#: src/pixvisualize/edit.js:876
+msgid "No shadow is applied to the slider."
+msgstr "Aucune ombre n'est appliquée au curseur."
+
+#: inc/Elementor/PixVisualizeWidget.php:550
+#: src/pixvisualize/edit.js:905
+msgid "Container Shadow Horizontal Offset"
+msgstr "Décalage horizontal de l'ombre du conteneur"
+
+#: inc/Elementor/PixVisualizeWidget.php:594
+#: src/pixvisualize/edit.js:941
+msgid "Container Shadow Blur Radius"
+msgstr "Rayon de flou de l'ombre du conteneur"
+
+#: inc/Elementor/PixVisualizeWidget.php:616
+#: src/pixvisualize/edit.js:959
+msgid "Container Shadow Spread Radius"
+msgstr "Rayon d'étalement de l'ombre du conteneur"
+
+#: inc/Elementor/PixVisualizeWidget.php:638
+#: src/pixvisualize/edit.js:977
+msgid "Container Shadow Opacity"
+msgstr "Opacité de l'ombre du conteneur"
+
+#: src/pixvisualize/edit.js:909
+msgid "Horizontal distance of the shadow, in px."
+msgstr "Distance horizontale de l'ombre, en px."
+
+#: src/pixvisualize/edit.js:927
+msgid "Vertical distance of the shadow, in px."
+msgstr "Distance verticale de l'ombre, en px."
+
+#: src/pixvisualize/edit.js:945
+msgid "Blur softness of the shadow, in px."
+msgstr "Douceur du flou de l'ombre, en px."
+
+#: src/pixvisualize/edit.js:963
+msgid "How far the shadow spreads, in px."
+msgstr "Jusqu'où l'ombre s'étend, en px."
+
+#: src/pixvisualize/edit.js:981
+msgid "Shadow opacity, from 0 (transparent) to 100 (opaque)."
+msgstr "Opacité de l'ombre, de 0 (transparent) à 100 (opaque)."
+
+#: inc/Elementor/PixVisualizeWidget.php:712
+#: templates/admin.php:424
+#: src/pixvisualize/edit.js:1035
+msgid "Border Style"
+msgstr "Style de bordure"
+
+#: inc/Elementor/PixVisualizeWidget.php:715
+#: templates/admin.php:426
+#: templates/woocommerce-product-data.php:812
+#: src/pixvisualize/edit.js:1039
+msgid "Solid"
+msgstr "Continu"
+
+#: inc/Elementor/PixVisualizeWidget.php:716
+#: templates/admin.php:427
+#: templates/woocommerce-product-data.php:813
+#: src/pixvisualize/edit.js:1043
+msgid "Dashed"
+msgstr "Tireté"
+
+#: inc/Elementor/PixVisualizeWidget.php:717
+#: templates/admin.php:428
+#: templates/woocommerce-product-data.php:814
+#: src/pixvisualize/edit.js:1047
+msgid "Dotted"
+msgstr "Pointillé"
+
+#: inc/Elementor/PixVisualizeWidget.php:718
+#: templates/admin.php:429
+#: templates/woocommerce-product-data.php:815
+#: src/pixvisualize/edit.js:1051
+msgid "Double"
+msgstr "Double"
+
+#: inc/Elementor/PixVisualizeWidget.php:742
+#: src/pixvisualize/edit.js:1100
+msgid "Top Left Radius"
+msgstr "Rayon en haut à gauche"
+
+#: inc/Elementor/PixVisualizeWidget.php:761
+#: src/pixvisualize/edit.js:1118
+msgid "Top Right Radius"
+msgstr "Rayon en haut à droite"
+
+#: inc/Elementor/PixVisualizeWidget.php:780
+#: src/pixvisualize/edit.js:1132
+msgid "Bottom Right Radius"
+msgstr "Rayon en bas à droite"
+
+#: inc/Elementor/PixVisualizeWidget.php:799
+#: src/pixvisualize/edit.js:1146
+msgid "Bottom Left Radius"
+msgstr "Rayon en bas à gauche"
+
+#: inc/Elementor/PixVisualizeWidget.php:663
+#: templates/admin.php:411
+#: src/pixvisualize/edit.js:997
+msgid "Container Border"
+msgstr "Bordure du conteneur"
+
+#: src/pixvisualize/edit.js:1021
+msgid "Thickness of the container border, in px."
+msgstr "Épaisseur de la bordure du conteneur, en px."
+
+#: inc/Elementor/PixVisualizeWidget.php:670
+#: templates/admin.php:414
+#: templates/woocommerce-product-data.php:794
+#: src/pixvisualize/edit.js:1000
+msgid "Show Border"
+msgstr "Afficher la bordure"
+
+#: inc/Elementor/PixVisualizeWidget.php:673
+msgid "FREE: show a default 2px solid gray border."
+msgstr "GRATUIT : affiche une bordure grise 2px solid par défaut."
+
+#: src/pixvisualize/edit.js:1003
+msgid "A 2px solid gray border is applied to the container."
+msgstr "Une bordure grise 2px solid est appliquée au conteneur."
+
+#: src/pixvisualize/edit.js:1007
+msgid "No border is applied to the container."
+msgstr "Aucune bordure n'est appliquée au conteneur."
+
+#: templates/admin.php:415
+msgid "Show a default 2px solid gray border around the container."
+msgstr "Affiche une bordure grise 2px solid par défaut autour du conteneur."
+
+#: templates/woocommerce-product-data.php:796
+msgid "Show a default 2px solid gray border around the comparison container."
+msgstr ""
+"Affiche une bordure grise 2px solid par défaut autour du conteneur de "
+"comparaison."
+
+#: inc/Elementor/PixVisualizeWidget.php:729
+#: templates/admin.php:439
+#: templates/woocommerce-product-data.php:820
+#: src/pixvisualize/edit.js:1080
+msgid "Rounded Corners"
+msgstr "Coins arrondis"
+
+#: inc/Elementor/PixVisualizeWidget.php:732
+msgid "FREE: round all corners with the default 16px radius."
+msgstr "GRATUIT : arrondit tous les coins avec le rayon 16px par défaut."
+
+#: templates/admin.php:440
+#: templates/woocommerce-product-data.php:822
+msgid "Round all corners with the default 16px radius."
+msgstr "Arrondit tous les coins avec le rayon 16px par défaut."
+
+#: src/pixvisualize/edit.js:1083
+msgid "A 16px radius is applied to all corners."
+msgstr "Un rayon de 16px est appliqué à tous les coins."
+
+#: src/pixvisualize/edit.js:1087
+msgid "The container corners stay square."
+msgstr "Les coins du conteneur restent carrés."
+
+#: src/pixvisualize/edit.js:1104
+msgid "Corner radius of the container, in px."
+msgstr "Rayon des coins du conteneur, en px."
+
+#: templates/woocommerce-product-data.php:755
+msgid "Container Style"
+msgstr "Style du conteneur"
+
+#: templates/woocommerce-product-data.php:760
+msgid "Add a drop shadow around the comparison container."
+msgstr "Ajoute une ombre portée autour du conteneur de comparaison."
+
+#: templates/admin.php:381
+#: templates/woocommerce-product-data.php:764
+msgid "Shadow Color"
+msgstr "Couleur de l’ombre"
+
+#: templates/woocommerce-product-data.php:769
+msgid "Shadow Horizontal Offset (px)"
+msgstr "Décalage horizontal de l’ombre (px)"
+
+#: templates/woocommerce-product-data.php:774
+msgid "Shadow Vertical Offset (px)"
+msgstr "Décalage vertical de l’ombre (px)"
+
+#: templates/woocommerce-product-data.php:779
+msgid "Shadow Blur (px)"
+msgstr "Rayon de flou de l’ombre (px)"
+
+#: templates/woocommerce-product-data.php:784
+msgid "Shadow Spread (px)"
+msgstr "Rayon d’étalement de l’ombre (px)"
+
+#: templates/woocommerce-product-data.php:789
+msgid "Shadow Opacity (%)"
+msgstr "Opacité de l’ombre (%)"
+
+#: templates/woocommerce-product-data.php:800
+msgid "Container Border Width (px)"
+msgstr "Épaisseur de bordure du conteneur (px)"
+
+#: templates/woocommerce-product-data.php:805
+msgid "Container Border Color"
+msgstr "Couleur de bordure du conteneur"
+
+#: templates/woocommerce-product-data.php:810
+msgid "Container Border Style"
+msgstr "Style de bordure du conteneur"
+
+#: templates/woocommerce-product-data.php:826
+msgid "Border Radius – Top Left (px)"
+msgstr "Rayon – en haut à gauche (px)"
+
+#: templates/woocommerce-product-data.php:831
+msgid "Border Radius – Top Right (px)"
+msgstr "Rayon – en haut à droite (px)"
+
+#: templates/woocommerce-product-data.php:836
+msgid "Border Radius – Bottom Right (px)"
+msgstr "Rayon – en bas à droite (px)"
+
+#: templates/woocommerce-product-data.php:841
+msgid "Border Radius – Bottom Left (px)"
+msgstr "Rayon – en bas à gauche (px)"
+
+#: templates/admin.php:101
+msgid "Content & Labels"
+msgstr "Contenu & libellés"
+
+#: templates/admin.php:117
+msgid "Uncheck to hide the \"Before\" / \"After\" captions."
+msgstr "Décochez pour masquer les légendes « Avant » / « Après »."
+
+#: templates/admin.php:139
+msgid "The slider spans the full width of the content."
+msgstr "Le curseur occupe toute la largeur du contenu."
+
+#: templates/admin.php:266
+msgid "Tablet Position (%)"
+msgstr "Position sur tablette (%)"
+
+#: templates/admin.php:268
+msgid "Divider position on tablets (768px–1024px)."
+msgstr "Position du diviseur sur tablette (768px–1024px)."
+
+#: templates/admin.php:272
+msgid "Mobile Position (%)"
+msgstr "Position sur mobile (%)"
+
+#: templates/admin.php:274
+msgid "Divider position on phones (below 768px)."
+msgstr "Position du diviseur sur téléphone (moins de 768px)."
+
+#: templates/admin.php:314
+msgid "Handle"
+msgstr "Poignée"
+
+#: templates/admin.php:222
+msgid "Only used with the Custom SVG handle. Paste a valid <svg> tag."
+msgstr ""
+"Utilisé uniquement avec la poignée SVG personnalisée. Collez une balise "
+"<svg> valide."
+
+#: templates/admin.php:353
+msgid "Separator"
+msgstr "Séparateur"
+
+#: templates/admin.php:386
+msgid "Horizontal Offset (px)"
+msgstr "Décalage horizontal (px)"
+
+#: templates/admin.php:391
+msgid "Vertical Offset (px)"
+msgstr "Décalage vertical (px)"
+
+#: templates/admin.php:396
+msgid "Blur Radius (px)"
+msgstr "Rayon de flou (px)"
+
+#: templates/admin.php:401
+msgid "Spread Radius (px)"
+msgstr "Rayon d’étalement (px)"
+
+#: templates/admin.php:406
+msgid "Opacity (0–100)"
+msgstr "Opacité (0–100)"
+
+#: templates/admin.php:419
+msgid "Border Width (px)"
+msgstr "Largeur de la bordure (px)"
+
+#: templates/admin.php:444
+msgid "Top Left Radius (px)"
+msgstr "Rayon en haut à gauche (px)"
+
+#: templates/admin.php:449
+msgid "Top Right Radius (px)"
+msgstr "Rayon en haut à droite (px)"
+
+#: templates/admin.php:454
+msgid "Bottom Right Radius (px)"
+msgstr "Rayon en bas à droite (px)"
+
+#: templates/admin.php:459
+msgid "Bottom Left Radius (px)"
+msgstr "Rayon en bas à gauche (px)"
+
+#: templates/admin.php:464
+msgid "Label Style"
+msgstr "Style des libellés"
+
+#: templates/admin.php:477
+msgid "Label Font Size (px)"
+msgstr "Taille de police des libellés (px)"
+
+#: templates/admin.php:484
+msgid "400 = normal, 700 = bold."
+msgstr "400 = normal, 700 = gras."
+
+#: templates/admin.php:488
+msgid "Label Padding X (px)"
+msgstr "Marge intérieure X des libellés (px)"
+
+#: templates/admin.php:493
+msgid "Label Padding Y (px)"
+msgstr "Marge intérieure Y des libellés (px)"
+
+#: templates/admin.php:498
+msgid "Label Border Radius (px)"
+msgstr "Rayon de bordure des libellés (px)"
+
+#: templates/admin.php:512
+msgid ""
+"The cursor sweeps from 100% to 0% then back to the initial position when "
+"the slider becomes visible."
+msgstr ""
+"Le curseur balaie de 100 % à 0 % puis revient à la position initiale "
+"lorsque le comparateur devient visible."
+
+#: templates/admin.php:532
+msgid "Live Preview"
+msgstr "Aperçu en direct"
+
+#: templates/admin.php:561
+msgid ""
+"Desktop preview. Tablet and mobile positions/ratios apply on smaller "
+"screens."
+msgstr ""
+"Aperçu pour ordinateur. Les positions/formats tablette et mobile "
+"s’appliquent sur les écrans plus petits."
+
+#: templates/woocommerce-product-data.php:901
+#: src/pixvisualize/edit.js:1334
+msgid ""
+"How long the auto-slide takes to sweep from 100% to 0% then back to the "
+"initial position."
+msgstr ""
+"Temps que met le défilement automatique pour balayer de 100 % à 0 % puis "
+"revenir à la position initiale."
+
+#: inc/Elementor/PixVisualizeWidget.php:410
+#: templates/admin.php:335
+#: templates/woocommerce-product-data.php:718
+#: src/pixvisualize/edit.js:755
+msgid "Handle Size (px)"
+msgstr "Taille de la poignée (px)"
+
+#: templates/admin.php:228
+#: templates/woocommerce-product-data.php:487
+msgid ""
+"Diameter with background, glyph box without. Arrows keep breathing room "
+"inside."
+msgstr ""
+"Diamètre avec fond, cadre du glyphe sans. Les flèches conservent une marge "
+"interne."
+
+#: src/pixvisualize/edit.js:409
+msgid ""
+"Diameter of the handle: circle background, or glyph box without background. "
+"Arrows keep breathing room inside."
+msgstr ""
+"Diamètre de la poignée : cercle avec fond, ou cadre du glyphe sans fond. "
+"Les flèches conservent une marge interne."
+
+#: inc/Elementor/PixVisualizeWidget.php:161
+#: inc/Elementor/PixVisualizeWidget.php:979
+#: templates/admin.php:141
+#: templates/woocommerce-product-data.php:442
+#: src/pixvisualize/edit.js:360
+msgid "Caption"
+msgstr "Légende"
+
+#: inc/Elementor/PixVisualizeWidget.php:168
+#: templates/admin.php:144
+#: templates/woocommerce-product-data.php:445
+#: src/pixvisualize/edit.js:364
+msgid "Show Caption"
+msgstr "Afficher la légende"
+
+#: inc/Elementor/PixVisualizeWidget.php:177
+#: templates/admin.php:149
+#: templates/woocommerce-product-data.php:451
+#: src/pixvisualize/edit.js:382
+msgid "Caption Title"
+msgstr "Titre de la légende"
+
+#: inc/Elementor/PixVisualizeWidget.php:187
+#: templates/admin.php:155
+#: templates/woocommerce-product-data.php:457
+#: src/pixvisualize/edit.js:393
+msgid "Caption Text"
+msgstr "Texte de la légende"
+
+#: inc/Elementor/PixVisualizeWidget.php:987
+#: templates/admin.php:161
+#: templates/woocommerce-product-data.php:463
+#: src/pixvisualize/edit.js:407
+msgid "Caption Background"
+msgstr "Fond de la légende"
+
+#: inc/Elementor/PixVisualizeWidget.php:997
+#: templates/admin.php:166
+#: templates/woocommerce-product-data.php:468
+#: src/pixvisualize/edit.js:422
+msgid "Caption Title Color"
+msgstr "Couleur du titre de la légende"
+
+#: inc/Elementor/PixVisualizeWidget.php:1007
+#: templates/admin.php:171
+#: templates/woocommerce-product-data.php:473
+#: src/pixvisualize/edit.js:439
+msgid "Caption Text Color"
+msgstr "Couleur du texte de la légende"
+
+#: inc/Elementor/PixVisualizeWidget.php:1017
+#: templates/admin.php:176
+#: templates/woocommerce-product-data.php:478
+#: src/pixvisualize/edit.js:455
+msgid "Caption Alignment"
+msgstr "Alignement de la légende"
+
+#: inc/Elementor/PixVisualizeWidget.php:1031
+#: templates/admin.php:185
+#: templates/woocommerce-product-data.php:487
+#: src/pixvisualize/edit.js:466
+msgid "Caption Title Size (px)"
+msgstr "Taille du titre de la légende (px)"
+
+#: inc/Elementor/PixVisualizeWidget.php:1050
+#: templates/admin.php:190
+#: templates/woocommerce-product-data.php:492
+#: src/pixvisualize/edit.js:478
+msgid "Caption Text Size (px)"
+msgstr "Taille du texte de la légende (px)"
+
+#: inc/Elementor/PixVisualizeWidget.php:264
+#: templates/admin.php:158
+#: templates/woocommerce-product-data.php:441
+#: src/pixvisualize/edit.js:355
+msgid "Caption Padding (px)"
+msgstr "Marge interne de la légende (px)"
+
+#: inc/Elementor/PixVisualizeWidget.php:1069
+#: templates/admin.php:195
+#: templates/woocommerce-product-data.php:497
+#: src/pixvisualize/edit.js:490
+msgid "Caption Padding X (px)"
+msgstr "Marge interne de la légende – horizontale (px)"
+
+#: inc/Elementor/PixVisualizeWidget.php:1070
+#: templates/admin.php:197
+#: templates/woocommerce-product-data.php:499
+#: src/pixvisualize/edit.js:494
+msgid "Left/right inner spacing of the caption."
+msgstr "Marge interne gauche/droite de la légende."
+
+#: inc/Elementor/PixVisualizeWidget.php:1089
+#: templates/admin.php:201
+#: templates/woocommerce-product-data.php:503
+#: src/pixvisualize/edit.js:506
+msgid "Caption Padding Y (px)"
+msgstr "Marge interne de la légende – verticale (px)"
+
+#: inc/Elementor/PixVisualizeWidget.php:1090
+#: templates/admin.php:203
+#: templates/woocommerce-product-data.php:505
+#: src/pixvisualize/edit.js:510
+msgid "Top/bottom inner spacing of the caption: controls its height."
+msgstr "Marge interne haut/bas de la légende : contrôle sa hauteur."
+
+#: templates/admin.php:145
+#: templates/woocommerce-product-data.php:447
+msgid "Uncheck to hide the title / text block below the slider."
+msgstr "Décochez pour masquer le bloc titre / texte sous le curseur."
+
+#: templates/admin.php:150
+#: templates/woocommerce-product-data.php:452
+msgid "One object, two realities"
+msgstr "Un même objet, deux réalités"
+
+#: templates/admin.php:151
+#: templates/woocommerce-product-data.php:453
+#: src/pixvisualize/edit.js:383
+msgid "Bold title displayed below the slider."
+msgstr "Titre en gras affiché sous le curseur."
+
+#: templates/admin.php:156
+#: templates/woocommerce-product-data.php:458
+msgid "See the before and after difference."
+msgstr "Découvrez la différence avant et après."
+
+#: templates/admin.php:157
+#: templates/woocommerce-product-data.php:459
+#: src/pixvisualize/edit.js:394
+msgid "Small text displayed under the caption title."
+msgstr "Petit texte affiché sous le titre de la légende."
+
+#: src/pixvisualize/edit.js:367
+msgid "The title / text block is visible below the slider."
+msgstr "Le bloc titre / texte est visible sous le curseur."
+
+#: src/pixvisualize/edit.js:371
+msgid "The title / text block below the slider is hidden."
+msgstr "Le bloc titre / texte sous le curseur est masqué."
+
+#: templates/woocommerce-product-data.php:923
+msgid "Preview"
+msgstr "Aperçu"
+
+#: templates/woocommerce-product-data.php:927
+msgid "Back to settings"
+msgstr "Retour aux réglages"
+
+#: inc/Base/CheckoutNotice.php:96
+msgid "Thank you for your purchase!"
+msgstr "Merci pour votre achat !"
+
+#: inc/Base/CheckoutNotice.php:101
+msgid "Your %s license key and installation instructions were sent by email."
+msgstr ""
+"Votre clé de licence %s et les instructions d'installation ont été envoyées "
+"par e-mail."
+
+#: inc/Base/CheckoutNotice.php:105
+msgid "Your license key and installation instructions were sent by email."
+msgstr ""
+"Votre clé de licence et les instructions d'installation ont été envoyées "
+"par e-mail."
+
+#: inc/Base/CheckoutNotice.php:110
+msgid "Check the inbox of %s (and the spam folder after 5 min)."
+msgstr "Vérifiez la boîte de réception de %s (et le dossier spam après 5 min)."
+
+#: inc/Base/CheckoutNotice.php:117
+msgid "To activate Pro on this site:"
+msgstr "Pour activer Pro sur ce site :"
+
+#: inc/Base/CheckoutNotice.php:118
+msgid ""
+"1) Open Extensions, 2) click \"Activate License\" on the PixVisualize row, "
+"3) paste the key and confirm."
+msgstr ""
+"1) Ouvrez Extensions, 2) cliquez sur « Activate License » sur la ligne "
+"PixVisualize, 3) collez la clé et confirmez."
+
+#: inc/Base/CheckoutNotice.php:119
+#: templates/license.php:41
+msgid "Open Extensions"
+msgstr "Ouvrir Extensions"
+
+#: inc/Base/CheckoutNotice.php:120
+msgid "Open License page"
+msgstr "Ouvrir la page Licence"
+
+#: inc/Base/Welcome.php:42
+msgid "Welcome to PixVisualize"
+msgstr "Bienvenue sur PixVisualize"
+
+#: inc/Base/Welcome.php:43
+msgid "Welcome"
+msgstr "Bienvenue"
+
+#: inc/Base/Welcome.php:81
+#: templates/welcome.php:6
+msgid "Welcome to PixVisualize!"
+msgstr "Bienvenue sur PixVisualize !"
+
+#: inc/Base/Welcome.php:82
+msgid "Get started in 3 steps or jump straight to the settings."
+msgstr "Démarrez en 3 étapes ou accédez directement aux réglages."
+
+#: inc/Base/Welcome.php:83
+msgid "Open the Welcome screen"
+msgstr "Ouvrir l'écran de bienvenue"
+
+#: inc/Base/Welcome.php:111
+msgid "You are not allowed to do this."
+msgstr "Vous n'êtes pas autorisé à faire cela."
+
+#: inc/Elementor/PixVisualizeWidget.php:220
+#: templates/admin.php:233
+#: templates/woocommerce-product-data.php:632
+#: src/pixvisualize/edit.js:565
+msgid ""
+"Width / height proportion, always respected (contain): 21/9 fills the "
+"width, 9/21 fills the height."
+msgstr ""
+"Proportion largeur / hauteur, toujours respectée (contain) : 21/9 remplit "
+"la largeur, 9/21 remplit la hauteur."
+
+#: inc/Elementor/PixVisualizeWidget.php:243
+#: templates/admin.php:239
+#: templates/woocommerce-product-data.php:638
+#: src/pixvisualize/edit.js:577
+msgid "Desired zone height, capped by a fixed parent height (contain)."
+msgstr "Hauteur de zone souhaitée, plafonnée par une hauteur parente fixe (contain)."
+
+#: inc/Elementor/PixVisualizeWidget.php:263
+#: templates/admin.php:244
+#: templates/woocommerce-product-data.php:644
+#: src/pixvisualize/edit.js:590
+msgid ""
+"Spans the content width (ratio kept, centered). Useless with a fixed parent "
+"height — contain already caps it."
+msgstr ""
+"Occupe la largeur du contenu (format conservé, centré). Inutile avec une "
+"hauteur parente fixe — contain la plafonne déjà."
+
+#: inc/Elementor/PixVisualizeWidget.php:367
+msgid "Handle & Separator"
+msgstr "Poignée et séparateur"
+
+#: inc/Elementor/PixVisualizeWidget.php:399
+msgid ""
+"Paste <svg viewBox=\"…\">…</svg> only: XML prolog, DOCTYPE, metadata and "
+"width/height are removed automatically. Use fill=\"currentColor\" so the "
+"icon inherits Handle Arrows Color."
+msgstr ""
+"Collez uniquement <svg viewBox=\"…\">…</svg> : prologue XML, DOCTYPE, "
+"métadonnées et width/height sont supprimés automatiquement. Utilisez "
+"fill=\"currentColor\" pour que l'icône hérite de la couleur des flèches de "
+"la poignée."
+
+#: inc/Elementor/PixVisualizeWidget.php:411
+#: templates/woocommerce-product-data.php:720
+#: src/pixvisualize/edit.js:759
+msgid "Diameter of the handle circle: independent size control."
+msgstr "Diamètre du cercle de la poignée : contrôle de taille indépendant."
+
+#: inc/Elementor/PixVisualizeWidget.php:430
+#: templates/admin.php:341
+#: templates/woocommerce-product-data.php:724
+#: src/pixvisualize/edit.js:772
+msgid "Handle Arrows Color"
+msgstr "Couleur des flèches de la poignée"
+
+#: inc/Elementor/PixVisualizeWidget.php:431
+#: templates/admin.php:343
+#: templates/woocommerce-product-data.php:726
+#: src/pixvisualize/edit.js:776
+msgid "Color of the arrows inside the handle (independent control)."
+msgstr "Couleur des flèches à l'intérieur de la poignée (contrôle indépendant)."
+
+#: inc/Elementor/PixVisualizeWidget.php:441
+#: templates/admin.php:347
+#: templates/woocommerce-product-data.php:730
+#: src/pixvisualize/edit.js:792
+msgid "Handle Padding (px)"
+msgstr "Marge interne de la poignée (px)"
+
+#: inc/Elementor/PixVisualizeWidget.php:469
+#: templates/woocommerce-product-data.php:740
+#: src/pixvisualize/edit.js:815
+msgid "Thickness of the vertical bar: independent control."
+msgstr "Épaisseur de la barre verticale : contrôle indépendant."
+
+#: inc/Elementor/PixVisualizeWidget.php:488
+#: templates/admin.php:362
+#: templates/woocommerce-product-data.php:744
+#: src/pixvisualize/edit.js:828
+msgid "Cursor & Handle Color"
+msgstr "Couleur du curseur et de la poignée"
+
+#: inc/Elementor/PixVisualizeWidget.php:489
+#: templates/admin.php:364
+#: templates/woocommerce-product-data.php:746
+#: src/pixvisualize/edit.js:832
+msgid ""
+"Single synchronized control: background of the vertical bar and the handle "
+"circle."
+msgstr ""
+"Contrôle synchronisé unique : fond de la barre verticale et du cercle de la "
+"poignée."
+
+#: inc/Elementor/PixVisualizeWidget.php:500
+#: templates/admin.php:369
+#: templates/woocommerce-product-data.php:752
+#: src/pixvisualize/edit.js:849
+msgid ""
+"Grouped shadow on the whole cursor + handle (filter: drop-shadow, no seam "
+"at the junction)."
+msgstr ""
+"Ombre groupée sur l'ensemble curseur + poignée (filtre : drop-shadow, sans "
+"couture à la jonction)."
+
+#: inc/Elementor/PixVisualizeWidget.php:512
+msgid "Container"
+msgstr "Conteneur"
+
+#: inc/Elementor/PixVisualizeWidget.php:823
+msgid "Labels"
+msgstr "Libellés"
+
+#: inc/Elementor/PixVisualizeWidget.php:1264
+#: templates/admin.php:30
+#: src/pixvisualize/edit.js:1391
+msgid "PixVisualize Pro"
+msgstr "PixVisualize Pro"
+
+#: inc/Elementor/PixVisualizeWidget.php:1289
+#: src/pixvisualize/edit.js:139
+msgid "Advanced Elementor widget with full styling & live preview"
+msgstr "Widget Elementor avancé avec style complet et aperçu en direct"
+
+#: inc/Elementor/PixVisualizeWidget.php:1290
+#: src/pixvisualize/edit.js:143
+msgid "Advanced Gutenberg controls"
+msgstr "Réglages Gutenberg avancés"
+
+#: inc/Elementor/PixVisualizeWidget.php:1291
+#: src/pixvisualize/edit.js:144
+msgid "WooCommerce product gallery integration"
+msgstr "Intégration de la galerie produit WooCommerce"
+
+#: inc/Elementor/PixVisualizeWidget.php:1292
+#: src/pixvisualize/edit.js:145
+msgid "Generate, save, edit & reuse shortcodes"
+msgstr "Générez, enregistrez, modifiez et réutilisez des shortcodes"
+
+#: inc/Elementor/PixVisualizeWidget.php:1293
+#: src/pixvisualize/edit.js:146
+msgid "Hover, Auto-Scan & Magnifier interactions"
+msgstr "Interactions survol, Auto-Scan et loupe"
+
+#: inc/Elementor/PixVisualizeWidget.php:1294
+#: src/pixvisualize/edit.js:147
+msgid "Vertical orientation"
+msgstr "Orientation verticale"
+
+#: inc/Elementor/PixVisualizeWidget.php:1295
+#: src/pixvisualize/edit.js:148
+msgid "Responsive controls for every breakpoint"
+msgstr "Réglages responsive pour chaque point de rupture"
+
+#: inc/Elementor/PixVisualizeWidget.php:1296
+#: src/pixvisualize/edit.js:149
+msgid "Custom handles & SVG icons"
+msgstr "Poignées personnalisées et icônes SVG"
+
+#: inc/Elementor/PixVisualizeWidget.php:1297
+#: src/pixvisualize/edit.js:150
+msgid "Advanced separator & handle styling"
+msgstr "Style avancé du séparateur et de la poignée"
+
+#: inc/Elementor/PixVisualizeWidget.php:1298
+#: src/pixvisualize/edit.js:151
+msgid "Fully customizable Before/After labels"
+msgstr "Libellés avant/après entièrement personnalisables"
+
+#: inc/Elementor/PixVisualizeWidget.php:1299
+#: src/pixvisualize/edit.js:152
+msgid "Custom captions with advanced styling"
+msgstr "Légendes personnalisées avec style avancé"
+
+#: inc/Elementor/PixVisualizeWidget.php:1300
+#: src/pixvisualize/edit.js:153
+msgid "Advanced borders, shadows & corner radius controls"
+msgstr "Contrôles avancés des bordures, ombres et rayons des coins"
+
+#: inc/Elementor/PixVisualizeWidget.php:1319
+#: src/pixvisualize/edit.js:1397
+msgid "Unlock advanced features to take your comparisons further:"
+msgstr ""
+"Débloquez des fonctionnalités avancées pour aller plus loin avec vos "
+"comparaisons :"
+
+#: inc/Elementor/PixVisualizeWidget.php:1321
+#: templates/admin.php:32
+#: templates/admin.php:43
+#: templates/admin.php:681
+#: src/pixvisualize/edit.js:1422
+msgid "Go Pro"
+msgstr "Passer à Pro"
+
+#: inc/Pages/Dashboard.php:42
+#: inc/Pages/Dashboard.php:43
+#: templates/license.php:2
+msgid "License"
+msgstr "Licence"
+
+#: inc/Pages/Dashboard.php:102
+msgid "Slider in the block editor."
+msgstr "Curseur dans l'éditeur de blocs."
+
+#: inc/Pages/Dashboard.php:103
+msgid "Drag-and-drop widget with live preview."
+msgstr "Widget par glisser-déposer avec aperçu en direct."
+
+#: inc/Pages/Dashboard.php:104
+msgid "Embed anywhere, plus the visual generator."
+msgstr "Intégrez n'importe où, plus le générateur visuel."
+
+#: inc/Pages/Dashboard.php:105
+msgid "Gallery on single product pages."
+msgstr "Galerie sur les pages produit."
+
+#: templates/admin.php:30
+msgid ""
+"unlock all the advanced features: native Elementor widget, shortcodes, "
+"WooCommerce, magnifier, auto-scan, responsive…"
+msgstr ""
+"débloquez toutes les fonctionnalités avancées : widget Elementor natif, "
+"shortcodes, WooCommerce, loupe, auto-scan, responsive…"
+
+#: templates/admin.php:75
+msgid "Shortcode generator"
+msgstr "Générateur de shortcode"
+
+#: templates/admin.php:76
+msgid "Shortcode list"
+msgstr "Liste de shortcodes"
+
+#: templates/admin.php:331
+msgid ""
+"Only used with the Custom SVG handle. Paste <svg viewBox=\"…\">…</svg> "
+"only: XML prolog, DOCTYPE, metadata and width/height are removed "
+"automatically. Use fill=\"currentColor\" so the icon inherits Handle Arrows "
+"Color."
+msgstr ""
+"Utilisé uniquement avec la poignée SVG personnalisée. Collez uniquement "
+"<svg viewBox=\"…\">…</svg> : prologue XML, DOCTYPE, métadonnées et "
+"width/height sont supprimés automatiquement. Utilisez fill=\"currentColor\" "
+"pour que l'icône hérite de la couleur des flèches de la poignée."
+
+#: templates/admin.php:337
+msgid "Diameter of the handle circle (independent control)."
+msgstr "Diamètre du cercle de la poignée (contrôle indépendant)."
+
+#: templates/admin.php:349
+#: templates/woocommerce-product-data.php:732
+#: src/pixvisualize/edit.js:796
+msgid "Inner spacing between the icon and the edge of the handle background, in px."
+msgstr "Espacement interne entre l'icône et le bord du fond de la poignée, en px."
+
+#: templates/admin.php:358
+msgid "Thickness of the vertical bar (independent control)."
+msgstr "Épaisseur de la barre verticale (contrôle indépendant)."
+
+#: templates/admin.php:567
+msgid "Save to list"
+msgstr "Enregistrer dans la liste"
+
+#: templates/admin.php:573
+msgid "Edit an existing shortcode"
+msgstr "Modifier un shortcode existant"
+
+#: templates/admin.php:574
+msgid ""
+"Paste a shortcode you copied earlier to reload it into the generator "
+"(images + settings + preview), edit it and copy it again."
+msgstr ""
+"Collez un shortcode copié précédemment pour le recharger dans le générateur "
+"(images + réglages + aperçu), modifiez-le puis copiez-le à nouveau."
+
+#: templates/admin.php:577
+msgid "Load into the generator"
+msgstr "Charger dans le générateur"
+
+#: templates/admin.php:585
+msgid ""
+"No saved shortcodes yet. Build one in the generator and click the save icon "
+"to keep it here."
+msgstr ""
+"Aucun shortcode enregistré pour le moment. Créez-en un dans le générateur "
+"et cliquez sur l'icône d'enregistrement pour le conserver ici."
+
+#: templates/admin.php:603
+msgid ""
+"provides an interactive Gutenberg block to compare two images "
+"(Before/After) with an overlaid sliding cursor."
+msgstr ""
+"fournit un bloc Gutenberg interactif pour comparer deux images "
+"(avant/après) avec un curseur de glissement superposé."
+
+#: templates/admin.php:606
+msgid "Built natively with"
+msgstr "Construit nativement avec"
+
+#: templates/admin.php:606
+msgid "React"
+msgstr "React"
+
+#: templates/admin.php:606
+msgid ""
+"and the @wordpress/scripts ecosystem, the block works both in the editor "
+"(back-office) and on the public site (front-office)."
+msgstr ""
+"et l'écosystème @wordpress/scripts, le bloc fonctionne à la fois dans "
+"l'éditeur (back-office) et sur le site public (front-office)."
+
+#: templates/admin.php:609
+msgid ""
+"The settings of each block (images, labels, position, ratio) are saved by "
+"Gutenberg in the content of your posts and pages: they are never affected "
+"by this settings page."
+msgstr ""
+"Les réglages de chaque bloc (images, libellés, position, format) sont "
+"enregistrés par Gutenberg dans le contenu de vos articles et pages : ils ne "
+"sont jamais affectés par cette page de réglages."
+
+#: templates/admin.php:622
+msgid ""
+"<strong>Custom handle styles</strong>: circle, transparent, line, double "
+"arrows or your own SVG icon, with independent size, arrows color and "
+"padding."
+msgstr ""
+"<strong>Styles de poignée personnalisés</strong> : cercle, transparent, "
+"ligne, double flèche ou votre propre icône SVG, avec taille, couleur des "
+"flèches et marge interne indépendantes."
+
+#: templates/admin.php:630
+msgid ""
+"<strong>Cursor & handle</strong>: one synchronized color for the bar and "
+"the circle, plus a grouped drop shadow with no seam."
+msgstr ""
+"<strong>Curseur et poignée</strong> : une couleur synchronisée pour la "
+"barre et le cercle, plus une ombre portée groupée sans couture."
+
+#: templates/admin.php:654
+msgid ""
+"<strong>Shortcode generator</strong>: build a <code>[pixvisualize]</code> "
+"shortcode visually, keep a saved list and reload any shortcode for editing."
+msgstr ""
+"<strong>Générateur de shortcode</strong> : créez visuellement un shortcode "
+"<code>[pixvisualize]</code>, conservez une liste enregistrée et rechargez "
+"tout shortcode pour le modifier."
+
+#: templates/admin.php:662
+msgid ""
+"<strong>Custom captions</strong>: title + text with background, colors, "
+"alignment, sizes and padding."
+msgstr ""
+"<strong>Légendes personnalisées</strong> : titre + texte avec fond, "
+"couleurs, alignement, tailles et marge interne."
+
+#: templates/admin.php:666
+msgid ""
+"<strong>Container style</strong>: custom shadow, border and per-corner "
+"radius (free ON/OFF toggles included)."
+msgstr ""
+"<strong>Style du conteneur</strong> : ombre, bordure et rayon par coin "
+"personnalisés (interrupteurs ON/OFF gratuits inclus)."
+
+#: templates/admin.php:683
+msgid ""
+"PixVisualize Pro extends the Free block with advanced controls, additional "
+"rendering modes and dedicated integrations — all with the same intuitive "
+"Gutenberg experience."
+msgstr ""
+"PixVisualize Pro étend le bloc gratuit avec des réglages avancés, des modes "
+"de rendu supplémentaires et des intégrations dédiées — le tout avec la même "
+"expérience Gutenberg intuitive."
+
+#: templates/admin.php:689
+msgid "Feature"
+msgstr "Fonctionnalité"
+
+#: templates/admin.php:690
+msgid "Free"
+msgstr "Gratuit"
+
+#: templates/admin.php:691
+msgid "Pro"
+msgstr "Pro"
+
+#: templates/admin.php:696
+msgid "Comparateur Avant / Après"
+msgstr "Comparateur Avant / Après"
+
+#: templates/admin.php:697
+#: templates/admin.php:698
+#: templates/admin.php:702
+#: templates/admin.php:703
+#: templates/admin.php:707
+#: templates/admin.php:708
+#: templates/admin.php:712
+#: templates/admin.php:713
+#: templates/admin.php:718
+#: templates/admin.php:722
+#: templates/admin.php:723
+#: templates/admin.php:727
+#: templates/admin.php:728
+#: templates/admin.php:732
+#: templates/admin.php:733
+#: templates/admin.php:737
+#: templates/admin.php:738
+#: templates/admin.php:743
+#: templates/admin.php:748
+#: templates/admin.php:753
+#: templates/admin.php:758
+#: templates/admin.php:762
+#: templates/admin.php:763
+#: templates/admin.php:768
+#: templates/admin.php:773
+#: templates/admin.php:778
+#: templates/admin.php:783
+#: templates/admin.php:788
+#: templates/admin.php:793
+#: templates/admin.php:797
+#: templates/admin.php:798
+#: templates/admin.php:803
+#: templates/admin.php:807
+#: templates/admin.php:808
+#: templates/admin.php:813
+#: templates/admin.php:818
+msgid "Yes"
+msgstr "Oui"
+
+#: templates/admin.php:701
+msgid "Libellés Avant / Après personnalisables"
+msgstr "Libellés Avant / Après personnalisables"
+
+#: templates/admin.php:706
+msgid "Affichage / masquage des libellés"
+msgstr "Affichage / masquage des libellés"
+
+#: templates/admin.php:711
+msgid "Orientation horizontale"
+msgstr "Orientation horizontale"
+
+#: templates/admin.php:716
+msgid "Orientation verticale"
+msgstr "Orientation verticale"
+
+#: templates/admin.php:717
+#: templates/admin.php:742
+#: templates/admin.php:747
+#: templates/admin.php:752
+#: templates/admin.php:757
+#: templates/admin.php:767
+#: templates/admin.php:772
+#: templates/admin.php:777
+#: templates/admin.php:782
+#: templates/admin.php:787
+#: templates/admin.php:792
+#: templates/admin.php:802
+#: templates/admin.php:812
+#: templates/admin.php:817
+msgid "No"
+msgstr "Non"
+
+#: templates/admin.php:721
+msgid "Format et hauteur personnalisables"
+msgstr "Format et hauteur personnalisables"
+
+#: templates/admin.php:726
+msgid "Position initiale du curseur"
+msgstr "Position initiale du curseur"
+
+#: templates/admin.php:731
+msgid "Pleine largeur et alignement"
+msgstr "Pleine largeur et alignement"
+
+#: templates/admin.php:736
+msgid "Légende sous le comparateur"
+msgstr "Légende sous le comparateur"
+
+#: templates/admin.php:741
+msgid "Personnalisation complète de la légende"
+msgstr "Personnalisation complète de la légende"
+
+#: templates/admin.php:746
+msgid "Design responsive avancé"
+msgstr "Design responsive avancé"
+
+#: templates/admin.php:751
+msgid "Personnalisation de la poignée et du séparateur"
+msgstr "Personnalisation de la poignée et du séparateur"
+
+#: templates/admin.php:756
+msgid "Libellés entièrement personnalisables"
+msgstr "Libellés entièrement personnalisables"
+
+#: templates/admin.php:761
+msgid "Bordures et coins personnalisables"
+msgstr "Bordures et coins personnalisables"
+
+#: templates/admin.php:766
+msgid "Ombre personnalisable"
+msgstr "Ombre personnalisable"
+
+#: templates/admin.php:771
+msgid "Déplacement au survol"
+msgstr "Déplacement au survol"
+
+#: templates/admin.php:776
+msgid "Balayage automatique"
+msgstr "Balayage automatique"
+
+#: templates/admin.php:781
+msgid "Loupe avec zoom"
+msgstr "Loupe avec zoom"
+
+#: templates/admin.php:786
+msgid "Shortcodes sauvegardés"
+msgstr "Shortcodes sauvegardés"
+
+#: templates/admin.php:791
+msgid "Modification visuelle des shortcodes existants"
+msgstr "Modification visuelle des shortcodes existants"
+
+#: templates/admin.php:796
+msgid "Bloc Gutenberg"
+msgstr "Bloc Gutenberg"
+
+#: templates/admin.php:801
+msgid "Réglages avancés Gutenberg"
+msgstr "Réglages avancés Gutenberg"
+
+#: templates/admin.php:806
+msgid "Widget Elementor"
+msgstr "Widget Elementor"
+
+#: templates/admin.php:811
+msgid "Style et prévisualisation WYSIWYG Elementor"
+msgstr "Style et prévisualisation WYSIWYG Elementor"
+
+#: templates/admin.php:816
+msgid "Galerie Avant / Après WooCommerce"
+msgstr "Galerie Avant / Après WooCommerce"
+
+#: templates/admin.php:823
+msgid "Why upgrade?"
+msgstr "Pourquoi passer à Pro ?"
+
+#: templates/admin.php:827
+msgid "Save hours"
+msgstr "Gagnez du temps"
+
+#: templates/admin.php:828
+msgid ""
+"Embed comparisons anywhere with shortcodes and the WooCommerce gallery — no "
+"block editor needed."
+msgstr ""
+"Intégrez des comparaisons n'importe où avec les shortcodes et la galerie "
+"WooCommerce — sans éditeur de blocs."
+
+#: templates/admin.php:832
+msgid "Impress clients"
+msgstr "Impressionnez vos clients"
+
+#: templates/admin.php:833
+msgid ""
+"Hover mode, magnifier glass and the Auto-Scan intro make every demo "
+"memorable."
+msgstr "Le mode survol, la loupe et l'intro Auto-Scan rendent chaque démo mémorable."
+
+#: templates/admin.php:837
+msgid "Full control"
+msgstr "Contrôle total"
+
+#: templates/admin.php:838
+msgid ""
+"A native Elementor widget with visual styling, vertical orientation and "
+"per-breakpoint responsive settings."
+msgstr ""
+"Un widget Elementor natif avec style visuel, orientation verticale et "
+"réglages responsive par point de rupture."
+
+#: templates/admin.php:844
+msgid "Zero-effort upgrade"
+msgstr "Mise à niveau sans effort"
+
+#: templates/admin.php:845
+msgid ""
+"Same block name — your existing blocks keep working after switching to Pro, "
+"no re-editing."
+msgstr ""
+"Même nom de bloc — vos blocs existants continuent de fonctionner après le "
+"passage à Pro, sans réédition."
+
+#: templates/admin.php:848
+msgid "Priority support included"
+msgstr "Support prioritaire inclus"
+
+#: templates/admin.php:849
+msgid ""
+"Dedicated support: get fast help to configure and integrate your "
+"comparisons without technical roadblocks."
+msgstr ""
+"Support dédié : obtenez une aide rapide pour configurer et intégrer vos "
+"comparaisons sans blocage technique."
+
+#: templates/admin.php:854
+msgid "Go Pro now"
+msgstr "Passer à Pro maintenant"
+
+#: templates/license.php:18
+msgid "Pro license active"
+msgstr "Licence Pro active"
+
+#: templates/license.php:20
+msgid ""
+"Your Pro license is active. Shortcodes, the generator, the WooCommerce "
+"gallery and many other features and customizations are unlocked."
+msgstr ""
+"Votre licence Pro est active. Les shortcodes, le générateur, la galerie "
+"WooCommerce et de nombreuses autres fonctionnalités et personnalisations "
+"sont débloqués."
+
+#: templates/license.php:24
+#: templates/license.php:44
+msgid "Open Account page"
+msgstr "Ouvrir la page Compte"
+
+#: templates/license.php:25
+#: templates/license.php:27
+#: templates/license.php:42
+msgid "Open Pricing page"
+msgstr "Ouvrir la page Tarifs"
+
+#: templates/license.php:31
+msgid "Activate your Pro license"
+msgstr "Activez votre licence Pro"
+
+#: templates/license.php:33
+msgid ""
+"The license key itself is entered through the native Freemius dialog (same "
+"as on the Extensions screen). This page only points you to it — no separate "
+"key handling here."
+msgstr ""
+"La clé de licence elle-même est saisie via la boîte de dialogue native "
+"Freemius (comme sur l'écran Extensions). Cette page ne fait que vous y "
+"rediriger — aucune gestion de clé séparée ici."
+
+#: templates/license.php:36
+msgid "%1$sOpen Extensions%2$s and find the %3$sPixVisualize%4$s row."
+msgstr "%1$sOuvrez Extensions%2$s et trouvez la ligne %3$sPixVisualize%4$s."
+
+#: templates/license.php:37
+msgid ""
+"Click \"Activate License\", paste the key received by email after purchase, "
+"then \"Agree & Activate License\"."
+msgstr ""
+"Cliquez sur « Activate License », collez la clé reçue par e-mail après "
+"l'achat, puis sur « Agree & Activate License »."
+
+#: templates/license.php:38
+msgid ""
+"No key yet? Buy a plan on the Pricing page — checkout activates the license "
+"automatically."
+msgstr ""
+"Pas encore de clé ? Achetez un plan sur la page Tarifs — le paiement active "
+"la licence automatiquement."
+
+#: templates/license.php:48
+msgid ""
+"If the Pricing page keeps loading forever, the Pro plan is not published "
+"yet in the Freemius dashboard — publish prices then use Account > Sync."
+msgstr ""
+"Si la page Tarifs charge indéfiniment, le plan Pro n'est pas encore publié "
+"dans le tableau de bord Freemius — publiez les tarifs puis utilisez Compte "
+"> Sync."
+
+#: templates/welcome.php:8
+msgid ""
+"A modern, ultra-fast Before/After image comparison slider for the Gutenberg "
+"block editor."
+msgstr ""
+"Un curseur de comparaison d'images avant/après moderne et ultra-rapide pour "
+"l'éditeur de blocs Gutenberg."
+
+#: templates/welcome.php:13
+msgid "Get started in 3 steps"
+msgstr "Démarrez en 3 étapes"
+
+#: templates/welcome.php:17
+msgid "Add the block"
+msgstr "Ajoutez le bloc"
+
+#: templates/welcome.php:18
+msgid ""
+"In the editor, search for \"PixVisualize\" in the block inserter and add it "
+"to your content."
+msgstr ""
+"Dans l'éditeur, recherchez « PixVisualize » dans l'insertion de blocs et "
+"ajoutez-le à votre contenu."
+
+#: templates/welcome.php:21
+msgid "Pick your images"
+msgstr "Choisissez vos images"
+
+#: templates/welcome.php:22
+msgid ""
+"Select a Before and an After image, customize the labels and the starting "
+"position."
+msgstr ""
+"Sélectionnez une image avant et une image après, personnalisez les libellés "
+"et la position de départ."
+
+#: templates/welcome.php:25
+msgid "Publish & drag"
+msgstr "Publiez et faites glisser"
+
+#: templates/welcome.php:26
+msgid "Your visitors can now slide the cursor with the mouse or a finger on mobile."
+msgstr ""
+"Vos visiteurs peuvent désormais faire glisser le curseur avec la souris ou "
+"un doigt sur mobile."
+
+#: templates/welcome.php:32
+msgid "Take it further with PixVisualize Pro"
+msgstr "Allez plus loin avec PixVisualize Pro"
+
+#: templates/welcome.php:34
+msgid "Native Elementor widget with full controls & styling"
+msgstr "Widget Elementor natif avec réglages et style complets"
+
+#: templates/welcome.php:35
+msgid "Shortcode generation & WooCommerce product gallery"
+msgstr "Génération de shortcodes et galerie produit WooCommerce"
+
+#: templates/welcome.php:36
+msgid "Hover mode, magnifier glass and Auto-Scan intro"
+msgstr "Mode survol, loupe et intro Auto-Scan"
+
+#: templates/welcome.php:37
+msgid "Vertical orientation, responsive breakpoints & custom handles"
+msgstr ""
+"Orientation verticale, points de rupture responsive et poignées "
+"personnalisées"
+
+#: templates/welcome.php:40
+msgid ""
+"Licences for 1, 3 or 5 sites, managed by Freemius. Upgrade anytime, your "
+"content stays intact."
+msgstr ""
+"Licences pour 1, 3 ou 5 sites, gérées par Freemius. Mettez à niveau à tout "
+"moment, votre contenu reste intact."
+
+#: templates/welcome.php:43
+msgid "Discover PixVisualize Pro"
+msgstr "Découvrez PixVisualize Pro"
+
+#: templates/welcome.php:50
+msgid "Start building"
+msgstr "Commencer à créer"
+
+#: templates/welcome.php:53
+msgid "Open settings"
+msgstr "Ouvrir les réglages"
+
+#: templates/woocommerce-product-data.php:714
+msgid ""
+"Paste <svg viewBox=\"…\">…</svg> only. Only used when Handle Style is "
+"Custom SVG. Use fill=\"currentColor\" so the icon inherits Handle Arrows "
+"Color."
+msgstr ""
+"Collez uniquement <svg viewBox=\"…\">…</svg>. Utilisé uniquement lorsque le "
+"style de poignée est SVG personnalisé. Utilisez fill=\"currentColor\" pour "
+"que l'icône hérite de la couleur des flèches de la poignée."
+
+#: src/js/pixvisualize-admin.js:1081
+msgid "No valid [pixvisualize …] shortcode found."
+msgstr "Aucun shortcode [pixvisualize …] valide trouvé."
+
+#: src/js/pixvisualize-admin.js:1099
+msgid "The shortcode needs before=\"…\" and after=\"…\" images."
+msgstr "Le shortcode nécessite des images before=\"…\" et after=\"…\"."
+
+#: src/js/pixvisualize-admin.js:1132
+msgid "Shortcode loaded into the generator."
+msgstr "Shortcode chargé dans le générateur."
+
+#: src/js/pixvisualize-admin.js:1256
+msgid "Edit"
+msgstr "Modifier"
+
+#: src/js/pixvisualize-admin.js:1258
+msgid "Delete"
+msgstr "Supprimer"
+
+#: src/js/pixvisualize-admin.js:1280
+#: src/js/pixvisualize-admin.js:1428
+#: src/js/pixvisualize-admin.js:1437
+msgid "Shortcode"
+msgstr "Shortcode"
+
+#: src/js/pixvisualize-admin.js:1287
+msgid "Rename this shortcode"
+msgstr "Renommer ce shortcode"
+
+#: src/js/pixvisualize-admin.js:1388
+msgid "Delete this shortcode from the list?"
+msgstr "Supprimer ce shortcode de la liste ?"
+
+#: src/pixvisualize/edit.js:743
+msgid ""
+"Paste <svg viewBox=\"…\">…</svg> only: XML prolog, DOCTYPE, metadata and "
+"width/height are removed automatically. Use fill=\"currentColor\" so the "
+"icon inherits Handle Arrows Color. Without an SVG, the Circle style is used."
+msgstr ""
+"Collez uniquement <svg viewBox=\"…\">…</svg> : prologue XML, DOCTYPE, "
+"métadonnées et width/height sont supprimés automatiquement. Utilisez "
+"fill=\"currentColor\" pour que l'icône hérite de la couleur des flèches de "
+"la poignée. Sans SVG, le style Cercle est utilisé."
+
+#: src/pixvisualize/edit.js:853
+msgid "No shadow is applied to the cursor."
+msgstr "Aucune ombre n'est appliquée au curseur."
+
+#: inc/Elementor/PixVisualizeWidget.php:672
+msgid "Show the default 2px solid gray border (a custom width below overrides it)."
+msgstr ""
+"Affiche la bordure grise 2px solid par défaut (une largeur personnalisée "
+"ci-dessous la remplace)."
+
+#: inc/Elementor/PixVisualizeWidget.php:731
+msgid ""
+"Round all corners with the default 16px radius (custom radii below override "
+"it)."
+msgstr ""
+"Arrondit tous les coins avec le rayon 16px par défaut (des rayons "
+"personnalisés ci-dessous le remplacent)."
+
+#: inc/Base/CheckoutNotice.php:55
+#: templates/admin.php:16
+msgid "Pro license active — install the Pro version to unlock everything."
+msgstr "Licence Pro active — installez la version Pro pour tout débloquer."
+
+#: inc/Base/CheckoutNotice.php:56
+msgid ""
+"Your license is active on the Free code: upload pixvisualize-pro.zip "
+"(purchase email or Account) via Extensions → Add → Upload, then activate it."
+msgstr ""
+"Votre licence est active sur le code Free : téléversez pixvisualize-pro.zip "
+"(e-mail d’achat ou Compte) via Extensions → Ajouter → Téléverser, puis "
+"activez-le."
+
+#: inc/Base/CheckoutNotice.php:57
+#: templates/admin.php:19
+msgid "Upload the Pro version"
+msgstr "Téléverser la version Pro"
+
+#: inc/Base/CheckoutNotice.php:58
+#: templates/admin.php:21
+msgid "Open my Account"
+msgstr "Ouvrir mon compte"
+
+#: inc/Base/WooCommerceController.php:496
+#: inc/Base/WooCommerceController.php:824
+#: templates/woocommerce-product-data.php:196
+msgid "Comparison"
+msgstr "Comparaison"
+
+#: templates/admin.php:17
+msgid ""
+"Your license is active on the Free code: the Pro controls stay hidden until "
+"pixvisualize-pro is installed (otherwise they would look working in the "
+"editor but do nothing on the site)."
+msgstr ""
+"Votre licence est active sur le code Free : les réglages Pro restent "
+"masqués tant que pixvisualize-pro n’est pas installé (sinon ils "
+"sembleraient fonctionner dans l’éditeur sans aucun effet sur le site)."
+
+#: templates/admin.php:18
+msgid ""
+"1) Download pixvisualize-pro.zip from your purchase email or your Freemius "
+"Account, 2) go to Extensions → Add → Upload, 3) activate — the Free version "
+"deactivates itself."
+msgstr ""
+"1) Téléchargez pixvisualize-pro.zip depuis votre e-mail d’achat ou votre "
+"compte Freemius, 2) allez dans Extensions → Ajouter → Téléverser, 3) "
+"activez — la version Free se désactive seule."
+
+#: templates/woocommerce-product-data.php:553
+msgid ""
+"Classic WooCommerce hooks were not detected in the active theme (block "
+"theme?): placements may not display on the product page."
+msgstr ""
+"Les hooks WooCommerce classiques n’ont pas été détectés dans le thème actif "
+"(thème en blocs ?) : les emplacements peuvent ne pas s’afficher sur la page "
+"produit."
+
+#: templates/woocommerce-product-data.php:558
+msgid ""
+"The saved placement was not detected in the active theme and may not "
+"display."
+msgstr ""
+"L’emplacement enregistré n’a pas été détecté dans le thème actif et peut ne "
+"pas s’afficher."
+
+#: templates/woocommerce-product-data.php:604
+msgid "Description vertical position"
+msgstr "Position verticale de la description"
+
+#: templates/woocommerce-product-data.php:606
+msgid "Text at the top"
+msgstr "Texte en haut"
+
+#: templates/woocommerce-product-data.php:607
+msgid "Text in the middle"
+msgstr "Texte au milieu"
+
+#: templates/woocommerce-product-data.php:608
+msgid "Text at the bottom"
+msgstr "Texte en bas"
+
+#: templates/woocommerce-product-data.php:610
+msgid ""
+"Vertical position of the text inside its container (used in 2-column "
+"layouts)."
+msgstr ""
+"Position verticale du texte dans son conteneur (utilisée dans les mises en "
+"page en 2 colonnes)."
+
+#: src/pixvisualize/components/CompareSlider.jsx:251
+msgid "Please select both images for the comparator."
+msgstr "Veuillez sélectionner les deux images pour le comparateur."
+
+#: src/pixvisualize/components/Handle.jsx:83
+msgid "Image comparison slider"
+msgstr "Curseur de comparaison d’images"
+
+#: src/pixvisualize/components/ImageLayer.jsx:6
+msgid "Comparison Image"
+msgstr "Image de comparaison"
+
+#: src/pixvisualize/edit.js:244
+msgid "1/1 (Square)"
+msgstr "1/1 (Carré)"
+
+#: src/pixvisualize/edit.js:1430
+msgid "Pro license active — install Pro"
+msgstr "Licence Pro active — installez Pro"
+
+#: src/pixvisualize/edit.js:1439
+msgid ""
+"Your Pro license is active on the Free code. Install pixvisualize-pro to "
+"unlock Hover, Auto-Scan and Magnifier on the site."
+msgstr ""
+"Votre licence Pro est active sur le code Free. Installez pixvisualize-pro "
+"pour débloquer le survol, le balayage auto et la loupe sur le site."
+
+#: src/pixvisualize/block.json:6
+msgctxt "block title"
+msgid "PixVisualize"
+msgstr "PixVisualize"
+
+#: src/pixvisualize/block.json:9
+msgctxt "block description"
+msgid "A modern image comparison slider block."
+msgstr "Un bloc de curseur de comparaison d'images moderne."

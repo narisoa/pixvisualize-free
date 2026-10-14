@@ -1,0 +1,27 @@
+{
+	"domain": "messages",
+	"locale_data": {
+		"messages": {
+			"": {
+				"domain": "messages",
+				"plural_forms": "nplurals=2; plural=(n != 1);",
+				"lang": "es"
+			},
+			"Before": [
+				"Antes"
+			],
+			"After": [
+				"Después"
+			],
+			"Please select both images for the comparator.": [
+				"Selecciona ambas imágenes para el comparador."
+			],
+			"Image comparison slider": [
+				"Deslizador de comparación de imágenes"
+			],
+			"Comparison Image": [
+				"Imagen de comparación"
+			]
+		}
+	}
+}

@@ -1,0 +1,60 @@
+{
+	"domain": "messages",
+	"locale_data": {
+		"messages": {
+			"": {
+				"domain": "messages",
+				"plural_forms": "nplurals=2; plural=(n != 1);",
+				"lang": "pt"
+			},
+			"Before": [
+				"Antes"
+			],
+			"After": [
+				"Depois"
+			],
+			"No image selected": [
+				"Nenhuma imagem selecionada"
+			],
+			"Select Image": [
+				"Selecionar imagem"
+			],
+			"Copy Shortcode": [
+				"Copiar shortcode"
+			],
+			"Use this image": [
+				"Usar esta imagem"
+			],
+			"Reset the generator to its default values?": [
+				"Redefinir o gerador para os valores padrão?"
+			],
+			"Copied!": [
+				"Copiado!"
+			],
+			"No valid [pixvisualize …] shortcode found.": [
+				"Nenhum shortcode [pixvisualize …] válido encontrado."
+			],
+			"The shortcode needs before=\"…\" and after=\"…\" images.": [
+				"O shortcode precisa de imagens before=\"…\" e after=\"…\"."
+			],
+			"Shortcode loaded into the generator.": [
+				"Shortcode carregado no gerador."
+			],
+			"Edit": [
+				"Editar"
+			],
+			"Delete": [
+				"Excluir"
+			],
+			"Shortcode": [
+				"Shortcode"
+			],
+			"Rename this shortcode": [
+				"Renomear este shortcode"
+			],
+			"Delete this shortcode from the list?": [
+				"Excluir este shortcode da lista?"
+			]
+		}
+	}
+}

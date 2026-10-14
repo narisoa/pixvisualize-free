@@ -1,0 +1,15 @@
+{
+    "name": "pixvisualize/pixvisualize",
+    "description": "Interactive Gutenberg block (React) to compare two images with a Before/After slider.",
+    "type": "wordpress-plugin",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "Narisoa Denis RANDRIANARIVELO"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {"Inc\\": "./inc"}
+    }
+}

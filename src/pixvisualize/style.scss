@@ -1,0 +1,356 @@
+@import "./styles/variables";
+@import "./styles/mixins";
+
+// Shadow behaves like a native Elementor shadow: pure paint that overflows
+// freely (no reserved room). Only the slider box itself clips
+// (overflow: hidden is required to round the images to the container
+// radius); every wrapper above it stays visible so the shadow is never cut
+// by our own markup — in the front-end AND in the Elementor editor preview
+// (the widget style handle loads in both).
+.pixvisualize-block-wrapper,
+.pixvisualize-card {
+	overflow: visible;
+}
+
+.elementor-widget-pixvisualize,
+.elementor-widget-pixvisualize .elementor-widget-container {
+	// Scoped to our widget only: wins over any generic theme rule that
+	// would clip the container shadow at the widget box (visible is the
+	// Elementor default — this only restores it, never alters layout).
+	overflow: visible !important;
+}
+
+.pixvisualize-slider-container {
+	position: relative;
+	width: 100%;
+	max-width: 100%;
+	max-height: 100%;
+	margin: auto;
+	overflow: hidden;
+	user-select: none;
+	// Horizontal (défaut) : le swipe vertical scrolle la page (natif),
+	// le swipe horizontal pilote le curseur. Sans ça (none), tout
+	// toucher partant du slider bloquait le scroll mobile.
+	touch-action: pan-y;
+}
+
+.pixvisualize-slider-container--vertical {
+	height: 100%;
+	// Vertical : même axe que le scroll page → conflit physique.
+	// Le conteneur laisse TOUT le scroll natif au navigateur
+	// (pan-x pan-y : vertical + horizontal libres sur l'image) et
+	// le drag vertical est réservé à la poignée
+	// (touch-action: none ci-dessous). pan-x seul interdirait le
+	// scroll vertical → symptôme "rien ne se passe".
+	touch-action: pan-x pan-y;
+}
+
+.pixvisualize-handle {
+
+	@include flex-center;
+	width: $pixvisualize-handle-size;
+	height: 100%;
+	background-color: transparent;
+	outline: none;
+	// Seul élément qui capture le geste vertical en mode vertical :
+	// le navigateur ne doit pas intercepter le scroll ici.
+	touch-action: none;
+}
+
+// Zone tactile élargie (44px mini recommandé mobile) : le visuel
+// garde sa taille (handleSize) mais le doigt attrape facilement
+// la poignée, indispensable quand le reste de l'image scrolle la page.
+.pixvisualize-handle::after {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: max(100%, 44px);
+	height: max(100%, 44px);
+}
+
+.pixvisualize-handle-line {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 2px;
+	height: 100%;
+	background-color: var(--pixvisualize-accent-color, $pixvisualize-primary-color);
+
+	// No box-shadow here: the grouped shadow is applied once on the parent
+	// .pixvisualize-handle via filter: drop-shadow() (see Handle.jsx) so the
+	// bar + circle cast a single unified shadow with no seam at the junction.
+	box-shadow: none;
+}
+
+.pixvisualize-slider-container--vertical .pixvisualize-handle {
+	width: 100%;
+	height: $pixvisualize-handle-size;
+}
+
+.pixvisualize-slider-container--vertical .pixvisualize-handle-line {
+	top: 50%;
+	left: 0;
+	transform: translateY(-50%);
+	width: 100%;
+	height: 2px;
+}
+
+.pixvisualize-image-layer {
+
+	@include absolute-fill;
+}
+
+.pixvisualize-image-layer img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+}
+
+.pixvisualize-image-layer-before {
+	z-index: 2;
+	overflow: hidden;
+}
+
+.pixvisualize-image-layer-after {
+	z-index: 1;
+}
+
+.pixvisualize-handle-circle {
+	width: $pixvisualize-handle-inner-size;
+	height: $pixvisualize-handle-inner-size;
+	border: none;
+	border-radius: 50%;
+	background-color: var(--pixvisualize-accent-color, $pixvisualize-primary-color);
+	box-shadow: none;
+}
+
+.pixvisualize-handle-arrows {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 20px;
+	height: 20px;
+	color: #666;
+	pointer-events: none;
+}
+
+.pixvisualize-handle-arrows svg {
+	width: 100%;
+	height: 100%;
+	display: block;
+	fill: none;
+	stroke: currentcolor;
+	stroke-width: 2;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+}
+
+.pixvisualize-handle--arrows .pixvisualize-handle-arrows {
+	width: 34px;
+	height: 34px;
+	color: var(--pixvisualize-accent-color, $pixvisualize-primary-color);
+}
+
+.pixvisualize-handle:focus-visible {
+	outline: 2px solid $pixvisualize-accent-color;
+	outline-offset: 2px;
+}
+
+.pixvisualize-handle--line {
+	width: 2px;
+}
+
+.pixvisualize-slider-container--vertical .pixvisualize-handle--line {
+	height: 2px;
+}
+
+.pixvisualize-handle--line .pixvisualize-handle-circle {
+	display: none;
+}
+
+.pixvisualize-handle--line .pixvisualize-handle-arrows {
+	display: none;
+}
+
+.pixvisualize-handle--transparent .pixvisualize-handle-circle {
+	background-color: transparent;
+	border: none;
+	box-shadow: none;
+}
+
+.pixvisualize-handle--transparent .pixvisualize-handle-arrows {
+	color: var(--pixvisualize-accent-color, $pixvisualize-primary-color);
+}
+
+.pixvisualize-handle--arrows .pixvisualize-handle-circle {
+	display: none;
+}
+
+.pixvisualize-handle--custom .pixvisualize-handle-arrows {
+	display: none;
+}
+
+.pixvisualize-handle--custom .pixvisualize-handle-svg {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: $pixvisualize-handle-inner-size;
+	height: $pixvisualize-handle-inner-size;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #666;
+	pointer-events: none;
+}
+
+.pixvisualize-handle--custom .pixvisualize-handle-svg svg {
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+
+.pixvisualize-label {
+	position: absolute;
+	z-index: 5;
+	cursor: pointer;
+}
+
+.pixvisualize-placeholder {
+	padding: 20px;
+	text-align: center;
+	border: 2px dashed #ccc;
+	color: #666;
+}
+
+.pixvisualize-block-wrapper {
+	width: 100%;
+}
+
+/* Caption below the slider (free display, Pro styling).
+   Colors/sizes/alignment are set inline from the shortcode attributes;
+   this only provides the typographic base matching the reference design. */
+.pixvisualize-caption {
+	width: 100%;
+	max-width: 100%;
+	box-sizing: border-box;
+	background-color: #fff;
+	border-top: 1px solid #e5e7eb;
+}
+
+.pixvisualize-caption-title {
+	margin: 0 0 4px;
+	font-weight: 700;
+	line-height: 1.25;
+}
+
+.pixvisualize-caption-text {
+	margin: 0;
+	line-height: 1.5;
+}
+
+/* WooCommerce — placement wrapper (unique inar- prefix, theme-proof).
+   Every placement echoes through this block: it clears the summary
+   floats/flex (notably "before the product tabs" on themes where the
+   summary is a flex row), forces a full-width block and isolates our
+   slider from theme rules targeting generic selectors. */
+.inar-pixvisualize-woo,
+.pixvisualize-woo-placement {
+	clear: both;
+	display: block;
+	width: 100%;
+	max-width: 100%;
+	margin: 24px 0;
+	padding: 0;
+	box-sizing: border-box;
+	overflow: visible;
+}
+
+.inar-pixvisualize-woo .pixvisualize-block-wrapper,
+.pixvisualize-woo-placement .pixvisualize-block-wrapper {
+	clear: both;
+	max-width: 100%;
+}
+
+/* Card frame (WooCommerce only): drawn by the outer wrapper when the
+   slider itself has no border and no shadow, so the comparator never
+   melts into the product sheet (white image edges on a white fiche).
+   Explicit white background + hairline border + soft shadow, whatever
+   the theme (best-shop / applience-shop, Astra, Storefront…). */
+.inar-pixvisualize-woo--framed {
+	background-color: #fff;
+	border: 1px solid #e5e7eb;
+	border-radius: 12px;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+	padding: 16px;
+}
+
+.inar-pixvisualize-woo-desc {
+	min-width: 0;
+	overflow-wrap: break-word;
+}
+
+/* Description vertical position inside its container: applies to the
+   2-column layouts on desktop, where the row centers its items by
+   default (align-self overrides the row alignment per item). */
+
+@media (min-width: 768px) {
+
+	.inar-pixvisualize-woo-desc-layout--left .inar-pixvisualize-woo-desc--valign-top,
+	.inar-pixvisualize-woo-desc-layout--right .inar-pixvisualize-woo-desc--valign-top,
+	.pixvisualize-woo-desc-layout--left .inar-pixvisualize-woo-desc--valign-top,
+	.pixvisualize-woo-desc-layout--right .inar-pixvisualize-woo-desc--valign-top {
+		align-self: flex-start;
+	}
+
+	.inar-pixvisualize-woo-desc-layout--left .inar-pixvisualize-woo-desc--valign-middle,
+	.inar-pixvisualize-woo-desc-layout--right .inar-pixvisualize-woo-desc--valign-middle,
+	.pixvisualize-woo-desc-layout--left .inar-pixvisualize-woo-desc--valign-middle,
+	.pixvisualize-woo-desc-layout--right .inar-pixvisualize-woo-desc--valign-middle {
+		align-self: center;
+	}
+
+	.inar-pixvisualize-woo-desc-layout--left .inar-pixvisualize-woo-desc--valign-bottom,
+	.inar-pixvisualize-woo-desc-layout--right .inar-pixvisualize-woo-desc--valign-bottom,
+	.pixvisualize-woo-desc-layout--left .inar-pixvisualize-woo-desc--valign-bottom,
+	.pixvisualize-woo-desc-layout--right .inar-pixvisualize-woo-desc--valign-bottom {
+		align-self: flex-end;
+	}
+}
+
+/* WooCommerce — description + content layout around the comparator. */
+.pixvisualize-woo-desc-layout,
+.inar-pixvisualize-woo-desc-layout {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+
+	&--left,
+	&--right {
+
+		@media (min-width: 768px) {
+			flex-direction: row;
+			align-items: center;
+
+			.pixvisualize-woo-desc,
+			.inar-pixvisualize-woo-desc {
+				flex: 0 0 40%;
+				min-width: 0;
+			}
+
+			.pixvisualize-block-wrapper {
+				flex: 1 1 60%;
+				min-width: 0;
+			}
+		}
+	}
+}

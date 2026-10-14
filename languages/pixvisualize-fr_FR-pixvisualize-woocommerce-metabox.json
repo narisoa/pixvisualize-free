@@ -1,0 +1,24 @@
+{
+	"domain": "messages",
+	"locale_data": {
+		"messages": {
+			"": {
+				"domain": "messages",
+				"plural_forms": "nplurals=2; plural=(n != 1);",
+				"lang": "fr"
+			},
+			"Before": [
+				"Avant"
+			],
+			"After": [
+				"Après"
+			],
+			"Select Image": [
+				"Sélectionner une image"
+			],
+			"Use this image": [
+				"Utiliser cette image"
+			]
+		}
+	}
+}

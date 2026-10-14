@@ -1,0 +1,33 @@
+{
+	"name": "pixvisualize",
+	"version": "1.0.12",
+	"description": "Interactive Gutenberg block (React) to compare two images with a Before/After slider.",
+	"author": "Narisoa Denis RANDRIANARIVELO",
+	"license": "GPL-2.0-or-later",
+	"main": "build/index.js",
+	"scripts": {
+		"build": "wp-scripts build --webpack-copy-php --blocks-manifest",
+		"format": "wp-scripts format",
+		"i18n": "node scripts/i18n.mjs extract && node scripts/i18n.mjs compile",
+		"i18n:compile": "node scripts/i18n.mjs compile",
+		"i18n:extract": "node scripts/i18n.mjs extract",
+		"i18n:watch": "node scripts/i18n.mjs watch",
+		"lint:css": "wp-scripts lint-style",
+		"lint:js": "wp-scripts lint-js",
+		"packages-update": "wp-scripts packages-update",
+		"plugin-zip": "wp-scripts plugin-zip",
+		"start": "wp-scripts start --webpack-copy-php --blocks-manifest"
+	},
+	"dependencies": {
+		"@wordpress/block-editor": "latest",
+		"@wordpress/blocks": "latest",
+		"@wordpress/components": "^39.0.0",
+		"@wordpress/element": "^8.5.0",
+		"@wordpress/i18n": "latest"
+	},
+	"devDependencies": {
+		"@types/react": "^19.2.18",
+		"@wordpress/scripts": "^33.0.0",
+		"gettext-parser": "^1.4.0"
+	}
+}

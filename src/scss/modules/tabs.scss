@@ -1,0 +1,99 @@
+.nav-tabs {
+	display: flex;
+	flex-wrap: nowrap;
+	gap: 4px;
+	width: 100%;
+	margin: 0 0 -1px;
+	padding: 0 4px;
+	list-style: none;
+	overflow-x: auto;
+	border-bottom: 1px solid #e5e7eb;
+
+	> li {
+		flex: 0 0 auto;
+		margin: 0;
+
+		> a {
+			display: inline-flex;
+			align-items: center;
+			gap: 6px;
+			padding: 10px 16px;
+			border: 1px solid transparent;
+			border-bottom: 0;
+			border-radius: 8px 8px 0 0;
+			color: #555d66;
+			text-decoration: none;
+			white-space: nowrap;
+
+			.dashicons {
+				width: 18px;
+				height: 18px;
+				font-size: 18px;
+			}
+
+			&:hover {
+				color: #1d2327;
+				background: #fff;
+				border-color: #e5e7eb;
+			}
+
+			&:focus-visible {
+				outline: 2px solid #2563eb;
+				outline-offset: -2px;
+			}
+		}
+
+		&.active > a {
+
+			&,
+			&:hover,
+			&:focus {
+				color: #1d2327;
+				font-weight: 600;
+				cursor: default;
+				background-color: #fff;
+				border-color: #e5e7eb;
+				border-top: 3px solid #2563eb;
+				padding-top: 8px;
+			}
+		}
+	}
+}
+
+.pixvisualize-tab-count {
+	display: inline-block;
+	min-width: 20px;
+	padding: 0 6px;
+	border-radius: 10px;
+	background: #f0f0f1;
+	color: #555d66;
+	font-size: 11px;
+	line-height: 18px;
+	text-align: center;
+}
+
+.nav-tabs > li.active .pixvisualize-tab-count {
+	background: #2563eb;
+	color: #fff;
+}
+
+.tab-content {
+	clear: both;
+}
+
+.tab-content > .tab-pane {
+	float: left;
+	width: 98%;
+	max-width: 100%;
+	box-sizing: border-box;
+	display: none;
+
+	&.active {
+		display: block;
+		padding: 0;
+		background-color: #fff;
+		box-shadow: 0 5px 4px -2px rgba(0, 0, 0, 0.15);
+		overflow: clip;
+		overflow-wrap: break-word;
+	}
+}

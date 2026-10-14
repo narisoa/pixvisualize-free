@@ -1,0 +1,274 @@
+// Upsell surfaces (admin banner, Go Pro comparison table, pro features,
+// callouts). Ported from pixvisualize-free admin CSS.
+// Note: banner block stays last (stylelint no-descending-specificity).
+
+.pc-pro-features {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 14px;
+}
+
+@media (max-width: 960px) {
+
+	.pc-pro-features {
+		grid-template-columns: 1fr;
+	}
+}
+
+.pc-pro-feature {
+	background: #f8f9fa;
+	border: 1px solid #e2e4e7;
+	border-radius: 8px;
+	padding: 18px;
+}
+
+.pc-pro-feature__icon {
+	display: block;
+	margin-bottom: 8px;
+	width: 26px;
+	height: 26px;
+	font-size: 26px;
+	color: #2271b1;
+}
+
+.pc-pro-feature strong {
+	display: block;
+	margin-bottom: 6px;
+	color: #1d2327;
+	font-size: 14px;
+}
+
+.pc-pro-feature p {
+	margin: 0;
+	color: #50575e;
+	font-size: 12.5px;
+	line-height: 1.6;
+}
+
+.pc-callouts {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 14px;
+	margin-top: 14px;
+}
+
+@media (max-width: 960px) {
+
+	.pc-callouts {
+		grid-template-columns: 1fr;
+	}
+}
+
+.pc-callout {
+	border-radius: 8px;
+	border: 1px solid;
+	padding: 16px 18px;
+}
+
+.pc-callout strong {
+	display: block;
+	margin-bottom: 4px;
+	font-size: 14px;
+}
+
+.pc-callout p {
+	margin: 0;
+	font-size: 12.5px;
+	line-height: 1.6;
+}
+
+.pc-callout--migration {
+	background: #e7f0fb;
+	border-color: #2271b1;
+	color: #0a4b78;
+}
+
+.pc-callout--guarantee {
+	background: #e6f4ea;
+	border-color: #34a853;
+	color: #137333;
+}
+
+.pc-table {
+	width: 100%;
+	border-collapse: collapse;
+	table-layout: auto;
+}
+
+.pc-table th,
+.pc-table td {
+	border: 1px solid #eee;
+	padding: 12px 14px;
+	text-align: left;
+	vertical-align: middle;
+	overflow-wrap: break-word;
+	min-width: 0;
+}
+
+.pc-table thead th {
+	background: #555;
+	color: #fff;
+	font-weight: 700;
+	font-size: 13px;
+}
+
+.pc-table thead th.pc-table__free-col,
+.pc-table thead th.pc-table__pro-col {
+	width: 14%;
+	text-align: center;
+}
+
+.pc-table tbody tr:nth-child(even) {
+	background: #f9f9f9;
+}
+
+.pc-table tbody td:nth-child(2),
+.pc-table tbody td:nth-child(3) {
+	text-align: center;
+}
+
+.pc-table .pc-feature strong {
+	display: block;
+	color: #333;
+	font-size: 13px;
+	font-weight: 700;
+}
+
+.pc-table .pc-feature__sub {
+	display: block;
+	margin-top: 2px;
+	color: #777;
+	font-size: 12px;
+}
+
+.pc-table .pc-badge {
+	display: inline-block;
+	padding: 4px 12px;
+	border-radius: 999px;
+	font-size: 12px;
+	font-weight: 700;
+	line-height: 1.5;
+	white-space: nowrap;
+}
+
+.pc-table .pc-badge__icon {
+	margin-right: 4px;
+}
+
+.pc-table .pc-badge--yes {
+	background: #e6f4ea;
+	color: #137333;
+}
+
+.pc-table .pc-badge--yes .pc-badge__icon {
+	color: #137333;
+}
+
+.pc-table .pc-badge--no {
+	background: #fce8e6;
+	color: #c5221f;
+}
+
+.pc-table .pc-badge--no .pc-badge__icon {
+	color: #c5221f;
+}
+
+.pc-table .pc-badge--basic {
+	background: #f0f0f1;
+	color: #646970;
+}
+
+.pc-table .pc-badge--full {
+	background: #e7f0fb;
+	color: #0a4b78;
+}
+
+.pc-pane__section-title {
+	margin: 28px 0 12px;
+	font-size: 15px;
+	font-weight: 700;
+	color: #333;
+}
+
+.pixvisualize-banner {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 16px;
+	padding: 14px 18px;
+	margin: 12px 0 20px;
+	background: #1d2327;
+	color: #fff;
+	border-radius: 6px;
+	box-sizing: border-box;
+	max-width: 100%;
+}
+
+.pixvisualize-banner .pixvisualize-banner__text {
+	flex: 1 1 auto;
+	min-width: 0;
+	font-size: 13px;
+	overflow-wrap: break-word;
+}
+
+.pixvisualize-banner .pixvisualize-banner__text strong {
+	color: #00d084;
+}
+
+.pixvisualize-banner .button {
+	flex-shrink: 0;
+	white-space: nowrap;
+}
+
+@media (max-width: 782px) {
+
+	.pixvisualize-banner {
+		flex-wrap: wrap;
+	}
+}
+// Settings toggles as feature cards (Manage Settings form only).
+// Placed last: must stay below the .pc-table rules above.
+.pixvisualize-settings-form .form-table {
+	margin: 16px 0 0;
+}
+
+.pixvisualize-settings-form .form-table tbody {
+	display: block;
+}
+
+.pixvisualize-settings-form table.form-table tr {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+	margin: 0 0 10px;
+	padding: 14px 16px;
+	background: #fff;
+	border: 1px solid #e5e7eb;
+	border-radius: 8px;
+}
+
+.pixvisualize-settings-form .form-table tr:hover {
+	border-color: #c7d7fe;
+	box-shadow: 0 1px 3px rgba(16, 24, 40, 0.08);
+}
+
+.pixvisualize-settings-form .form-table tr th {
+	flex: 1 1 auto;
+	width: auto;
+	padding: 0;
+}
+
+.pixvisualize-settings-form .form-table tr td {
+	flex: 0 0 auto;
+	margin: 0;
+	padding: 0;
+}
+
+.pixvisualize-toggle-desc {
+	display: block;
+	margin-top: 4px;
+	color: #667085;
+	font-size: 12.5px;
+	font-weight: 400;
+	line-height: 1.5;
+}
