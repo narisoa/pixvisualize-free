@@ -4,7 +4,7 @@ Tags: before-after, image-comparison, gutenberg, elementor, woocommerce
 Requires at least: 6.8
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.0.13
+Stable tag: 1.0.14
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -88,6 +88,9 @@ Nothing without your consent. On activation, an opt-in screen (skippable) offers
 
 == Upgrade Notice ==
 
+= 1.0.14 =
+Maintenance release (docs only, no code change): author credits unified under the i-NariDigit brand.
+
 = 1.0.13 =
 Maintenance release (docs only, no code change): fixes Tags for WordPress.org compliance (image comparison to image-comparison).
 
@@ -125,6 +128,9 @@ Maintenance release. Recommended update: commercial docs cleanup plus WooCommerc
 Maintenance release. Recommended update: fixes Pro activation when Free is still active.
 
 == Changelog ==
+
+= 1.0.14 =
+* Maintenance release (docs only, no functional change): author credits unified under the i-NariDigit brand (package/composer metadata).
 
 = 1.0.13 =
 * Maintenance release (docs only, no functional change): Tags fixed for WordPress.org guideline #12 (image-comparison with hyphen instead of space).
