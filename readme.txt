@@ -1,14 +1,14 @@
-=== PixVisualize - Before After Image Comparison Slider ===
+=== PixVisualize ===
 Contributors: inaridigit
 Tags: before-after, image-comparison, gutenberg, elementor, woocommerce
 Requires at least: 6.8
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.0.14
+Stable tag: 1.0.16
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Showcase transformations with a fast, responsive Before/After slider for Gutenberg, Elementor, shortcodes and WooCommerce.
+Showcase transformations with a fast Before/After Image Comparison Slider for Gutenberg, Elementor, shortcodes and WooCommerce.
 
 == Description ==
 
@@ -88,6 +88,12 @@ Nothing without your consent. On activation, an opt-in screen (skippable) offers
 
 == Upgrade Notice ==
 
+= 1.0.16 =
+Short descriptions now carry the full "Before/After Image Comparison Slider" phrase for directory search. No code change.
+
+= 1.0.15 =
+Short display name (PixVisualize) so the wordpress.org slug is pixvisualize. No code change.
+
 = 1.0.14 =
 Maintenance release (docs only, no code change): author credits unified under the i-NariDigit brand.
 
@@ -128,6 +134,12 @@ Maintenance release. Recommended update: commercial docs cleanup plus WooCommerc
 Maintenance release. Recommended update: fixes Pro activation when Free is still active.
 
 == Changelog ==
+
+= 1.0.16 =
+* Short descriptions (header + readme) now carry the full "Before/After Image Comparison Slider" phrase for directory search. No functional change.
+
+= 1.0.15 =
+* Short display name (PixVisualize) so the wordpress.org slug is pixvisualize; readme title kept identical to the header. No functional change.
 
 = 1.0.14 =
 * Maintenance release (docs only, no functional change): author credits unified under the i-NariDigit brand (package/composer metadata).
