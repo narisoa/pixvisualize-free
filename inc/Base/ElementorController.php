@@ -52,7 +52,7 @@ class ElementorController extends BaseController
 			'pixvisualize-elementor-editor',
 			$this->plugin_url . 'assets/js/pixvisualize-elementor-editor.js',
 			array( 'jquery' ),
-			'1.0.18',
+			'1.0.19',
 			true
 		);
 
@@ -60,7 +60,7 @@ class ElementorController extends BaseController
 			'pixvisualize-elementor-editor',
 			$this->plugin_url . 'assets/css/pixvisualize-elementor-editor.css',
 			array(),
-			'1.0.18'
+			'1.0.19'
 		);
 
 		$plan = function_exists( 'pixvisualize_get_plan' ) ? pixvisualize_get_plan() : 'free';

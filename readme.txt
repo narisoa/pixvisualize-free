@@ -4,7 +4,7 @@ Tags: before-after, image-comparison, gutenberg, elementor, woocommerce
 Requires at least: 6.8
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.0.18
+Stable tag: 1.0.19
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -76,7 +76,7 @@ The `[pixvisualize]` shortcode is a Pro feature and is not rendered in the Free 
 PixVisualize → Account. After checkout, activate your key, then install `pixvisualize-pro.zip` when prompted. Support: [i-naridigit.com/support](https://i-naridigit.com/support/)
 
 = What data does PixVisualize collect? =
-Nothing without your consent. On activation, an opt-in screen (skippable) offers to share admin name/email, site URL, WordPress version and diagnostic data with Freemius for licensing, updates and support. No tracking otherwise.
+Nothing without your consent. On activation, an opt-in screen (skippable) offers to share admin name/email, site URL, WordPress version and diagnostic data with Freemius for licensing, updates and support. No tracking otherwise. Freemius [Terms of Use](https://freemius.com/terms/) and [Privacy Policy](https://freemius.com/privacy/).
 
 == Screenshots ==
 
@@ -87,6 +87,9 @@ Nothing without your consent. On activation, an opt-in screen (skippable) offers
 5. WooCommerce product tab with placement options (Pro).
 
 == Upgrade Notice ==
+
+= 1.0.19 =
+Free distribution cleanup: removed the Pro shortcode generator UI from the Free build and documented Freemius Terms and Privacy links.
 
 = 1.0.18 =
 Maintenance update: Plugin Check compliance (explicit script version, no inline style injection).
@@ -140,6 +143,10 @@ Maintenance release. Recommended update: commercial docs cleanup plus WooCommerc
 Maintenance release. Recommended update: fixes Pro activation when Free is still active.
 
 == Changelog ==
+
+= 1.0.19 =
+* Free build: removed the Pro shortcode generator UI and its admin JS from the WordPress.org distribution.
+* Documentation: added Freemius Terms of Use and Privacy Policy links.
 
 = 1.0.18 =
 * Plugin Check compliance: explicit version for the welcome notice inline script.
