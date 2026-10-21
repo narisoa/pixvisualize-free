@@ -292,7 +292,7 @@ class PixVisualizeWidget extends Widget_Base {
         foreach ( $features as $feature ) {
             $list .= '<li><span class="pixvisualize-upsell-panel__dot">•</span>' . $feature . '</li>';
         }
-        return '<style>' . '.pixvisualize-upsell-panel{background:#f0f7ff;border:1px solid #e2e8f0;border-left:3px solid #2271b1;border-radius:6px;padding:14px 16px;font-size:12px;line-height:1.7;color:#444;}' . '.pixvisualize-upsell-panel__title{font-weight:700;color:#1d2327;font-size:12.5px;margin:0 0 8px;}' . '.pixvisualize-upsell-panel__list{margin:0 0 12px;padding:0;list-style:none;}' . '.pixvisualize-upsell-panel__list li{display:flex;align-items:flex-start;gap:8px;margin:3px 0;}' . '.pixvisualize-upsell-panel__dot{color:#b0b8c1;font-weight:700;}' . '.pixvisualize-upsell-panel__cta{display:block;width:100%;box-sizing:border-box;text-align:center;background:#007cba;color:#fff;font-weight:700;font-size:12px;text-decoration:none;border-radius:3px;padding:6px 12px;}' . '.pixvisualize-upsell-panel__cta:hover{background:#006ba1;color:#fff;}' . '.pixvisualize-upsell-panel__cta--secondary{background:#fff;color:#007cba;border:1px solid #007cba;}' . '.pixvisualize-upsell-panel__actions{display:flex;flex-direction:column;align-items:stretch;gap:8px;margin:12px 0 4px;}' . '</style>' . '<div class="pixvisualize-upsell-panel">' . '<p class="pixvisualize-upsell-panel__title">' . esc_html__( 'Unlock advanced features to take your comparisons further:', 'pixvisualize' ) . '</p>' . '<ul class="pixvisualize-upsell-panel__list">' . $list . '</ul>' . '<div class="pixvisualize-upsell-panel__actions">' . '<a class="pixvisualize-upsell-panel__cta" href="' . $url . '" target="_blank" rel="noopener noreferrer">' . esc_html__( 'Go Pro', 'pixvisualize' ) . '</a>' . '<a class="pixvisualize-upsell-panel__cta pixvisualize-upsell-panel__cta--secondary" href="' . $demo_url . '" target="_blank" rel="noopener noreferrer">' . esc_html__( 'View Pro demo', 'pixvisualize' ) . '</a>' . '</div>' . '</div>';
+        return '<div class="pixvisualize-upsell-panel">' . '<p class="pixvisualize-upsell-panel__title">' . esc_html__( 'Unlock advanced features to take your comparisons further:', 'pixvisualize' ) . '</p>' . '<ul class="pixvisualize-upsell-panel__list">' . $list . '</ul>' . '<div class="pixvisualize-upsell-panel__actions">' . '<a class="pixvisualize-upsell-panel__cta" href="' . $url . '" target="_blank" rel="noopener noreferrer">' . esc_html__( 'Go Pro', 'pixvisualize' ) . '</a>' . '<a class="pixvisualize-upsell-panel__cta pixvisualize-upsell-panel__cta--secondary" href="' . $demo_url . '" target="_blank" rel="noopener noreferrer">' . esc_html__( 'View Pro demo', 'pixvisualize' ) . '</a>' . '</div>' . '</div>';
     }
 
     /**
@@ -785,134 +785,6 @@ class PixVisualizeWidget extends Widget_Base {
 			</div>
 		</div>
 		<# } #>
-		<style>
-			.pixvisualize-elementor-preview {
-				position: relative;
-				overflow: hidden;
-				background: #f1f3f5;
-				border-radius: 4px;
-			}
-			.pixvisualize-elementor-preview__image {
-				position: absolute;
-				top: 0;
-				left: 0;
-				max-width: none !important;
-				width: 100% !important;
-				height: 100% !important;
-				object-fit: cover;
-				display: block;
-			}
-			.pixvisualize-elementor-preview__after {
-				z-index: 1;
-			}
-			.pixvisualize-elementor-preview__before {
-				z-index: 2;
-			}
-			.pixvisualize-elementor-preview__handle {
-				position: absolute;
-				z-index: 3;
-			}
-			.pixvisualize-elementor-preview__handle--horizontal {
-				top: 0;
-				bottom: 0;
-				transform: translateX(-50%);
-			}
-			.pixvisualize-elementor-preview__handle--vertical {
-				left: 0;
-				right: 0;
-				transform: translateY(-50%);
-			}
-			.pixvisualize-elementor-preview__handle-line {
-				background-color: #fff;
-			}
-			.pixvisualize-elementor-preview__handle-icon {
-				position: absolute;
-				top: 50%;
-				left: 50%;
-				transform: translate(-50%, -50%);
-				width: 24px;
-				height: 24px;
-				border-radius: 50%;
-				background: #fff;
-				color: #666;
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				font-size: 12px;
-				font-weight: 700;
-				border: none;
-				box-shadow: none;
-				overflow: hidden;
-			}
-			.pixvisualize-elementor-preview__handle-icon svg {
-				width: 100%;
-				height: 100%;
-				display: block;
-			}
-			.pixvisualize-elementor-preview__handle-icon .pixvisualize-elementor-preview__arrows svg {
-				fill: none;
-				stroke: currentcolor;
-				stroke-width: 2;
-				stroke-linecap: round;
-				stroke-linejoin: round;
-			}
-			.pixvisualize-elementor-preview__arrows {
-				display: block;
-				font-size: 12px;
-				line-height: 1;
-			}
-			.pixvisualize-elementor-preview__label {
-				position: absolute;
-				z-index: 4;
-			}
-			.pixvisualize-elementor-preview--empty {
-				min-height: 200px;
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				padding: 40px;
-				text-align: center;
-				color: #8c8f94;
-				font-size: 14px;
-			}
-			.pixvisualize-elementor-preview[data-orientation="horizontal"] .pixvisualize-elementor-preview__before {
-				clip-path: inset(0 calc(100% - var(--pc-pos, 50%)) 0 0);
-			}
-			.pixvisualize-elementor-preview[data-orientation="vertical"] .pixvisualize-elementor-preview__after {
-				z-index: 2;
-				clip-path: inset(0 0 calc(100% - var(--pc-pos, 50%)) 0);
-			}
-			.pixvisualize-elementor-preview[data-orientation="vertical"] .pixvisualize-elementor-preview__before {
-				z-index: 1;
-			}
-			.pixvisualize-elementor-preview__handle--horizontal {
-				left: var(--pc-pos, 50%);
-			}
-			.pixvisualize-elementor-preview__handle--vertical {
-				top: var(--pc-pos, 50%);
-			}
-			.pixvisualize-preview-magnifier {
-				position: absolute;
-				width: 160px;
-				height: 160px;
-				border-radius: 50%;
-				overflow: hidden;
-				border: 3px solid #fff;
-				box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-				z-index: 8;
-				pointer-events: none;
-				display: none;
-			}
-			.pixvisualize-preview-magnifier__img {
-				position: absolute;
-				top: 0;
-				left: 0;
-				max-width: none !important;
-				max-height: none !important;
-				display: block;
-				object-fit: cover;
-			}
-		</style>
 		<?php 
     }
 

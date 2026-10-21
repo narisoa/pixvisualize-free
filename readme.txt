@@ -4,11 +4,11 @@ Tags: before-after, image-comparison, gutenberg, elementor, woocommerce
 Requires at least: 6.8
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.0.16
+Stable tag: 1.0.18
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Showcase transformations with a fast Before/After Image Comparison Slider for Gutenberg, Elementor, shortcodes and WooCommerce.
+Showcase transformations with a fast Before/After Image Comparison Slider for Gutenberg, Elementor, plus Pro shortcodes and WooCommerce.
 
 == Description ==
 
@@ -88,6 +88,12 @@ Nothing without your consent. On activation, an opt-in screen (skippable) offers
 
 == Upgrade Notice ==
 
+= 1.0.18 =
+Maintenance update: Plugin Check compliance (explicit script version, no inline style injection).
+
+= 1.0.17 =
+Recommended update: WordPress.org review compliance. The Free package no longer contains Pro shortcode/WooCommerce code; assets are enqueued, inputs are sanitized, and translations are handled by WordPress.org.
+
 = 1.0.16 =
 Short descriptions now carry the full "Before/After Image Comparison Slider" phrase for directory search. No code change.
 
@@ -134,6 +140,18 @@ Maintenance release. Recommended update: commercial docs cleanup plus WooCommerc
 Maintenance release. Recommended update: fixes Pro activation when Free is still active.
 
 == Changelog ==
+
+= 1.0.18 =
+* Plugin Check compliance: explicit version for the welcome notice inline script.
+* Elementor disabled Height control styles moved from a JS-injected style element to the enqueued editor stylesheet.
+* Short description now labels Pro shortcodes and WooCommerce.
+
+= 1.0.17 =
+* WordPress.org review compliance: Pro shortcode and WooCommerce files are excluded from the Free build via `@fs_premium_only`; the license gate is now strippable by the Freemius preprocessor.
+* Inline CSS/JS replaced with enqueued assets (Elementor preview styles, welcome notice script, WooCommerce product panel styles).
+* Input sanitization for the WooCommerce nonce and custom SVG; `register_setting()` now uses an array with a `sanitize_callback`.
+* Removed `load_plugin_textdomain()` and deferred service boot to `init` priority 5 to avoid the early textdomain notice.
+* Translation files are excluded from the WordPress.org package and handled by translate.wordpress.org.
 
 = 1.0.16 =
 * Short descriptions (header + readme) now carry the full "Before/After Image Comparison Slider" phrase for directory search. No functional change.

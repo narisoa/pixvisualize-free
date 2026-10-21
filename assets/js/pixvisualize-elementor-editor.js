@@ -63,27 +63,6 @@
 		}, delay || 150 );
 	}
 
-	const CSS_ID = 'pixvisualize-elementor-editor-css';
-
-	// 1. Inject the visual "disabled" styles once.
-	function injectStyles() {
-		if ( document.getElementById( CSS_ID ) ) {
-			return;
-		}
-
-		const style = document.createElement( 'style' );
-		style.id = CSS_ID;
-		style.textContent = [
-			'.elementor-control-height.my-disabled-control {',
-			'	opacity: 0.5;',
-			'	pointer-events: none;',
-			'	cursor: not-allowed;',
-			'}',
-		].join( '\n' );
-		document.head.appendChild( style );
-		log( '[PixVisualize] Styles injected.' );
-	}
-
 	const observedPanels = new WeakSet();
 
 	/**
@@ -295,8 +274,6 @@
 
 	$( function () {
 		log( '[PixVisualize] Script loaded (DOM ready).' );
-
-		injectStyles();
 
 		if ( window.elementor && window.elementor.hooks ) {
 			log(

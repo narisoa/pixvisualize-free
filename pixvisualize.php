@@ -11,8 +11,8 @@
 /*
 Plugin Name: PixVisualize
 Plugin URI: https://i-naridigit.com/products/pixvisualize/
-Description: Before/After Image Comparison Slider for Gutenberg, Elementor, shortcodes and WooCommerce. Fast, responsive, Pro-ready.
-Version: 1.0.16
+Description: Before/After Image Comparison Slider for Gutenberg, Elementor, plus Pro shortcodes and WooCommerce. Fast, responsive, Pro-ready.
+Version: 1.0.18
 Requires at least: 6.8
 Requires PHP: 7.4
 Author: i-NariDigit
@@ -101,14 +101,6 @@ if ( file_exists( dirname( __FILE__ ) . '/vendor/autoload.php' ) ) {
 }
 
 /**
- * Load plugin translations.
- */
-function pixvisualize_load_textdomain() {
-	load_plugin_textdomain( 'pixvisualize', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
-}
-add_action( 'plugins_loaded', 'pixvisualize_load_textdomain' );
-
-/**
  * Variant fallback: use the base language file when the exact locale file
  * is missing (fr_BE/fr_CH/... -> fr_FR, de_AT/de_CH/... -> de_DE,
  * es_MX/... -> es_ES, it_CH/... -> it_IT, pt_AO/... -> pt_PT).
@@ -169,9 +161,17 @@ function pixvisualize_script_fallback( $file, $handle, $domain ) {
 add_filter( 'load_script_translation_file', 'pixvisualize_script_fallback', 10, 3 );
 
 	/**
-	 * Boot plugin services.
+	 * Boot plugin services on 'init' so the plugin translations are loaded
+	 * first: calling translation functions before 'init' triggers the
+	 * "textdomain loaded too early" notice since WordPress 6.7.
 	 */
-	if ( class_exists( 'Inc\\Init' ) ) {
-		Inc\Init::registerServices();
-	}
+	add_action(
+		'init',
+		function () {
+			if ( class_exists( 'Inc\\Init' ) ) {
+				Inc\Init::registerServices();
+			}
+		},
+		5
+	);
 }

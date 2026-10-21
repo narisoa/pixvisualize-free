@@ -84,25 +84,14 @@ class Welcome extends BaseController
 				<a class="button" style="margin-left:4px;" href="<?php echo esc_url( $settings_url ); ?>"><?php esc_html_e( 'Settings', 'pixvisualize' ); ?></a>
 			</p>
 		</div>
-		<script>
-		(function () {
-			var notice = document.getElementById( 'pixvisualize-welcome-notice' );
-			if ( ! notice ) {
-				return;
-			}
-			var dismiss = notice.querySelector( '.notice-dismiss' );
-			if ( ! dismiss ) {
-				return;
-			}
-			dismiss.addEventListener( 'click', function () {
-				var form = new FormData();
-				form.append( 'action', '<?php echo esc_js( self::NOTICE_ACTION ); ?>' );
-				form.append( 'nonce', '<?php echo esc_js( $nonce ); ?>' );
-				fetch( '<?php echo esc_url( $ajax_url ); ?>', { method: 'POST', body: form } );
-			} );
-		})();
-		</script>
 		<?php
+
+		wp_register_script( 'pixvisualize-welcome-notice', '', array(), '1.0.18', true );
+		wp_enqueue_script( 'pixvisualize-welcome-notice' );
+		wp_add_inline_script(
+			'pixvisualize-welcome-notice',
+			"(function(){var n=document.getElementById('pixvisualize-welcome-notice');if(!n){return;}var d=n.querySelector('.notice-dismiss');if(!d){return;}d.addEventListener('click',function(){var f=new FormData();f.append('action','" . esc_js( self::NOTICE_ACTION ) . "');f.append('nonce','" . esc_js( $nonce ) . "');fetch('" . esc_url( $ajax_url ) . "',{method:'POST',body:f});});})();"
+		);
 	}
 
 	public function dismissNotice()

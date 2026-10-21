@@ -21,3 +21,82 @@ i.pixvisualize-elementor-icon {
 .elementor-panel .elementor-element:hover .icon i.pixvisualize-elementor-icon {
 	color: #2271b1; /* native Elementor icon blue on hover */
 }
+
+/* Disabled Height control (Full Width enabled) in the Elementor editor panel.
+ * The class is applied by assets/js/pixvisualize-elementor-editor.js. */
+.elementor-control-height.my-disabled-control {
+	opacity: 0.5;
+	pointer-events: none;
+	cursor: not-allowed;
+}
+
+/* In-context upselling card shown in the widget panel when PixVisualize Pro
+ * is not active. Rendered by PixVisualizeWidget::renderUpsellHtml(). */
+.pixvisualize-upsell-panel {
+	background: #f0f7ff;
+	border: 1px solid #e2e8f0;
+	border-left: 3px solid #2271b1;
+	border-radius: 6px;
+	padding: 14px 16px;
+	font-size: 12px;
+	line-height: 1.7;
+	color: #444;
+}
+
+.pixvisualize-upsell-panel__title {
+	font-weight: 700;
+	color: #1d2327;
+	font-size: 12.5px;
+	margin: 0 0 8px;
+}
+
+.pixvisualize-upsell-panel__list {
+	margin: 0 0 12px;
+	padding: 0;
+	list-style: none;
+}
+
+.pixvisualize-upsell-panel__list li {
+	display: flex;
+	align-items: flex-start;
+	gap: 8px;
+	margin: 3px 0;
+}
+
+.pixvisualize-upsell-panel__dot {
+	color: #b0b8c1;
+	font-weight: 700;
+}
+
+.pixvisualize-upsell-panel__cta {
+	display: block;
+	width: 100%;
+	box-sizing: border-box;
+	text-align: center;
+	background: #007cba;
+	color: #fff;
+	font-weight: 700;
+	font-size: 12px;
+	text-decoration: none;
+	border-radius: 3px;
+	padding: 6px 12px;
+}
+
+.pixvisualize-upsell-panel__cta:hover {
+	background: #006ba1;
+	color: #fff;
+}
+
+.pixvisualize-upsell-panel__cta--secondary {
+	background: #fff;
+	color: #007cba;
+	border: 1px solid #007cba;
+}
+
+.pixvisualize-upsell-panel__actions {
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	gap: 8px;
+	margin: 12px 0 4px;
+}

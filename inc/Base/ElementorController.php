@@ -37,6 +37,7 @@ class ElementorController extends BaseController
 		add_action( 'elementor/widgets/register', array( $this, 'registerWidget' ) );
 		add_action( 'elementor/editor/after_enqueue_scripts', array( $this, 'enqueueEditorAssets' ) );
 		add_action( 'elementor/preview/enqueue_scripts', array( $this, 'enqueuePreviewAssets' ) );
+		add_action( 'elementor/preview/enqueue_styles', array( $this, 'enqueuePreviewStyles' ) );
 		add_action( 'wp_enqueue_scripts', array( $this, 'registerFrontendAssets' ) );
 	}
 
@@ -51,7 +52,7 @@ class ElementorController extends BaseController
 			'pixvisualize-elementor-editor',
 			$this->plugin_url . 'assets/js/pixvisualize-elementor-editor.js',
 			array( 'jquery' ),
-			'1.0.6',
+			'1.0.18',
 			true
 		);
 
@@ -59,7 +60,7 @@ class ElementorController extends BaseController
 			'pixvisualize-elementor-editor',
 			$this->plugin_url . 'assets/css/pixvisualize-elementor-editor.css',
 			array(),
-			'1.0.6'
+			'1.0.18'
 		);
 
 		$plan = function_exists( 'pixvisualize_get_plan' ) ? pixvisualize_get_plan() : 'free';
@@ -86,6 +87,20 @@ class ElementorController extends BaseController
 			array(),
 			'1.0.5',
 			true
+		);
+	}
+
+	/**
+	 * Enqueue the stylesheet for the static preview markup rendered inside the
+	 * Elementor editor preview iframe by content_template().
+	 */
+	public function enqueuePreviewStyles()
+	{
+		wp_enqueue_style(
+			'pixvisualize-elementor-preview',
+			$this->plugin_url . 'assets/css/pixvisualize-elementor-preview.css',
+			array(),
+			'1.0.0'
 		);
 	}
 

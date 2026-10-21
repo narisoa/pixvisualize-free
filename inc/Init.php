@@ -1,4 +1,5 @@
 <?php
+
 /**
  * PixVisualize service bootstrap.
  *
@@ -9,59 +10,48 @@
  */
 namespace Inc;
 
-final class Init
-{
-	/**
-	 * Service class map.
-	 *
-	 * @return array
-	 */
-	public static function getServices()
-	{
-		$services = [
-			Pages\Dashboard::class,
-			Base\Enqueue::class,
-			Base\SettingsLinks::class,
-			Base\Welcome::class,
-			Base\CheckoutNotice::class,
-			Base\PixVisualizeController::class,
-			Base\ElementorController::class,
-		];
+final class Init {
+    /**
+     * Service class map.
+     *
+     * @return array
+     */
+    public static function getServices() {
+        $services = [
+            Pages\Dashboard::class,
+            Base\Enqueue::class,
+            Base\SettingsLinks::class,
+            Base\Welcome::class,
+            Base\CheckoutNotice::class,
+            Base\PixVisualizeController::class,
+            Base\ElementorController::class
+        ];
+        return $services;
+    }
 
-		// Pro services. Stripped from the WordPress.org build.
-		if ( function_exists( 'pixvisualize_fs' ) && pixvisualize_fs()->can_use_premium_code__premium_only() ) {
-			$services[] = Base\ShortcodeController::class;
-			$services[] = Base\WooCommerceController::class;
-		}
+    /**
+     * Instantiate and register services.
+     *
+     * @return void
+     */
+    public static function registerServices() {
+        foreach ( self::getServices() as $class ) {
+            $service = self::instantiate( $class );
+            if ( method_exists( $service, 'register' ) ) {
+                $service->register();
+            }
+        }
+    }
 
-		return $services;
-	}
+    /**
+     * Service factory.
+     *
+     * @param string $class Fully-qualified class name.
+     * @return object
+     */
+    private static function instantiate( $class ) {
+        $service = new $class();
+        return $service;
+    }
 
-	/**
-	 * Instantiate and register services.
-	 *
-	 * @return void
-	 */
-	public static function registerServices()
-	{
-		foreach (self::getServices() as $class) {
-			$service = self::instantiate($class);
-			if (method_exists($service, 'register')) {
-				$service->register();
-			}
-		}
-	}
-
-	/**
-	 * Service factory.
-	 *
-	 * @param string $class Fully-qualified class name.
-	 * @return object
-	 */
-	private static function instantiate($class)
-	{
-		$service = new $class();
-
-		return $service;
-	}
 }
