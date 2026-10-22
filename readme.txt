@@ -4,7 +4,7 @@ Tags: before-after, image-comparison, gutenberg, elementor, woocommerce
 Requires at least: 6.8
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.0.20
+Stable tag: 1.0.21
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -89,6 +89,9 @@ Nothing without your consent. On activation, an opt-in screen (skippable) offers
 
 == Upgrade Notice ==
 
+= 1.0.21 =
+Maintenance update: Plugin Check compliance for the checkout notice nonce and Elementor Free preview; removed the unused Domain Path header.
+
 = 1.0.20 =
 Free build cleanup: the Free package now ships Free-only JS for the editor, front-end view and Elementor preview; no Pro slider engine, handle styles, responsive controls or interactions are included.
 
@@ -147,6 +150,11 @@ Maintenance release. Recommended update: commercial docs cleanup plus WooCommerc
 Maintenance release. Recommended update: fixes Pro activation when Free is still active.
 
 == Changelog ==
+
+= 1.0.21 =
+* Plugin Check: annotated the nonce-verified checkout notice reads to avoid false-positive `NonceVerification.Recommended` warnings.
+* Elementor: the Free preview now uses Free-only constants and no longer reads or outputs Pro-only settings; Pro preview controls stay behind the Freemius premium-code marker.
+* Headers: removed the unused `Domain Path` header because translations are served by WordPress.org language packs and no `languages/` folder is shipped.
 
 = 1.0.20 =
 * Free build: separate `build-free/` JS bundle with a Free-only preview component, front-end view and Elementor preview; Pro engine code is not shipped in the Free package.

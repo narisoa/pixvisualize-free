@@ -514,11 +514,6 @@ class PixVisualizeWidget extends Widget_Base {
     protected function content_template() {
         ?>
 		<#
-		<?php 
-        ?>
-		var pixIsPro = false;
-		<?php 
-        ?>
 		var beforeImage = ( settings.before_image && settings.before_image.url ) ? settings.before_image.url : '';
 		var afterImage = ( settings.after_image && settings.after_image.url ) ? settings.after_image.url : '';
 		var initialPosition = ( settings.initial_position && settings.initial_position.size ) ? settings.initial_position.size : 50;
@@ -528,31 +523,34 @@ class PixVisualizeWidget extends Widget_Base {
 		var showLabels = 'yes' === settings.show_labels;
 		var aspectRatio = settings.aspect_ratio || '16/9';
 		var fullWidth = 'yes' === settings.full_width;
-		var orientation = settings.orientation || 'horizontal';
-		var handleStyle = settings.handle_style || 'circle';
-		var handleIconSvg = settings.handle_icon_svg || '';
-		var handleSize = ( settings.handle_size && settings.handle_size.size ) ? settings.handle_size.size : 24;
-		handleSize = Math.min( 64, Math.max( 16, handleSize ) );
-		var labelPositionBefore = settings.label_position_before || 'top-left';
-		var labelPositionAfter = settings.label_position_after || 'top-right';
-		var labelBackground = settings.label_background || '#00000080';
-		var labelColor = settings.label_color || '#ffffff';
-		var labelFontSize = ( settings.label_font_size && settings.label_font_size.size ) ? settings.label_font_size.size : 12;
-		var labelFontWeight = ( settings.label_font_weight && settings.label_font_weight.size ) ? settings.label_font_weight.size : 600;
-		var labelPaddingX = ( settings.label_padding_x && settings.label_padding_x.size ) ? settings.label_padding_x.size : 10;
-		var labelPaddingY = ( settings.label_padding_y && settings.label_padding_y.size ) ? settings.label_padding_y.size : 5;
-		var labelBorderRadius = ( settings.label_border_radius && settings.label_border_radius.size ) ? settings.label_border_radius.size : 4;
-		var separatorThickness = ( settings.separator_thickness && settings.separator_thickness.size ) ? settings.separator_thickness.size : 2;
-		var separatorColor = settings.separator_color || '#ffffff';
-		var separatorShadow = 'yes' === settings.separator_shadow;
+		<?php 
+        ?>
+		var orientation = 'horizontal';
+		var handleStyle = 'circle';
+		var handleIconSvg = '';
+		var handleSize = 24;
+		var labelPositionBefore = 'top-left';
+		var labelPositionAfter = 'top-right';
+		var labelBackground = '#00000080';
+		var labelColor = '#ffffff';
+		var labelFontSize = 12;
+		var labelFontWeight = 600;
+		var labelPaddingX = 10;
+		var labelPaddingY = 5;
+		var labelBorderRadius = 4;
+		var separatorThickness = 2;
+		var separatorColor = '#ffffff';
+		var separatorShadow = true;
 
 		var containerShadow = 'yes' === settings.container_shadow;
-		var containerShadowColor = settings.container_shadow_color || '#000000';
-		var containerShadowHorizontal = ( settings.container_shadow_horizontal && settings.container_shadow_horizontal.size ) ? settings.container_shadow_horizontal.size : 0;
-		var containerShadowVertical = ( settings.container_shadow_vertical && settings.container_shadow_vertical.size ) ? settings.container_shadow_vertical.size : 8;
-		var containerShadowBlur = ( settings.container_shadow_blur && settings.container_shadow_blur.size ) ? settings.container_shadow_blur.size : 20;
-		var containerShadowSpread = ( settings.container_shadow_spread && settings.container_shadow_spread.size ) ? settings.container_shadow_spread.size : 0;
-		var containerShadowOpacity = ( settings.container_shadow_opacity && settings.container_shadow_opacity.size ) ? settings.container_shadow_opacity.size : 35;
+		var containerShadowColor = '#000000';
+		var containerShadowHorizontal = 0;
+		var containerShadowVertical = 8;
+		var containerShadowBlur = 20;
+		var containerShadowSpread = 0;
+		var containerShadowOpacity = 35;
+		<?php 
+        ?>
 
 		var shadowAlpha = Math.max( 0, Math.min( 1, containerShadowOpacity / 100 ) );
 		var shadowHex = containerShadowColor.trim().match( /^#([0-9a-fA-F]{3}|[0-9a-fA-F]{6})$/ );
@@ -569,19 +567,23 @@ class PixVisualizeWidget extends Widget_Base {
 		}
 		var containerShadowStyle = containerShadow ? ('box-shadow: ' + containerShadowHorizontal + 'px ' + containerShadowVertical + 'px ' + containerShadowBlur + 'px ' + containerShadowSpread + 'px ' + shadowRgb + ';') : '';
 
-		var borderWidth = ( settings.border_width && settings.border_width.size ) ? settings.border_width.size : 0;
+		<?php 
+        ?>
+		var borderWidth = 0;
+		var borderColor = '#000000';
+		var borderStyle = 'solid';
+		var borderRadiusTL = 0;
+		var borderRadiusTR = 0;
+		var borderRadiusBR = 0;
+		var borderRadiusBL = 0;
+		<?php 
+        ?>
 		// FREE toggles (switchers): default 2px solid gray border, default 16px radius.
 		var showBorder = 'yes' === settings.show_border;
 		var roundedCorners = 'yes' === settings.rounded_corners;
 		var effBorderWidth = borderWidth > 0 ? borderWidth : ( showBorder ? 2 : 0 );
-		var borderColor = settings.border_color || '#000000';
-		var borderStyle = settings.border_style || 'solid';
 		var effBorderColor = borderWidth > 0 ? borderColor : '#E5E7EB';
 		var effBorderStyle = borderWidth > 0 ? borderStyle : 'solid';
-		var borderRadiusTL = ( settings.border_radius_tl && settings.border_radius_tl.size ) ? settings.border_radius_tl.size : 0;
-		var borderRadiusTR = ( settings.border_radius_tr && settings.border_radius_tr.size ) ? settings.border_radius_tr.size : 0;
-		var borderRadiusBR = ( settings.border_radius_br && settings.border_radius_br.size ) ? settings.border_radius_br.size : 0;
-		var borderRadiusBL = ( settings.border_radius_bl && settings.border_radius_bl.size ) ? settings.border_radius_bl.size : 0;
 		var effRadiusTL = borderRadiusTL > 0 ? borderRadiusTL : ( roundedCorners ? 16 : 0 );
 		var effRadiusTR = borderRadiusTR > 0 ? borderRadiusTR : ( roundedCorners ? 16 : 0 );
 		var effRadiusBR = borderRadiusBR > 0 ? borderRadiusBR : ( roundedCorners ? 16 : 0 );
@@ -592,12 +594,24 @@ class PixVisualizeWidget extends Widget_Base {
 		var isTransparentHandle = 'transparent' === handleStyle || 'arrows' === handleStyle;
 		// Single synchronized control: bar + disc share separatorColor.
 		// Legacy handle_background still wins when set (old content).
-		var handleBgSetting = settings.handle_background || '';
+		<?php 
+        ?>
+		var handleBgSetting = '';
+		<?php 
+        ?>
 		var discBg = handleBgSetting || ( isTransparentHandle ? 'transparent' : separatorColor );
-		var handlePaddingRaw = ( settings.handle_padding && settings.handle_padding.size ) ? settings.handle_padding.size : 0;
+		<?php 
+        ?>
+		var handlePaddingRaw = 0;
+		<?php 
+        ?>
 		var handlePadding = Math.min( 20, Math.max( 0, handlePaddingRaw ) );
 		var iconBg = discBg;
-		var iconColor = settings.handle_arrow_color || '#666666';
+		<?php 
+        ?>
+		var iconColor = '#666666';
+		<?php 
+        ?>
 		var groupedFilter = separatorShadow ? 'filter: drop-shadow(0 0 6px rgba(0, 0, 0, 0.6));' : '';
 		// Inner spacing: on the icon box for custom SVG (glued to the
 		// edge), on the glyph box otherwise. Zero keeps history.
@@ -628,11 +642,8 @@ class PixVisualizeWidget extends Widget_Base {
 			? 'pixvisualize-elementor-preview__handle pixvisualize-elementor-preview__handle--vertical'
 			: 'pixvisualize-elementor-preview__handle pixvisualize-elementor-preview__handle--horizontal';
 
-		var hoverMode = 'yes' === settings.hover_mode;
-		var autoScan = 'yes' === settings.auto_scan;
-		var autoScanDuration = ( settings.auto_scan_duration && settings.auto_scan_duration.size ) ? settings.auto_scan_duration.size : 2500;
-		var magnifier = 'yes' === settings.magnifier;
-		var magnifierZoom = ( settings.magnifier_zoom && settings.magnifier_zoom.size ) ? settings.magnifier_zoom.size : 2;
+		<?php 
+        ?>
 
 		// Caption + card look (mirrors the front-end CompareSlider rule:
 		// with a caption the container border/shadow wrap the whole card,
@@ -640,16 +651,19 @@ class PixVisualizeWidget extends Widget_Base {
 		var showCaption = 'yes' === settings.show_caption;
 		var captionTitle = settings.caption_title || '';
 		var captionText = settings.caption_text || '';
-		var captionBg = settings.caption_bg || '#ffffff';
-		var captionTitleColor = settings.caption_title_color || '#1e293b';
-		var captionTextColor = settings.caption_text_color || '#64748b';
-		var captionAlignment = settings.caption_alignment || 'center';
-		if ( [ 'left', 'center', 'right' ].indexOf( captionAlignment ) === -1 ) { captionAlignment = 'center'; }
-		var captionTitleSize = ( settings.caption_title_size && settings.caption_title_size.size ) ? settings.caption_title_size.size : 22;
-		var captionTextSize = ( settings.caption_text_size && settings.caption_text_size.size ) ? settings.caption_text_size.size : 15;
-		var legacyCaptionPadding = ( settings.caption_padding && '' !== settings.caption_padding.size ) ? settings.caption_padding.size : 16;
-		var captionPaddingX = ( settings.caption_padding_x && '' !== settings.caption_padding_x.size ) ? settings.caption_padding_x.size : legacyCaptionPadding;
-		var captionPaddingY = ( settings.caption_padding_y && '' !== settings.caption_padding_y.size ) ? settings.caption_padding_y.size : legacyCaptionPadding;
+		<?php 
+        ?>
+		var captionBg = '#ffffff';
+		var captionTitleColor = '#1e293b';
+		var captionTextColor = '#64748b';
+		var captionAlignment = 'center';
+		var captionTitleSize = 22;
+		var captionTextSize = 15;
+		var legacyCaptionPadding = 16;
+		var captionPaddingX = 16;
+		var captionPaddingY = 16;
+		<?php 
+        ?>
 		var captionVisible = showCaption && ( captionTitle || captionText );
 		var cardShadow = captionVisible && containerShadow;
 		// Card look: with a caption the container bottom corners move to
@@ -678,25 +692,6 @@ class PixVisualizeWidget extends Widget_Base {
 			: ' border-top: 1px solid #e5e7eb;' );
 		var captionTitleAttr = 'color: ' + captionTitleColor + '; font-size: ' + captionTitleSize + 'px; font-weight: 700; line-height: 1.25; margin: ' + ( captionText ? '0 0 4px' : '0' ) + ';';
 		var captionTextAttr = 'color: ' + captionTextColor + '; font-size: ' + captionTextSize + 'px; line-height: 1.5; margin: 0;';
-
-		// Degradation gracieuse : sans licence, le preview ignore les
-		// reglages Pro stockes (contenu pre-existant) et retombe sur les defauts.
-		if ( ! pixIsPro ) {
-			orientation = 'horizontal'; handleStyle = 'circle'; handleIconSvg = '';
-			handleSize = 24; labelPositionBefore = 'top-left'; labelPositionAfter = 'top-right';
-			labelBackground = '#00000080'; labelColor = '#ffffff'; labelFontSize = 12;
-			labelFontWeight = 600; labelPaddingX = 10; labelPaddingY = 5; labelBorderRadius = 4;
-			separatorThickness = 2; separatorColor = '#ffffff'; separatorShadow = true;
-			containerShadowColor = '#000000'; containerShadowHorizontal = 0;
-			containerShadowVertical = 8; containerShadowBlur = 20; containerShadowSpread = 0;
-			containerShadowOpacity = 35; borderWidth = 0; borderColor = '#000000';
-			borderStyle = 'solid'; borderRadiusTL = 0; borderRadiusTR = 0;
-			borderRadiusBR = 0; borderRadiusBL = 0; hoverMode = false; autoScan = false;
-			autoScanDuration = 2500; magnifier = false; magnifierZoom = 2;
-			tabletPosition = 50; mobilePosition = 50; tabletRatio = ''; mobileRatio = '';
-			captionBg = '#ffffff'; captionTitleColor = '#1e293b'; captionTextColor = '#64748b';
-			captionAlignment = 'center'; captionTitleSize = 22; captionTextSize = 15;
-		}
 
 		// Handle icon (same geometry as the front-end Handle component:
 		// 24px circle, 20px chevrons, 34px double arrows).
@@ -737,11 +732,8 @@ class PixVisualizeWidget extends Widget_Base {
 			data-orientation="{{ orientation }}"
 			data-aspect-ratio="{{ aspectRatio }}"
 			data-height="{{ clampedHeight }}"
-			data-hover-mode="{{ hoverMode ? '1' : '0' }}"
-			data-auto-scan="{{ autoScan ? '1' : '0' }}"
-			data-auto-scan-duration="{{ autoScanDuration }}"
-			data-magnifier="{{ magnifier ? '1' : '0' }}"
-			data-magnifier-zoom="{{ magnifierZoom }}"
+			<?php 
+        ?>
 			style="{{ boxWidthAttr }} aspect-ratio: {{ aspectRatio }}; --pc-pos: {{ initialPosition }}%; {{ boxShadowAttr }} {{ boxBorderAttr }} {{ boxRadiusAttr }}"
 		>
 			<# if ( afterImage ) { #>

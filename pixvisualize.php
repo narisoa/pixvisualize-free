@@ -12,7 +12,7 @@
 Plugin Name: PixVisualize
 Plugin URI: https://i-naridigit.com/products/pixvisualize/
 Description: Before/After Image Comparison Slider for Gutenberg, Elementor, plus Pro shortcodes and WooCommerce. Fast, responsive, Pro-ready.
-Version: 1.0.20
+Version: 1.0.21
 Requires at least: 6.8
 Requires PHP: 7.4
 Author: i-NariDigit
@@ -20,7 +20,6 @@ Author URI: https://i-naridigit.com/
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: pixvisualize
-Domain Path: /languages
 */
 
 /*

@@ -32,6 +32,9 @@ class CheckoutNotice extends BaseController
 			return;
 		}
 
+		// Read-only admin notices: these query args only drive display.
+		// phpcs:disable WordPress.Security.NonceVerification.Recommended
+
 		// Cas piège UX : licencié mais toujours sur le code Free.
 		// Les contrôles Pro restent cachés (sinon inertes en front) :
 		// on force l'installation du build premium, sur nos écrans
@@ -125,5 +128,6 @@ class CheckoutNotice extends BaseController
 			</p>
 		</div>
 		<?php
+		// phpcs:enable WordPress.Security.NonceVerification.Recommended
 	}
 }
