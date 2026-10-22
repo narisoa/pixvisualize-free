@@ -86,7 +86,7 @@ class Welcome extends BaseController
 		</div>
 		<?php
 
-		wp_register_script( 'pixvisualize-welcome-notice', '', array(), '1.0.19', true );
+		wp_register_script( 'pixvisualize-welcome-notice', '', array(), '1.0.20', true );
 		wp_enqueue_script( 'pixvisualize-welcome-notice' );
 		wp_add_inline_script(
 			'pixvisualize-welcome-notice',

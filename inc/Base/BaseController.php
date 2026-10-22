@@ -215,8 +215,10 @@ class BaseController
 	 */
 	protected function enqueueViewAssets()
 	{
+		$build_dir = function_exists( 'pixvisualize_get_build_dir' ) ? pixvisualize_get_build_dir() : 'build';
+
 		if ( ! wp_script_is( 'create-block-pixvisualize-view', 'registered' ) ) {
-			$asset_file = $this->plugin_path . 'build/pixvisualize/view.asset.php';
+			$asset_file = $this->plugin_path . $build_dir . '/pixvisualize/view.asset.php';
 
 			if ( ! file_exists( $asset_file ) ) {
 				return;
@@ -226,7 +228,7 @@ class BaseController
 
 			wp_register_script(
 				'create-block-pixvisualize-view',
-				$this->plugin_url . 'build/pixvisualize/view.js',
+				$this->plugin_url . $build_dir . '/pixvisualize/view.js',
 				$asset['dependencies'],
 				$asset['version'],
 				true
@@ -234,7 +236,7 @@ class BaseController
 
 			wp_register_style(
 				'create-block-pixvisualize-style',
-				$this->plugin_url . 'build/pixvisualize/style-index.css',
+				$this->plugin_url . $build_dir . '/pixvisualize/style-index.css',
 				array(),
 				$asset['version']
 			);

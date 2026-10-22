@@ -4,7 +4,7 @@ Tags: before-after, image-comparison, gutenberg, elementor, woocommerce
 Requires at least: 6.8
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.0.19
+Stable tag: 1.0.20
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -44,8 +44,9 @@ Built for agencies, photographers, renovation, beauty, automotive and e-commerce
 
 A single codebase powers both versions. Upgrading keeps all your existing blocks and settings — no migration, no rebuild.
 
-> Learn more: [PixVisualize product page](https://i-naridigit.com/products/pixvisualize/)
-> Development: [GitHub repository](https://github.com/narisoa/pixvisualize-free)
+Learn more: [PixVisualize product page](https://i-naridigit.com/products/pixvisualize/)
+
+Development: [GitHub repository](https://github.com/narisoa/pixvisualize-free)
 
 == Installation ==
 
@@ -64,7 +65,7 @@ A single codebase powers both versions. Upgrading keeps all your existing blocks
 Yes. The block and the base widget work standalone. Elementor is only required for the widget, WooCommerce only for the product gallery.
 
 = Does the block work on mobile? =
-Yes. Touch swipe, responsive positions/ratios per breakpoint, keyboard navigation (arrows, Home, End). Vertical swipe scrolls the page, horizontal swipe moves the slider.
+Yes. Touch swipe, responsive layout, keyboard navigation (arrows, Home, End). Vertical swipe scrolls the page, horizontal swipe moves the slider. Custom per-breakpoint position and ratio controls are available in Pro.
 
 = Will I lose content if I disable a feature or upgrade to Pro? =
 No. Block settings live in post content, product settings in post meta. Disabling a toggle hides the feature; re-enabling restores it. Free → Pro upgrade keeps everything.
@@ -87,6 +88,9 @@ Nothing without your consent. On activation, an opt-in screen (skippable) offers
 5. WooCommerce product tab with placement options (Pro).
 
 == Upgrade Notice ==
+
+= 1.0.20 =
+Free build cleanup: the Free package now ships Free-only JS for the editor, front-end view and Elementor preview; no Pro slider engine, handle styles, responsive controls or interactions are included.
 
 = 1.0.19 =
 Free distribution cleanup: removed the Pro shortcode generator UI from the Free build and documented Freemius Terms and Privacy links.
@@ -143,6 +147,11 @@ Maintenance release. Recommended update: commercial docs cleanup plus WooCommerc
 Maintenance release. Recommended update: fixes Pro activation when Free is still active.
 
 == Changelog ==
+
+= 1.0.20 =
+* Free build: separate `build-free/` JS bundle with a Free-only preview component, front-end view and Elementor preview; Pro engine code is not shipped in the Free package.
+* Free package: `build/` and the Pro Elementor preview script are marked premium-only and excluded from the Free Freemius build; the plugin loads `build-free/` when premium code is absent.
+* Readme: mobile FAQ no longer claims per-breakpoint controls in Free; Development link moved out of the blockquote.
 
 = 1.0.19 =
 * Free build: removed the Pro shortcode generator UI and its admin JS from the WordPress.org distribution.

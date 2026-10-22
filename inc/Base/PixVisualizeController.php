@@ -76,7 +76,8 @@ class PixVisualizeController extends BaseController
 
 	public function registerBlock()
 	{
-		$build_dir = $this->plugin_path . 'build';
+		$build_name = function_exists( 'pixvisualize_get_build_dir' ) ? pixvisualize_get_build_dir() : 'build';
+		$build_dir  = $this->plugin_path . $build_name;
 
 		if ( ! is_dir( $build_dir ) ) {
 			return;

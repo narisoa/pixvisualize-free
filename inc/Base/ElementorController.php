@@ -52,7 +52,7 @@ class ElementorController extends BaseController
 			'pixvisualize-elementor-editor',
 			$this->plugin_url . 'assets/js/pixvisualize-elementor-editor.js',
 			array( 'jquery' ),
-			'1.0.19',
+			'1.0.20',
 			true
 		);
 
@@ -60,7 +60,7 @@ class ElementorController extends BaseController
 			'pixvisualize-elementor-editor',
 			$this->plugin_url . 'assets/css/pixvisualize-elementor-editor.css',
 			array(),
-			'1.0.19'
+			'1.0.20'
 		);
 
 		$plan = function_exists( 'pixvisualize_get_plan' ) ? pixvisualize_get_plan() : 'free';
@@ -75,17 +75,22 @@ class ElementorController extends BaseController
 
 	/**
 	 * Enqueue the preview script inside the Elementor editor preview iframe.
-	 * It adds the live interaction behaviours (Move on Hover, Auto-Slide and
+	 * The free build only needs the contain layout pass; the premium build
+	 * adds the live interaction behaviours (Move on Hover, Auto-Slide and
 	 * Magnifier) on top of the static preview markup rendered by
 	 * content_template().
 	 */
 	public function enqueuePreviewAssets()
 	{
+		$preview_script = function_exists( 'pixvisualize_has_premium_code' ) && pixvisualize_has_premium_code()
+			? 'pixvisualize-elementor-preview.js'
+			: 'pixvisualize-elementor-preview-free.js';
+
 		wp_enqueue_script(
 			'pixvisualize-elementor-preview',
-			$this->plugin_url . 'assets/js/pixvisualize-elementor-preview.js',
+			$this->plugin_url . 'assets/js/' . $preview_script,
 			array(),
-			'1.0.5',
+			'1.0.20',
 			true
 		);
 	}
@@ -117,7 +122,8 @@ class ElementorController extends BaseController
 			return;
 		}
 
-		$asset_file = $this->plugin_path . 'build/pixvisualize/view.asset.php';
+		$build_dir   = function_exists( 'pixvisualize_get_build_dir' ) ? pixvisualize_get_build_dir() : 'build';
+		$asset_file  = $this->plugin_path . $build_dir . '/pixvisualize/view.asset.php';
 
 		if ( ! file_exists( $asset_file ) ) {
 			return;
@@ -127,7 +133,7 @@ class ElementorController extends BaseController
 
 		wp_register_script(
 			'create-block-pixvisualize-view',
-			$this->plugin_url . 'build/pixvisualize/view.js',
+			$this->plugin_url . $build_dir . '/pixvisualize/view.js',
 			$asset['dependencies'],
 			$asset['version'],
 			true
@@ -135,7 +141,7 @@ class ElementorController extends BaseController
 
 		wp_register_style(
 			'create-block-pixvisualize-style',
-			$this->plugin_url . 'build/pixvisualize/style-index.css',
+			$this->plugin_url . $build_dir . '/pixvisualize/style-index.css',
 			array(),
 			$asset['version']
 		);

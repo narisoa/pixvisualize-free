@@ -126,9 +126,12 @@ export default function Edit( { attributes, setAttributes } ) {
 	// Plan Freemius (runtime) : 'free' | 'pro'. Injecté par PHP
 	// (PixVisualizeController::injectEditorPlan), 'free' par défaut.
 	// 'pro' = licence + code premium (pas de faux Pro sur code Free).
-	const plan =
-		( typeof window !== 'undefined' && window.pixvisualizePlan ) || 'free';
-	const isPro = plan !== 'free';
+	const isFreeBuild = process.env.PIXVISUALIZE_FREE === true;
+	const plan = isFreeBuild
+		? 'free'
+		: ( typeof window !== 'undefined' && window.pixvisualizePlan ) ||
+		  'free';
+	const isPro = ! isFreeBuild && plan !== 'free';
 	const needsInstall =
 		typeof window !== 'undefined' &&
 		window.pixvisualizeNeedsInstall === true;
@@ -294,20 +297,105 @@ export default function Edit( { attributes, setAttributes } ) {
 		{ label: __( 'Right', 'pixvisualize' ), value: 'right' },
 	];
 
-	const labelPositionOptions = [
-		{ label: __( 'Top Left', 'pixvisualize' ), value: 'top-left' },
-		{ label: __( 'Top Right', 'pixvisualize' ), value: 'top-right' },
-		{ label: __( 'Bottom Left', 'pixvisualize' ), value: 'bottom-left' },
-		{
-			label: __( 'Bottom Right', 'pixvisualize' ),
-			value: 'bottom-right',
-		},
-	];
+	const labelPositionOptions = isPro
+		? [
+				{ label: __( 'Top Left', 'pixvisualize' ), value: 'top-left' },
+				{
+					label: __( 'Top Right', 'pixvisualize' ),
+					value: 'top-right',
+				},
+				{
+					label: __( 'Bottom Left', 'pixvisualize' ),
+					value: 'bottom-left',
+				},
+				{
+					label: __( 'Bottom Right', 'pixvisualize' ),
+					value: 'bottom-right',
+				},
+		  ]
+		: [];
 
-	const responsiveRatioOptions = [
-		{ label: __( 'Inherit (desktop)', 'pixvisualize' ), value: '' },
-		...aspectRatioOptions,
-	];
+	const responsiveRatioOptions = isPro
+		? [
+				{
+					label: __( 'Inherit (desktop)', 'pixvisualize' ),
+					value: '',
+				},
+				...aspectRatioOptions,
+		  ]
+		: [];
+
+	const freePreviewProps = {
+		beforeImage,
+		afterImage,
+		initialPosition,
+		beforeLabel,
+		afterLabel,
+		showLabels,
+		aspectRatio,
+		height: effHeight,
+		captionTitle,
+		captionText,
+		showCaption,
+		captionBg,
+		captionTitleColor,
+		captionTextColor,
+		captionAlignment,
+		captionTitleSize,
+		captionTextSize,
+		captionPadding,
+		captionPaddingX: captionPaddingX ?? captionPadding,
+		captionPaddingY: captionPaddingY ?? captionPadding,
+		containerShadow,
+		containerBorder,
+		containerRounded,
+		labelBackground,
+		labelColor,
+	};
+
+	const proPreviewProps = {
+		...freePreviewProps,
+		orientation,
+		handleStyle,
+		handleIconSvg,
+		handleSize,
+		handleBackground,
+		handleArrowColor,
+		handlePadding,
+		labelPositionBefore,
+		labelPositionAfter,
+		labelFontSize,
+		labelFontWeight,
+		labelPaddingX,
+		labelPaddingY,
+		labelBorderRadius,
+		separatorThickness,
+		separatorColor,
+		separatorShadow,
+		containerShadowColor,
+		containerShadowHorizontal,
+		containerShadowVertical,
+		containerShadowBlur,
+		containerShadowSpread,
+		containerShadowOpacity,
+		containerBorderWidth,
+		containerBorderColor,
+		containerBorderStyle,
+		containerBorderRadiusTL,
+		containerBorderRadiusTR,
+		containerBorderRadiusBR,
+		containerBorderRadiusBL,
+		hoverMode,
+		autoScan,
+		autoScanDuration,
+		magnifier,
+		magnifierZoom,
+		tabletPosition,
+		mobilePosition,
+		tabletRatio,
+		mobileRatio,
+		...( ! isPro && previewFreeDefaults ),
+	};
 
 	return (
 		<>
@@ -561,44 +649,32 @@ export default function Edit( { attributes, setAttributes } ) {
 					) }
 				</PanelBody>
 				<PanelBody
-					title={ __( 'Layout & Orientation', 'pixvisualize' ) }
+					title={
+						isPro
+							? __( 'Layout & Orientation', 'pixvisualize' )
+							: __( 'Layout', 'pixvisualize' )
+					}
 					initialOpen={ false }
 				>
-					<SelectControl
-						label={ __( 'Orientation', 'pixvisualize' ) }
-						value={ isPro ? orientation : 'horizontal' }
-						options={
-							isPro
-								? [
-										{
-											label: __(
-												'Horizontal',
-												'pixvisualize'
-											),
-											value: 'horizontal',
-										},
-										{
-											label: __(
-												'Vertical',
-												'pixvisualize'
-											),
-											value: 'vertical',
-										},
-								  ]
-								: [
-										{
-											label: __(
-												'Horizontal',
-												'pixvisualize'
-											),
-											value: 'horizontal',
-										},
-								  ]
-						}
-						onChange={ ( val ) =>
-							setAttributes( { orientation: val } )
-						}
-					/>
+					{ isPro && (
+						<SelectControl
+							label={ __( 'Orientation', 'pixvisualize' ) }
+							value={ orientation }
+							options={ [
+								{
+									label: __( 'Horizontal', 'pixvisualize' ),
+									value: 'horizontal',
+								},
+								{
+									label: __( 'Vertical', 'pixvisualize' ),
+									value: 'vertical',
+								},
+							] }
+							onChange={ ( val ) =>
+								setAttributes( { orientation: val } )
+							}
+						/>
+					) }
 					<SelectControl
 						label={ __( 'Aspect Ratio', 'pixvisualize' ) }
 						help={ __(
@@ -1516,91 +1592,11 @@ export default function Edit( { attributes, setAttributes } ) {
 								margin: '0 auto',
 							} }
 						>
-							<CompareSlider
-								beforeImage={ beforeImage }
-								afterImage={ afterImage }
-								initialPosition={ initialPosition }
-								beforeLabel={ beforeLabel }
-								afterLabel={ afterLabel }
-								showLabels={ showLabels }
-								aspectRatio={ aspectRatio }
-								height={ effHeight }
-								captionTitle={ captionTitle }
-								captionText={ captionText }
-								showCaption={ showCaption }
-								captionBg={ captionBg }
-								captionTitleColor={ captionTitleColor }
-								captionTextColor={ captionTextColor }
-								captionAlignment={ captionAlignment }
-								captionTitleSize={ captionTitleSize }
-								captionTextSize={ captionTextSize }
-								captionPadding={ captionPadding }
-								captionPaddingX={
-									captionPaddingX ?? captionPadding
-								}
-								captionPaddingY={
-									captionPaddingY ?? captionPadding
-								}
-								orientation={ orientation }
-								handleStyle={ handleStyle }
-								handleIconSvg={ handleIconSvg }
-								handleSize={ handleSize }
-								handleBackground={ handleBackground }
-								handleArrowColor={ handleArrowColor }
-								handlePadding={ handlePadding }
-								labelPositionBefore={ labelPositionBefore }
-								labelPositionAfter={ labelPositionAfter }
-								labelBackground={ labelBackground }
-								labelColor={ labelColor }
-								labelFontSize={ labelFontSize }
-								labelFontWeight={ labelFontWeight }
-								labelPaddingX={ labelPaddingX }
-								labelPaddingY={ labelPaddingY }
-								labelBorderRadius={ labelBorderRadius }
-								separatorThickness={ separatorThickness }
-								separatorColor={ separatorColor }
-								separatorShadow={ separatorShadow }
-								containerShadow={ containerShadow }
-								containerShadowColor={ containerShadowColor }
-								containerShadowHorizontal={
-									containerShadowHorizontal
-								}
-								containerShadowVertical={
-									containerShadowVertical
-								}
-								containerShadowBlur={ containerShadowBlur }
-								containerShadowSpread={ containerShadowSpread }
-								containerShadowOpacity={
-									containerShadowOpacity
-								}
-								containerBorderWidth={ containerBorderWidth }
-								containerBorder={ containerBorder }
-								containerBorderColor={ containerBorderColor }
-								containerBorderStyle={ containerBorderStyle }
-								containerBorderRadiusTL={
-									containerBorderRadiusTL
-								}
-								containerBorderRadiusTR={
-									containerBorderRadiusTR
-								}
-								containerBorderRadiusBR={
-									containerBorderRadiusBR
-								}
-								containerBorderRadiusBL={
-									containerBorderRadiusBL
-								}
-								containerRounded={ containerRounded }
-								hoverMode={ hoverMode }
-								autoScan={ autoScan }
-								autoScanDuration={ autoScanDuration }
-								magnifier={ magnifier }
-								magnifierZoom={ magnifierZoom }
-								tabletPosition={ tabletPosition }
-								mobilePosition={ mobilePosition }
-								tabletRatio={ tabletRatio }
-								mobileRatio={ mobileRatio }
-								{ ...( ! isPro && previewFreeDefaults ) }
-							/>
+							{ isFreeBuild ? (
+								<CompareSlider { ...freePreviewProps } />
+							) : (
+								<CompareSlider { ...proPreviewProps } />
+							) }
 						</div>
 					) : (
 						<ResizableBox
@@ -1625,91 +1621,11 @@ export default function Edit( { attributes, setAttributes } ) {
 							showHandle
 							onResizeStop={ onResizeStop }
 						>
-							<CompareSlider
-								beforeImage={ beforeImage }
-								afterImage={ afterImage }
-								initialPosition={ initialPosition }
-								beforeLabel={ beforeLabel }
-								afterLabel={ afterLabel }
-								showLabels={ showLabels }
-								aspectRatio={ aspectRatio }
-								height={ effHeight }
-								captionTitle={ captionTitle }
-								captionText={ captionText }
-								showCaption={ showCaption }
-								captionBg={ captionBg }
-								captionTitleColor={ captionTitleColor }
-								captionTextColor={ captionTextColor }
-								captionAlignment={ captionAlignment }
-								captionTitleSize={ captionTitleSize }
-								captionTextSize={ captionTextSize }
-								captionPadding={ captionPadding }
-								captionPaddingX={
-									captionPaddingX ?? captionPadding
-								}
-								captionPaddingY={
-									captionPaddingY ?? captionPadding
-								}
-								orientation={ orientation }
-								handleStyle={ handleStyle }
-								handleIconSvg={ handleIconSvg }
-								handleSize={ handleSize }
-								handleBackground={ handleBackground }
-								handleArrowColor={ handleArrowColor }
-								handlePadding={ handlePadding }
-								labelPositionBefore={ labelPositionBefore }
-								labelPositionAfter={ labelPositionAfter }
-								labelBackground={ labelBackground }
-								labelColor={ labelColor }
-								labelFontSize={ labelFontSize }
-								labelFontWeight={ labelFontWeight }
-								labelPaddingX={ labelPaddingX }
-								labelPaddingY={ labelPaddingY }
-								labelBorderRadius={ labelBorderRadius }
-								separatorThickness={ separatorThickness }
-								separatorColor={ separatorColor }
-								separatorShadow={ separatorShadow }
-								containerShadow={ containerShadow }
-								containerShadowColor={ containerShadowColor }
-								containerShadowHorizontal={
-									containerShadowHorizontal
-								}
-								containerShadowVertical={
-									containerShadowVertical
-								}
-								containerShadowBlur={ containerShadowBlur }
-								containerShadowSpread={ containerShadowSpread }
-								containerShadowOpacity={
-									containerShadowOpacity
-								}
-								containerBorderWidth={ containerBorderWidth }
-								containerBorder={ containerBorder }
-								containerBorderColor={ containerBorderColor }
-								containerBorderStyle={ containerBorderStyle }
-								containerBorderRadiusTL={
-									containerBorderRadiusTL
-								}
-								containerBorderRadiusTR={
-									containerBorderRadiusTR
-								}
-								containerBorderRadiusBR={
-									containerBorderRadiusBR
-								}
-								containerBorderRadiusBL={
-									containerBorderRadiusBL
-								}
-								containerRounded={ containerRounded }
-								hoverMode={ hoverMode }
-								autoScan={ autoScan }
-								autoScanDuration={ autoScanDuration }
-								magnifier={ magnifier }
-								magnifierZoom={ magnifierZoom }
-								tabletPosition={ tabletPosition }
-								mobilePosition={ mobilePosition }
-								tabletRatio={ tabletRatio }
-								mobileRatio={ mobileRatio }
-								{ ...( ! isPro && previewFreeDefaults ) }
-							/>
+							{ isFreeBuild ? (
+								<CompareSlider { ...freePreviewProps } />
+							) : (
+								<CompareSlider { ...proPreviewProps } />
+							) }
 						</ResizableBox>
 					) }
 				</div>

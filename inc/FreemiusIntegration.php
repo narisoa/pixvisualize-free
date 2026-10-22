@@ -142,6 +142,28 @@ if ( !function_exists( 'pixvisualize_get_plan' ) ) {
     }
 
 }
+if ( !function_exists( 'pixvisualize_get_build_dir' ) ) {
+    /**
+     * JS build directory: Pro bundle on premium code, Free bundle otherwise.
+     *
+     * Freemius strips the Pro `build/` files from the Free package, so the
+     * Free package must load the prebuilt `build-free/` bundle.
+     *
+     * @return string
+     */
+    function pixvisualize_get_build_dir() {
+        $plugin_dir = dirname( __DIR__ );
+        $build_dir = 'build-free';
+        if ( function_exists( 'pixvisualize_has_premium_code' ) && pixvisualize_has_premium_code() ) {
+            $build_dir = 'build';
+        }
+        if ( !is_dir( $plugin_dir . '/' . $build_dir ) ) {
+            $build_dir = 'build';
+        }
+        return $build_dir;
+    }
+
+}
 if ( function_exists( 'pixvisualize_fs' ) ) {
     pixvisualize_fs()->add_filter(
         'is_submenu_visible',
