@@ -348,7 +348,7 @@ class PixVisualizeWidget extends Widget_Base {
         $beforeLabel = ( !empty( $settings['before_label'] ) ? $settings['before_label'] : __( 'Before', 'pixvisualize' ) );
         $afterLabel = ( !empty( $settings['after_label'] ) ? $settings['after_label'] : __( 'After', 'pixvisualize' ) );
         $showLabels = 'yes' === ($settings['show_labels'] ?? 'yes');
-        $orientation = ( $is_pro && !empty( $settings['orientation'] ) ? $settings['orientation'] : 'horizontal' );
+        $orientation = 'horizontal';
         $aspectRatio = ( !empty( $settings['aspect_ratio'] ) ? $settings['aspect_ratio'] : '16/9' );
         $height = ( isset( $settings['height']['size'] ) ? (int) $settings['height']['size'] : 450 );
         $fullWidth = 'yes' === ($settings['full_width'] ?? 'no');

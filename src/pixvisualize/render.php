@@ -14,7 +14,7 @@ $aspectRatio = $attributes['aspectRatio'] ?? '16/9';
 $height = $attributes['height'] ?? 450;
 $fullWidth = $attributes['fullWidth'] ?? false;
 $alignment = $attributes['alignment'] ?? 'center';
-$orientation = $attributes['orientation'] ?? 'horizontal';
+$orientation = 'horizontal';
 $handleStyle = $attributes['handleStyle'] ?? 'circle';
 $handleIconSvg = $attributes['handleIconSvg'] ?? '';
 $handleSize = $attributes['handleSize'] ?? 24;
@@ -118,7 +118,7 @@ echo ( $fullWidth ? '1' : '0' );
 echo esc_attr( $alignment );
 ?>"
 	data-orientation="<?php 
-echo esc_attr( ( function_exists( 'pixvisualize_can_use_pro' ) && pixvisualize_can_use_pro() ? $orientation : 'horizontal' ) );
+echo esc_attr( $orientation );
 ?>"
 	<?php 
 ?>

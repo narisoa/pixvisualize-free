@@ -4,7 +4,7 @@ Tags: before-after, image-comparison, gutenberg, elementor, woocommerce
 Requires at least: 6.8
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.0.21
+Stable tag: 1.0.22
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -89,6 +89,9 @@ Nothing without your consent. On activation, an opt-in screen (skippable) offers
 
 == Upgrade Notice ==
 
+= 1.0.22 =
+Maintenance update: WordPress.org compatibility for the Free/Pro orientation gate. No feature or slider behavior changes.
+
 = 1.0.21 =
 Maintenance update: Plugin Check compliance for the checkout notice nonce and Elementor Free preview; removed the unused Domain Path header.
 
@@ -150,6 +153,11 @@ Maintenance release. Recommended update: commercial docs cleanup plus WooCommerc
 Maintenance release. Recommended update: fixes Pro activation when Free is still active.
 
 == Changelog ==
+
+= 1.0.22 =
+* Free/Pro: the vertical orientation gate now uses the Freemius premium-code marker directly in the block and Elementor renderers, so the Free build falls back to horizontal without changing the slider runtime behavior.
+* Auto-Scan: unchanged; the sequence remains 100% to 0 to the initial position.
+* Tested: horizontal and vertical (Pro) orientation in Gutenberg and Elementor on the front end; Free builds render horizontal.
 
 = 1.0.21 =
 * Plugin Check: annotated the nonce-verified checkout notice reads to avoid false-positive `NonceVerification.Recommended` warnings.
