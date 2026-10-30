@@ -4,7 +4,7 @@ Tags: before-after, image-comparison, gutenberg, elementor, woocommerce
 Requires at least: 6.8
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.0.22
+Stable tag: 1.0.23
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -89,6 +89,9 @@ Nothing without your consent. On activation, an opt-in screen (skippable) offers
 
 == Upgrade Notice ==
 
+= 1.0.23 =
+Maintenance update: every `register_setting()` registration now always receives an explicit sanitization callback. No feature or slider behavior changes.
+
 = 1.0.22 =
 Maintenance update: WordPress.org compatibility for the Free/Pro orientation gate. No feature or slider behavior changes.
 
@@ -153,6 +156,10 @@ Maintenance release. Recommended update: commercial docs cleanup plus WooCommerc
 Maintenance release. Recommended update: fixes Pro activation when Free is still active.
 
 == Changelog ==
+
+= 1.0.23 =
+* Settings: `register_setting()` now always receives an explicit `sanitize_callback`, with a safe array fallback if a setting has no dedicated callback. The PixVisualize option keeps using its checkbox sanitizer.
+* Tested: plugin activation with `WP_DEBUG` enabled, settings save, and Plugin Check on the Free payload.
 
 = 1.0.22 =
 * Free/Pro: the vertical orientation gate now uses the Freemius premium-code marker directly in the block and Elementor renderers, so the Free build falls back to horizontal without changing the slider runtime behavior.

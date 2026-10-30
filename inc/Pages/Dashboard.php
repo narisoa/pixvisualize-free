@@ -58,9 +58,10 @@ class Dashboard extends BaseController
 	{
 		$args = array(
 			array(
-				'option_group' => 'pixvisualize_settings',
-				'option_name' => 'pixvisualize',
-				'callback' => array( $this->callbacks_mngr, 'checkboxSanitize' )
+				'option_group'      => 'pixvisualize_settings',
+				'option_name'       => 'pixvisualize',
+				'type'              => 'array',
+				'sanitize_callback' => array( $this->callbacks_mngr, 'checkboxSanitize' )
 			)
 		);
 

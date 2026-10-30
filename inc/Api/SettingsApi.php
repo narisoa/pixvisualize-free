@@ -101,12 +101,28 @@ class SettingsApi
 	{
 		// register setting
 		foreach ( $this->settings as $setting ) {
-			$args = array(
-				'type'              => 'array',
-				'sanitize_callback' => isset( $setting['callback'] ) ? $setting['callback'] : null,
-			);
+			$type = isset( $setting['type'] ) ? $setting['type'] : 'array';
 
-			register_setting( $setting['option_group'], $setting['option_name'], $args );
+			$sanitize_callback = null;
+
+			if ( isset( $setting['sanitize_callback'] ) ) {
+				$sanitize_callback = $setting['sanitize_callback'];
+			} elseif ( isset( $setting['callback'] ) ) {
+				$sanitize_callback = $setting['callback'];
+			}
+
+			if ( ! is_callable( $sanitize_callback ) ) {
+				$sanitize_callback = array( $this, 'sanitizeSetting' );
+			}
+
+			register_setting(
+				$setting['option_group'],
+				$setting['option_name'],
+				array(
+					'type'              => $type,
+					'sanitize_callback' => $sanitize_callback,
+				)
+			);
 		}
 
 		// add settings section
@@ -118,5 +134,30 @@ class SettingsApi
 		foreach ( $this->fields as $field ) {
 			add_settings_field( $field["id"], $field["title"], ( isset( $field["callback"] ) ? $field["callback"] : '' ), $field["page"], $field["section"], ( isset( $field["args"] ) ? $field["args"] : '' ) );
 		}
+	}
+
+	/**
+	 * Default sanitization callback for settings without a dedicated callback.
+	 *
+	 * @param mixed $input Raw option value.
+	 * @return mixed
+	 */
+	public function sanitizeSetting( $input )
+	{
+		if ( is_array( $input ) ) {
+			$output = array();
+
+			foreach ( $input as $key => $value ) {
+				$output[ sanitize_key( $key ) ] = $this->sanitizeSetting( $value );
+			}
+
+			return $output;
+		}
+
+		if ( is_bool( $input ) || is_int( $input ) || is_float( $input ) ) {
+			return $input;
+		}
+
+		return sanitize_text_field( (string) $input );
 	}
 }
