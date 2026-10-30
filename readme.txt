@@ -4,7 +4,7 @@ Tags: before-after, image-comparison, gutenberg, elementor, woocommerce
 Requires at least: 6.8
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.0.24
+Stable tag: 1.0.25
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -89,6 +89,9 @@ Nothing without your consent. On activation, an opt-in screen (skippable) offers
 
 == Upgrade Notice ==
 
+= 1.0.25 =
+Security update: bundled Freemius WordPress SDK upgraded to 2.13.5. No feature change.
+
 = 1.0.24 =
 The Pro package is now labelled "PixVisualize Pro" in the Plugins list so Free and Pro are never mistaken for duplicates. No feature change.
 
@@ -159,6 +162,10 @@ Maintenance release. Recommended update: commercial docs cleanup plus WooCommerc
 Maintenance release. Recommended update: fixes Pro activation when Free is still active.
 
 == Changelog ==
+
+= 1.0.25 =
+* Security: bundled Freemius WordPress SDK updated from 2.13.4 to 2.13.5 (stored XSS fixes in admin notices, pricing page and installation metadata).
+* No feature or slider behavior change.
 
 = 1.0.24 =
 * Plugins list: the Pro package (`pixvisualize-pro`) is displayed as "PixVisualize Pro"; the Free package keeps "PixVisualize".
