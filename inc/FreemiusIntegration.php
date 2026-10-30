@@ -203,3 +203,38 @@ function pixvisualize_force_remove_contact_menu() {
 }
 
 add_action( 'admin_menu', 'pixvisualize_force_remove_contact_menu', 999999 );
+/**
+ * Show the premium package as "PixVisualize Pro" in the Plugins list.
+ *
+ * Free and Pro use the same plugin header, and Freemius installs the premium
+ * package in the `pixvisualize-pro` folder. Without this filter both entries
+ * are labelled "PixVisualize" and look like a duplicate. Only the premium
+ * package entry is renamed; the Free entry keeps its original name.
+ *
+ * @param array $plugins Plugin list keyed by plugin basename.
+ * @return array
+ */
+if ( !function_exists( 'pixvisualize_rename_premium_plugin' ) ) {
+    function pixvisualize_rename_premium_plugin(  $plugins  ) {
+        if ( !is_array( $plugins ) ) {
+            return $plugins;
+        }
+        $premium_slug = 'pixvisualize-pro';
+        if ( function_exists( 'pixvisualize_fs' ) ) {
+            $fs = pixvisualize_fs();
+            if ( $fs && is_callable( array($fs, 'get_premium_slug') ) ) {
+                $slug = $fs->get_premium_slug();
+                if ( !empty( $slug ) ) {
+                    $premium_slug = $slug;
+                }
+            }
+        }
+        $premium_file = $premium_slug . '/pixvisualize.php';
+        if ( isset( $plugins[$premium_file] ) && is_array( $plugins[$premium_file] ) ) {
+            $plugins[$premium_file]['Name'] = 'PixVisualize Pro';
+        }
+        return $plugins;
+    }
+
+}
+add_filter( 'all_plugins', 'pixvisualize_rename_premium_plugin' );
