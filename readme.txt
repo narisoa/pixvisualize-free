@@ -4,7 +4,7 @@ Tags: before-after, image-comparison, gutenberg, elementor, woocommerce
 Requires at least: 6.8
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.0.25
+Stable tag: 1.0.26
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -17,9 +17,7 @@ PixVisualize adds a professional Before/After image comparison slider to WordPre
 Use it with:
 
 * **Gutenberg** – native block with live preview,
-* **Elementor** – drag-and-drop widget with visual controls,
-* **Shortcode** – `[pixvisualize]` embeddable anywhere (Pro),
-* **WooCommerce** – Before/After gallery on product pages (Pro).
+* **Elementor** – drag-and-drop widget with visual controls.
 
 Built for agencies, photographers, renovation, beauty, automotive and e-commerce stores that need to *prove* the transformation.
 
@@ -31,22 +29,15 @@ Built for agencies, photographers, renovation, beauty, automotive and e-commerce
 * Container shadow, border and rounded corners (one-click presets)
 * Touch, swipe and keyboard support, fully responsive
 
-**Pro version unlocks:**
-
-* Vertical orientation, custom handle (circle, line, arrows, custom SVG)
-* Advanced labels, separator styling with grouped drop shadow
-* Container fine-tuning: shadow, border, per-corner radius
-* Responsive per breakpoint (tablet + mobile position and ratio)
-* Hover mode, Auto-Scan intro animation, Magnifier loupe
-* Shortcode generator with saved list + visual re-edit
-* WooCommerce placements (14 locations) + Product Data panel
-* Priority updates and support
-
-A single codebase powers both versions. Upgrading keeps all your existing blocks and settings — no migration, no rebuild.
-
 Learn more: [PixVisualize product page](https://i-naridigit.com/products/pixvisualize/)
 
+Pricing: [PixVisualize plans and pricing](https://i-naridigit.com/pixvisualize-pricing/)
+
+Live demo: [PixVisualize Pro demo](https://i-naridigit.com/demo/pixvisualize/)
+
 Development: [GitHub repository](https://github.com/narisoa/pixvisualize-free)
+
+Contact: [contact@i-naridigit.com](mailto:contact@i-naridigit.com)
 
 == Installation ==
 
@@ -56,13 +47,11 @@ Development: [GitHub repository](https://github.com/narisoa/pixvisualize-free)
 4. Add a comparison:
 * **Gutenberg:** insert the **PixVisualize** block, pick Before/After images, publish.
 * **Elementor:** drag the **PixVisualize** widget, configure, publish.
-* **Shortcode (Pro):** PixVisualize → Shortcode Generator → copy, e.g. `[pixvisualize before="URL-BEFORE" after="URL-AFTER" position="50" ratio="16/9"]`
-* **WooCommerce (Pro):** edit a product → **PixVisualize** tab → images + placement → Update.
 
 == Frequently Asked Questions ==
 
 = Does it work without Elementor or WooCommerce? =
-Yes. The block and the base widget work standalone. Elementor is only required for the widget, WooCommerce only for the product gallery.
+Yes. The Gutenberg block works independently of Elementor and WooCommerce. Elementor is only required to use the Elementor widget, and WooCommerce is only required for the product gallery in PixVisualize Pro.
 
 = Does the block work on mobile? =
 Yes. Touch swipe, responsive layout, keyboard navigation (arrows, Home, End). Vertical swipe scrolls the page, horizontal swipe moves the slider. Custom per-breakpoint position and ratio controls are available in Pro.
@@ -74,20 +63,27 @@ No. Block settings live in post content, product settings in post meta. Disablin
 The `[pixvisualize]` shortcode is a Pro feature and is not rendered in the Free version (standard WordPress behavior: shortcode shown as text). Upgrade to Pro to render it.
 
 = Where do I manage my Pro license? =
-PixVisualize → Account. After checkout, activate your key, then install `pixvisualize-pro.zip` when prompted. Support: [i-naridigit.com/support](https://i-naridigit.com/support/)
+PixVisualize → Account. After checkout, activate your key, then install `pixvisualize-pro.zip` when prompted. See plans on the [pricing page](https://i-naridigit.com/pixvisualize-pricing/). Support: [i-naridigit.com/support](https://i-naridigit.com/support/) or [contact@i-naridigit.com](mailto:contact@i-naridigit.com).
+
+= Where can I try the Pro features? =
+The [live demo](https://i-naridigit.com/demo/pixvisualize/) runs the Pro version. Current plans are listed on the [pricing page](https://i-naridigit.com/pixvisualize-pricing/).
 
 = What data does PixVisualize collect? =
 Nothing without your consent. On activation, an opt-in screen (skippable) offers to share admin name/email, site URL, WordPress version and diagnostic data with Freemius for licensing, updates and support. No tracking otherwise. Freemius [Terms of Use](https://freemius.com/terms/) and [Privacy Policy](https://freemius.com/privacy/).
 
 == Screenshots ==
 
-1. Before/After slider on the front-end (horizontal, circle handle).
-2. Gutenberg sidebar: layout, appearance and interactions.
-3. Elementor widget with live WYSIWYG preview.
-4. Shortcode Generator (Pro) with saved list.
-5. WooCommerce product tab with placement options (Pro).
+1. Frontend display with custom labels, border radius, title, and description
+2. Minimalist frontend display without labels, captions, title, description, or border radius.
+3. Gutenberg block editor preview showing the slider component and its sidebar configuration settings.
+4. Elementor widget with live WYSIWYG preview.
+5. Global settings page to enable or disable the Gutenberg block and Elementor widget.
+6. Elementor widget configuration sidebar highlighting layout orientation, aspect ratio, height, and full width settings (also available as a native Gutenberg block).
 
 == Upgrade Notice ==
+
+= 1.0.26 =
+Documentation update: clearer Free/Pro split, pricing and demo links, refreshed screenshots. No code change.
 
 = 1.0.25 =
 Security update: bundled Freemius WordPress SDK upgraded to 2.13.5. No feature change.
@@ -162,6 +158,11 @@ Maintenance release. Recommended update: commercial docs cleanup plus WooCommerc
 Maintenance release. Recommended update: fixes Pro activation when Free is still active.
 
 == Changelog ==
+
+= 1.0.26 =
+* Documentation: Free/Pro split clarified; all Pro features and Pro usage instructions now live under "Upgrade to Pro".
+* Readme: added pricing, live demo and contact links; clarified Elementor/WooCommerce requirements; refreshed screenshots (6).
+* No code or slider behavior change.
 
 = 1.0.25 =
 * Security: bundled Freemius WordPress SDK updated from 2.13.4 to 2.13.5 (stored XSS fixes in admin notices, pricing page and installation metadata).
@@ -265,6 +266,22 @@ Maintenance release. Recommended update: fixes Pro activation when Free is still
 
 == Upgrade to Pro ==
 
-Go Pro to unlock vertical mode, custom handles, advanced labels, hover / auto-scan / magnifier, responsive per breakpoint, shortcode generator and WooCommerce gallery.
+PixVisualize Pro is a separate premium product. A single codebase powers both versions: upgrading keeps all your existing blocks and settings — no migration, no rebuild.
 
-See current plans on the [PixVisualize product page](https://i-naridigit.com/products/pixvisualize/). Checkout, license and auto-updates are handled securely via Freemius.
+**Pro version unlocks:**
+
+* Vertical orientation, custom handle (circle, line, arrows, custom SVG)
+* Advanced labels, separator styling with grouped drop shadow
+* Container fine-tuning: shadow, border, per-corner radius
+* Responsive per breakpoint (tablet + mobile position and ratio)
+* Hover mode, Auto-Scan intro animation, Magnifier loupe
+* Shortcode generator with saved list + visual re-edit
+* WooCommerce placements + Product Data panel
+* Priority updates and support
+
+**Pro usage:**
+
+* **Shortcode:** PixVisualize → Shortcode Generator → copy, e.g. `[pixvisualize before="URL-BEFORE" after="URL-AFTER" position="50" ratio="16/9"]`
+* **WooCommerce:** edit a product → **PixVisualize** tab → images + placement → Update.
+
+See current plans on the [PixVisualize pricing page](https://i-naridigit.com/pixvisualize-pricing/) and try the Pro slider on the [live demo](https://i-naridigit.com/demo/pixvisualize/). Checkout, license and auto-updates are handled securely via Freemius.
