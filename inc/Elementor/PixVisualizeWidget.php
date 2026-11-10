@@ -87,9 +87,10 @@ class PixVisualizeWidget extends Widget_Base {
 
     protected function register_controls() {
         $is_pro = function_exists( 'pixvisualize_can_use_pro' ) && pixvisualize_can_use_pro();
-        /* ------------------------------------------------------------------ *
-         * CONTENT TAB — "Images & Content" (mirror of Gutenberg panel)       *
-         * ------------------------------------------------------------------ */
+        /*
+        		------------------------------------------------------------------ *
+        		 * CONTENT TAB — "Images & Content" (mirror of Gutenberg panel)       *
+        		 * ------------------------------------------------------------------ */
         $this->start_controls_section( 'pixvisualize_content_section', array(
             'label' => __( 'Images & Content', 'pixvisualize' ),
         ) );
@@ -125,9 +126,10 @@ class PixVisualizeWidget extends Widget_Base {
             'default' => 'yes',
         ) );
         $this->end_controls_section();
-        /* ------------------------------------------------------------------ *
-         * CONTENT TAB — "Caption" (title + text below the slider)            *
-         * ------------------------------------------------------------------ */
+        /*
+        		------------------------------------------------------------------ *
+        		 * CONTENT TAB — "Caption" (title + text below the slider)            *
+        		 * ------------------------------------------------------------------ */
         $this->start_controls_section( 'pixvisualize_caption_section', array(
             'label' => __( 'Caption', 'pixvisualize' ),
         ) );
@@ -153,9 +155,10 @@ class PixVisualizeWidget extends Widget_Base {
             ),
         ) );
         $this->end_controls_section();
-        /* ------------------------------------------------------------------ *
-         * CONTENT TAB — "Layout & Orientation"                               *
-         * ------------------------------------------------------------------ */
+        /*
+        		------------------------------------------------------------------ *
+        		 * CONTENT TAB — "Layout & Orientation"                               *
+        		 * ------------------------------------------------------------------ */
         $this->start_controls_section( 'pixvisualize_layout_section', array(
             'label' => __( 'Layout & Orientation', 'pixvisualize' ),
         ) );
@@ -354,7 +357,9 @@ class PixVisualizeWidget extends Widget_Base {
         $fullWidth = 'yes' === ($settings['full_width'] ?? 'no');
         $initialPosition = ( isset( $settings['initial_position']['size'] ) ? (int) $settings['initial_position']['size'] : 50 );
         $handleStyle = ( !empty( $settings['handle_style'] ) ? $settings['handle_style'] : 'circle' );
-        $handleIconSvg = ( !empty( $settings['handle_icon_svg'] ) ? $settings['handle_icon_svg'] : '' );
+        // The custom SVG is injected with dangerouslySetInnerHTML in the React
+        // view: sanitize the Elementor setting before it reaches the data-* attr.
+        $handleIconSvg = ( !empty( $settings['handle_icon_svg'] ) && function_exists( 'pixvisualize_sanitize_svg' ) ? pixvisualize_sanitize_svg( $settings['handle_icon_svg'] ) : '' );
         $handleSize = ( isset( $settings['handle_size']['size'] ) ? (int) $settings['handle_size']['size'] : 24 );
         $handleSize = max( 16, min( 64, $handleSize ) );
         // Legacy handle_background kept for backward compatibility (old
@@ -448,7 +453,7 @@ class PixVisualizeWidget extends Widget_Base {
         echo esc_attr( $afterImage );
         ?>"
 			data-initial-position="<?php 
-        echo esc_attr( $initialPosition );
+        echo esc_attr( (string) $initialPosition );
         ?>"
 			data-before-label="<?php 
         echo esc_attr( $beforeLabel );
@@ -463,7 +468,7 @@ class PixVisualizeWidget extends Widget_Base {
         echo esc_attr( $aspectRatio );
         ?>"
 			data-height="<?php 
-        echo esc_attr( $height );
+        echo esc_attr( (string) $height );
         ?>"
 			data-full-width="<?php 
         echo ( $fullWidth ? '1' : '0' );

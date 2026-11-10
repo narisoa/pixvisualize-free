@@ -18,8 +18,8 @@ use Inc\Base\BaseController;
  * Plugin Review Team), a single dismissible notice is shown on the plugins
  * screen inviting the user to open the Welcome screen or the settings page.
  */
-class Welcome extends BaseController
-{
+class Welcome extends BaseController {
+
 	const PAGE_SLUG = 'pixvisualize_welcome';
 
 	const NOTICE_TRANSIENT = 'pixvisualize_welcome_notice';
@@ -28,16 +28,14 @@ class Welcome extends BaseController
 
 	const NOTICE_ACTION = 'pixvisualize_welcome_dismiss';
 
-	public function register()
-	{
+	public function register() {
 		add_action( 'admin_menu', array( $this, 'addPage' ) );
 		add_action( 'admin_notices', array( $this, 'maybeShowNotice' ) );
 		add_action( 'wp_ajax_' . self::NOTICE_ACTION, array( $this, 'dismissNotice' ) );
 		add_action( 'load-toplevel_page_' . self::PAGE_SLUG, array( $this, 'clearNotice' ) );
 	}
 
-	public function addPage()
-	{
+	public function addPage() {
 		add_menu_page(
 			__( 'Welcome to PixVisualize', 'pixvisualize' ),
 			__( 'Welcome', 'pixvisualize' ),
@@ -50,8 +48,7 @@ class Welcome extends BaseController
 		remove_menu_page( self::PAGE_SLUG );
 	}
 
-	public function maybeShowNotice()
-	{
+	public function maybeShowNotice() {
 		if ( ! current_user_can( 'manage_options' ) ) {
 			return;
 		}
@@ -86,7 +83,7 @@ class Welcome extends BaseController
 		</div>
 		<?php
 
-		wp_register_script( 'pixvisualize-welcome-notice', '', array(), '1.0.20', true );
+		wp_register_script( 'pixvisualize-welcome-notice', false, array(), '1.0.20', true );
 		wp_enqueue_script( 'pixvisualize-welcome-notice' );
 		wp_add_inline_script(
 			'pixvisualize-welcome-notice',
@@ -94,8 +91,7 @@ class Welcome extends BaseController
 		);
 	}
 
-	public function dismissNotice()
-	{
+	public function dismissNotice() {
 		if ( ! current_user_can( 'manage_options' ) ) {
 			wp_send_json_error( array( 'message' => __( 'You are not allowed to do this.', 'pixvisualize' ) ), 403 );
 		}
@@ -108,14 +104,12 @@ class Welcome extends BaseController
 		wp_send_json_success();
 	}
 
-	public function clearNotice()
-	{
+	public function clearNotice() {
 		// Once the user opens the Welcome screen, the notice has done its job.
 		delete_transient( self::NOTICE_TRANSIENT );
 	}
 
-	public function render()
-	{
+	public function render() {
 		require_once $this->plugin_path . 'templates/welcome.php';
 	}
 }

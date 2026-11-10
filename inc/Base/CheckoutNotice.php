@@ -19,15 +19,13 @@ use Inc\Base\BaseController;
  * checkout return params are present and Pro is NOT active yet. No custom
  * key handling — it points to the native activation dialog.
  */
-class CheckoutNotice extends BaseController
-{
-	public function register()
-	{
+class CheckoutNotice extends BaseController {
+
+	public function register() {
 		add_action( 'admin_notices', array( $this, 'maybeShowNotice' ) );
 	}
 
-	public function maybeShowNotice()
-	{
+	public function maybeShowNotice() {
 		if ( ! current_user_can( 'manage_options' ) ) {
 			return;
 		}
@@ -40,17 +38,17 @@ class CheckoutNotice extends BaseController
 		// on force l'installation du build premium, sur nos écrans
 		// ET sur Extensions (où se fait l'upload).
 		$needs_install = function_exists( 'pixvisualize_needs_premium_install' ) && pixvisualize_needs_premium_install();
-		$can_use_pro = function_exists( 'pixvisualize_can_use_pro' ) && pixvisualize_can_use_pro();
+		$can_use_pro   = function_exists( 'pixvisualize_can_use_pro' ) && pixvisualize_can_use_pro();
 
 		if ( $needs_install ) {
-			$screen = function_exists( 'get_current_screen' ) ? get_current_screen() : null;
+			$screen     = function_exists( 'get_current_screen' ) ? get_current_screen() : null;
 			$on_plugins = isset( $_GET['page'] ) ? false : ( $screen && 'plugins' === $screen->id );
-		$on_ours = isset( $_GET['page'] ) && 'pixvisualize' === sanitize_key( wp_unslash( $_GET['page'] ) );
-		if ( ! $on_plugins && ! $on_ours ) {
-			return;
-		}
-		$upload_url = esc_url( admin_url( 'plugin-install.php?tab=upload' ) );
-		$account_url = ( function_exists( 'pixvisualize_fs' ) && is_callable( array( pixvisualize_fs(), 'get_account_url' ) ) )
+			$on_ours    = isset( $_GET['page'] ) && 'pixvisualize' === sanitize_key( wp_unslash( $_GET['page'] ) );
+			if ( ! $on_plugins && ! $on_ours ) {
+				return;
+			}
+			$upload_url  = esc_url( admin_url( 'plugin-install.php?tab=upload' ) );
+			$account_url = ( function_exists( 'pixvisualize_fs' ) && is_callable( array( pixvisualize_fs(), 'get_account_url' ) ) )
 			? esc_url( pixvisualize_fs()->get_account_url() )
 			: esc_url( admin_url( 'plugins.php' ) );
 			?>
@@ -83,7 +81,7 @@ class CheckoutNotice extends BaseController
 			return;
 		}
 
-		$plan = isset( $_GET['purchased_plan'] )
+		$plan  = isset( $_GET['purchased_plan'] )
 			? sanitize_text_field( wp_unslash( $_GET['purchased_plan'] ) )
 			: '';
 		$email = isset( $_GET['purchase_email'] )
@@ -91,9 +89,13 @@ class CheckoutNotice extends BaseController
 			: '';
 
 		$plugins_url = esc_url( admin_url( 'plugins.php' ) );
-		$account_url = ( function_exists( 'pixvisualize_fs' ) && is_callable( array( pixvisualize_fs(), 'get_account_url' ) ) && pixvisualize_fs()->is_registered() )
-			? esc_url( pixvisualize_fs()->get_account_url() )
-			: '';
+		$account_url = '';
+		if ( function_exists( 'pixvisualize_fs' ) ) {
+			$pixvisualize_fs_instance = pixvisualize_fs();
+			if ( $pixvisualize_fs_instance instanceof \Freemius && $pixvisualize_fs_instance->is_registered() ) {
+				$account_url = esc_url( $pixvisualize_fs_instance->get_account_url() );
+			}
+		}
 
 		?>
 		<div class="notice notice-success is-dismissible">

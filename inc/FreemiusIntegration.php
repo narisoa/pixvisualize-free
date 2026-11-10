@@ -33,7 +33,7 @@ if ( !function_exists( 'pixvisualize_fs' ) ) {
         global $pixvisualize_fs;
         if ( !isset( $pixvisualize_fs ) ) {
             // Include Freemius SDK.
-            require_once dirname( __FILE__ ) . '/../vendor/freemius/start.php';
+            require_once __DIR__ . '/../vendor/freemius/start.php';
             $pixvisualize_fs = fs_dynamic_init( array(
                 'id'               => '39570',
                 'slug'             => 'pixvisualize',
@@ -110,7 +110,7 @@ if ( !function_exists( 'pixvisualize_can_use_pro' ) ) {
         if ( is_callable( array($fs, 'can_use_premium_code__premium_only') ) ) {
             return (bool) $fs->can_use_premium_code__premium_only();
         }
-        return (bool) ($fs->is_premium() && $fs->can_use_premium_code());
+        return $fs->is_premium() && $fs->can_use_premium_code();
     }
 
 }

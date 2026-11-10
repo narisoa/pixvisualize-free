@@ -12,10 +12,9 @@ use Inc\Base\BaseController;
  * The widget is only registered when Elementor is loaded, so the plugin
  * stays fully functional without Elementor (Gutenberg block keeps working).
  */
-class ElementorController extends BaseController
-{
-	public function register()
-	{
+class ElementorController extends BaseController {
+
+	public function register() {
 		// Optional gate: only register the widget when the Elementor manager
 		// is activated on the PixVisualize settings page.
 		if ( ! $this->activated( 'pixvisualize_elementor_manager' ) ) {
@@ -32,8 +31,7 @@ class ElementorController extends BaseController
 		}
 	}
 
-	public function registerElementorHooks()
-	{
+	public function registerElementorHooks() {
 		add_action( 'elementor/widgets/register', array( $this, 'registerWidget' ) );
 		add_action( 'elementor/editor/after_enqueue_scripts', array( $this, 'enqueueEditorAssets' ) );
 		add_action( 'elementor/preview/enqueue_scripts', array( $this, 'enqueuePreviewAssets' ) );
@@ -41,13 +39,11 @@ class ElementorController extends BaseController
 		add_action( 'wp_enqueue_scripts', array( $this, 'registerFrontendAssets' ) );
 	}
 
-	public function registerWidget( $widgets_manager )
-	{
+	public function registerWidget( $widgets_manager ) {
 		$widgets_manager->register( new \Inc\Elementor\PixVisualizeWidget() );
 	}
 
-	public function enqueueEditorAssets()
-	{
+	public function enqueueEditorAssets() {
 		wp_enqueue_script(
 			'pixvisualize-elementor-editor',
 			$this->plugin_url . 'assets/js/pixvisualize-elementor-editor.js',
@@ -62,8 +58,7 @@ class ElementorController extends BaseController
 			array(),
 			'1.0.20'
 		);
-
-		$plan = function_exists( 'pixvisualize_get_plan' ) ? pixvisualize_get_plan() : 'free';
+		$plan          = function_exists( 'pixvisualize_get_plan' ) ? pixvisualize_get_plan() : 'free';
 		$needs_install = function_exists( 'pixvisualize_needs_premium_install' ) && pixvisualize_needs_premium_install();
 		wp_add_inline_script(
 			'pixvisualize-elementor-editor',
@@ -80,8 +75,7 @@ class ElementorController extends BaseController
 	 * Magnifier) on top of the static preview markup rendered by
 	 * content_template().
 	 */
-	public function enqueuePreviewAssets()
-	{
+	public function enqueuePreviewAssets() {
 		$preview_script = function_exists( 'pixvisualize_has_premium_code' ) && pixvisualize_has_premium_code()
 			? 'pixvisualize-elementor-preview.js'
 			: 'pixvisualize-elementor-preview-free.js';
@@ -99,8 +93,7 @@ class ElementorController extends BaseController
 	 * Enqueue the stylesheet for the static preview markup rendered inside the
 	 * Elementor editor preview iframe by content_template().
 	 */
-	public function enqueuePreviewStyles()
-	{
+	public function enqueuePreviewStyles() {
 		wp_enqueue_style(
 			'pixvisualize-elementor-preview',
 			$this->plugin_url . 'assets/css/pixvisualize-elementor-preview.css',
@@ -116,14 +109,13 @@ class ElementorController extends BaseController
 	 * They are skipped when the Gutenberg block is already registered (the
 	 * block registers the exact same handles), which avoids double-loading.
 	 */
-	public function registerFrontendAssets()
-	{
+	public function registerFrontendAssets() {
 		if ( wp_script_is( 'create-block-pixvisualize-view', 'registered' ) ) {
 			return;
 		}
 
-		$build_dir   = function_exists( 'pixvisualize_get_build_dir' ) ? pixvisualize_get_build_dir() : 'build';
-		$asset_file  = $this->plugin_path . $build_dir . '/pixvisualize/view.asset.php';
+		$build_dir  = function_exists( 'pixvisualize_get_build_dir' ) ? pixvisualize_get_build_dir() : 'build';
+		$asset_file = $this->plugin_path . $build_dir . '/pixvisualize/view.asset.php';
 
 		if ( ! file_exists( $asset_file ) ) {
 			return;

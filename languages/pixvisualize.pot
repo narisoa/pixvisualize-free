@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PixVisualize 1.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-21 10:31+0000\n"
+"POT-Creation-Date: 2026-11-09 16:19+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -33,55 +33,55 @@ msgstr ""
 msgid "Activate PixVisualize WooCommerce Gallery"
 msgstr ""
 
-#: inc/Base/CheckoutNotice.php:55
+#: inc/Base/CheckoutNotice.php:58
 #: templates/admin.php:20
 msgid "Pro license active — install the Pro version to unlock everything."
 msgstr ""
 
-#: inc/Base/CheckoutNotice.php:56
+#: inc/Base/CheckoutNotice.php:59
 msgid ""
 "Your license is active on the Free code: upload pixvisualize-pro.zip "
 "(purchase email or Account) via Extensions → Add → Upload, then activate it."
 msgstr ""
 
-#: inc/Base/CheckoutNotice.php:57
+#: inc/Base/CheckoutNotice.php:60
 #: templates/admin.php:23
 msgid "Upload the Pro version"
 msgstr ""
 
-#: inc/Base/CheckoutNotice.php:58
-#: inc/Base/CheckoutNotice.php:123
+#: inc/Base/CheckoutNotice.php:61
+#: inc/Base/CheckoutNotice.php:126
 #: templates/admin.php:25
 msgid "Open my Account"
 msgstr ""
 
-#: inc/Base/CheckoutNotice.php:98
+#: inc/Base/CheckoutNotice.php:101
 msgid "Thank you for your purchase!"
 msgstr ""
 
-#: inc/Base/CheckoutNotice.php:103
+#: inc/Base/CheckoutNotice.php:106
 msgid "Your %s license key and installation instructions were sent by email."
 msgstr ""
 
-#: inc/Base/CheckoutNotice.php:107
+#: inc/Base/CheckoutNotice.php:110
 msgid "Your license key and installation instructions were sent by email."
 msgstr ""
 
-#: inc/Base/CheckoutNotice.php:112
+#: inc/Base/CheckoutNotice.php:115
 msgid "Check the inbox of %s (and the spam folder after 5 min)."
 msgstr ""
 
-#: inc/Base/CheckoutNotice.php:119
+#: inc/Base/CheckoutNotice.php:122
 msgid "To activate Pro on this site:"
 msgstr ""
 
-#: inc/Base/CheckoutNotice.php:120
+#: inc/Base/CheckoutNotice.php:123
 msgid ""
 "1) Open Extensions, 2) click \"Activate License\" on the PixVisualize row, "
 "3) paste the key and confirm."
 msgstr ""
 
-#: inc/Base/CheckoutNotice.php:121
+#: inc/Base/CheckoutNotice.php:124
 msgid "Open Extensions"
 msgstr ""
 
@@ -130,26 +130,26 @@ msgstr ""
 
 #: inc/Elementor/PixVisualizeWidget.php:102
 #: templates/woocommerce-product-data.php:411
-#: src/pixvisualize/edit.js:316
+#: src/pixvisualize/edit.js:404
 msgid "Images & Content"
 msgstr ""
 
 #: inc/Elementor/PixVisualizeWidget.php:109
 #: templates/woocommerce-product-data.php:415
-#: src/pixvisualize/edit.js:321
+#: src/pixvisualize/edit.js:409
 msgid "Before Image"
 msgstr ""
 
 #: inc/Elementor/PixVisualizeWidget.php:118
 #: templates/woocommerce-product-data.php:419
-#: src/pixvisualize/edit.js:329
+#: src/pixvisualize/edit.js:417
 msgid "After Image"
 msgstr ""
 
 #: inc/Elementor/PixVisualizeWidget.php:127
 #: templates/admin.php:112
 #: templates/woocommerce-product-data.php:425
-#: src/pixvisualize/edit.js:336
+#: src/pixvisualize/edit.js:424
 msgid "Before Label"
 msgstr ""
 
@@ -163,7 +163,7 @@ msgstr ""
 #: inc/Elementor/PixVisualizeWidget.php:137
 #: templates/admin.php:118
 #: templates/woocommerce-product-data.php:430
-#: src/pixvisualize/edit.js:343
+#: src/pixvisualize/edit.js:431
 msgid "After Label"
 msgstr ""
 
@@ -177,7 +177,7 @@ msgstr ""
 #: inc/Elementor/PixVisualizeWidget.php:147
 #: templates/admin.php:124
 #: templates/woocommerce-product-data.php:435
-#: src/pixvisualize/edit.js:350
+#: src/pixvisualize/edit.js:438
 msgid "Show Labels"
 msgstr ""
 
@@ -185,129 +185,129 @@ msgstr ""
 #: inc/Elementor/PixVisualizeWidget.php:979
 #: templates/admin.php:149
 #: templates/woocommerce-product-data.php:459
-#: src/pixvisualize/edit.js:399
+#: src/pixvisualize/edit.js:487
 msgid "Caption"
 msgstr ""
 
 #: inc/Elementor/PixVisualizeWidget.php:168
 #: templates/admin.php:152
 #: templates/woocommerce-product-data.php:462
-#: src/pixvisualize/edit.js:403
+#: src/pixvisualize/edit.js:491
 msgid "Show Caption"
 msgstr ""
 
 #: inc/Elementor/PixVisualizeWidget.php:177
 #: templates/admin.php:157
 #: templates/woocommerce-product-data.php:468
-#: src/pixvisualize/edit.js:421
+#: src/pixvisualize/edit.js:509
 msgid "Caption Title"
 msgstr ""
 
 #: inc/Elementor/PixVisualizeWidget.php:187
 #: templates/admin.php:163
 #: templates/woocommerce-product-data.php:474
-#: src/pixvisualize/edit.js:432
+#: src/pixvisualize/edit.js:520
 msgid "Caption Text"
 msgstr ""
 
 #: inc/Elementor/PixVisualizeWidget.php:202
 #: templates/admin.php:215
 #: templates/woocommerce-product-data.php:635
-#: src/pixvisualize/edit.js:564
+#: src/pixvisualize/edit.js:654
 msgid "Layout & Orientation"
 msgstr ""
 
 #: inc/Elementor/PixVisualizeWidget.php:209
 #: templates/admin.php:218
 #: templates/woocommerce-product-data.php:638
-#: src/pixvisualize/edit.js:568
+#: src/pixvisualize/edit.js:661
 msgid "Orientation"
 msgstr ""
 
 #: inc/Elementor/PixVisualizeWidget.php:219
 #: templates/admin.php:227
 #: templates/woocommerce-product-data.php:646
-#: src/pixvisualize/edit.js:603
+#: src/pixvisualize/edit.js:679
 msgid "Aspect Ratio"
 msgstr ""
 
 #: inc/Elementor/PixVisualizeWidget.php:220
 #: templates/admin.php:241
 #: templates/woocommerce-product-data.php:652
-#: src/pixvisualize/edit.js:604
+#: src/pixvisualize/edit.js:680
 msgid ""
 "Width / height proportion, always respected (contain): 21/9 fills the "
 "width, 9/21 fills the height."
 msgstr ""
 
 #: inc/Elementor/PixVisualizeWidget.php:242
-#: src/pixvisualize/edit.js:615
+#: src/pixvisualize/edit.js:691
 msgid "Height"
 msgstr ""
 
 #: inc/Elementor/PixVisualizeWidget.php:243
 #: templates/admin.php:247
 #: templates/woocommerce-product-data.php:658
-#: src/pixvisualize/edit.js:616
+#: src/pixvisualize/edit.js:692
 msgid "Desired zone height, capped by a fixed parent height (contain)."
 msgstr ""
 
 #: inc/Elementor/PixVisualizeWidget.php:262
 #: templates/admin.php:251
 #: templates/woocommerce-product-data.php:662
-#: src/pixvisualize/edit.js:626
+#: src/pixvisualize/edit.js:702
 msgid "Full Width"
 msgstr ""
 
 #: inc/Elementor/PixVisualizeWidget.php:263
 #: templates/admin.php:252
 #: templates/woocommerce-product-data.php:664
-#: src/pixvisualize/edit.js:629
+#: src/pixvisualize/edit.js:705
 msgid ""
 "Spans the content width (ratio kept, centered). Useless with a fixed parent "
 "height — contain already caps it."
 msgstr ""
 
 #: inc/Elementor/PixVisualizeWidget.php:272
-#: src/pixvisualize/edit.js:652
+#: src/pixvisualize/edit.js:728
 msgid "Initial Position"
 msgstr ""
 
 #: inc/Elementor/PixVisualizeWidget.php:293
 #: templates/admin.php:271
 #: templates/woocommerce-product-data.php:682
-#: src/pixvisualize/edit.js:667
+#: src/pixvisualize/edit.js:743
 msgid "Responsive"
 msgstr ""
 
 #: inc/Elementor/PixVisualizeWidget.php:300
-#: src/pixvisualize/edit.js:670
+#: src/pixvisualize/edit.js:746
 msgid "Tablet Position"
 msgstr ""
 
 #: inc/Elementor/PixVisualizeWidget.php:319
-#: src/pixvisualize/edit.js:686
+#: src/pixvisualize/edit.js:762
 msgid "Mobile Position"
 msgstr ""
 
 #: inc/Elementor/PixVisualizeWidget.php:338
 #: templates/admin.php:286
 #: templates/woocommerce-product-data.php:697
-#: src/pixvisualize/edit.js:702
+#: src/pixvisualize/edit.js:778
 msgid "Tablet Ratio"
 msgstr ""
 
 #: inc/Elementor/PixVisualizeWidget.php:339
 #: inc/Elementor/PixVisualizeWidget.php:350
-#: src/pixvisualize/edit.js:703
-#: src/pixvisualize/edit.js:715
+#: src/pixvisualize/edit.js:779
+#: src/pixvisualize/edit.js:791
 msgid "Leave empty to inherit the desktop ratio."
 msgstr ""
 
 #: inc/Elementor/PixVisualizeWidget.php:349
 #: templates/admin.php:304
 #: templates/woocommerce-product-data.php:707
-#: src/pixvisualize/edit.js:714
+#: src/pixvisualize/edit.js:790
 msgid "Mobile Ratio"
 msgstr ""
 
@@ -319,49 +319,49 @@ msgstr ""
 #: inc/Elementor/PixVisualizeWidget.php:382
 #: templates/admin.php:325
 #: templates/woocommerce-product-data.php:721
-#: src/pixvisualize/edit.js:735
-#: src/pixvisualize/edit.js:738
+#: src/pixvisualize/edit.js:811
+#: src/pixvisualize/edit.js:814
 msgid "Handle Style"
 msgstr ""
 
 #: inc/Elementor/PixVisualizeWidget.php:385
 #: templates/admin.php:327
 #: templates/woocommerce-product-data.php:723
-#: src/pixvisualize/edit.js:746
+#: src/pixvisualize/edit.js:822
 msgid "Circle"
 msgstr ""
 
 #: inc/Elementor/PixVisualizeWidget.php:386
 #: templates/admin.php:328
 #: templates/woocommerce-product-data.php:724
-#: src/pixvisualize/edit.js:750
+#: src/pixvisualize/edit.js:826
 msgid "Transparent"
 msgstr ""
 
 #: inc/Elementor/PixVisualizeWidget.php:387
 #: templates/admin.php:329
 #: templates/woocommerce-product-data.php:725
-#: src/pixvisualize/edit.js:757
+#: src/pixvisualize/edit.js:833
 msgid "Line"
 msgstr ""
 
 #: inc/Elementor/PixVisualizeWidget.php:388
 #: templates/admin.php:330
 #: templates/woocommerce-product-data.php:726
-#: src/pixvisualize/edit.js:761
+#: src/pixvisualize/edit.js:837
 msgid "Arrows"
 msgstr ""
 
 #: inc/Elementor/PixVisualizeWidget.php:389
 #: templates/admin.php:331
 #: templates/woocommerce-product-data.php:727
-#: src/pixvisualize/edit.js:765
+#: src/pixvisualize/edit.js:841
 msgid "Custom SVG"
 msgstr ""
 
 #: inc/Elementor/PixVisualizeWidget.php:398
 #: templates/admin.php:337
-#: src/pixvisualize/edit.js:778
+#: src/pixvisualize/edit.js:854
 msgid "Custom SVG Icon (<svg> tag…)"
 msgstr ""
 
@@ -375,65 +375,65 @@ msgstr ""
 #: inc/Elementor/PixVisualizeWidget.php:410
 #: templates/admin.php:343
 #: templates/woocommerce-product-data.php:738
-#: src/pixvisualize/edit.js:794
+#: src/pixvisualize/edit.js:870
 msgid "Handle Size (px)"
 msgstr ""
 
 #: inc/Elementor/PixVisualizeWidget.php:411
 #: templates/woocommerce-product-data.php:740
-#: src/pixvisualize/edit.js:798
+#: src/pixvisualize/edit.js:874
 msgid "Diameter of the handle circle: independent size control."
 msgstr ""
 
 #: inc/Elementor/PixVisualizeWidget.php:430
 #: templates/admin.php:349
 #: templates/woocommerce-product-data.php:744
-#: src/pixvisualize/edit.js:811
+#: src/pixvisualize/edit.js:887
 msgid "Handle Arrows Color"
 msgstr ""
 
 #: inc/Elementor/PixVisualizeWidget.php:431
 #: templates/admin.php:351
 #: templates/woocommerce-product-data.php:746
-#: src/pixvisualize/edit.js:815
+#: src/pixvisualize/edit.js:891
 msgid "Color of the arrows inside the handle (independent control)."
 msgstr ""
 
 #: inc/Elementor/PixVisualizeWidget.php:441
 #: templates/admin.php:355
 #: templates/woocommerce-product-data.php:750
-#: src/pixvisualize/edit.js:831
+#: src/pixvisualize/edit.js:907
 msgid "Handle Padding (px)"
 msgstr ""
 
 #: inc/Elementor/PixVisualizeWidget.php:461
 #: templates/woocommerce-product-data.php:755
-#: src/pixvisualize/edit.js:847
+#: src/pixvisualize/edit.js:923
 msgid "Colors"
 msgstr ""
 
 #: inc/Elementor/PixVisualizeWidget.php:468
-#: src/pixvisualize/edit.js:850
+#: src/pixvisualize/edit.js:926
 msgid "Separator Thickness"
 msgstr ""
 
 #: inc/Elementor/PixVisualizeWidget.php:469
 #: templates/woocommerce-product-data.php:760
-#: src/pixvisualize/edit.js:854
+#: src/pixvisualize/edit.js:930
 msgid "Thickness of the vertical bar: independent control."
 msgstr ""
 
 #: inc/Elementor/PixVisualizeWidget.php:488
 #: templates/admin.php:370
 #: templates/woocommerce-product-data.php:764
-#: src/pixvisualize/edit.js:867
+#: src/pixvisualize/edit.js:943
 msgid "Cursor & Handle Color"
 msgstr ""
 
 #: inc/Elementor/PixVisualizeWidget.php:489
 #: templates/admin.php:372
 #: templates/woocommerce-product-data.php:766
-#: src/pixvisualize/edit.js:871
+#: src/pixvisualize/edit.js:947
 msgid ""
 "Single synchronized control: background of the vertical bar and the handle "
 "circle."
@@ -442,14 +442,14 @@ msgstr ""
 #: inc/Elementor/PixVisualizeWidget.php:499
 #: templates/admin.php:376
 #: templates/woocommerce-product-data.php:770
-#: src/pixvisualize/edit.js:885
+#: src/pixvisualize/edit.js:961
 msgid "Drop Shadow"
 msgstr ""
 
 #: inc/Elementor/PixVisualizeWidget.php:500
 #: templates/admin.php:377
 #: templates/woocommerce-product-data.php:772
-#: src/pixvisualize/edit.js:888
+#: src/pixvisualize/edit.js:964
 msgid ""
 "Grouped shadow on the whole cursor + handle (filter: drop-shadow, no seam "
 "at the junction)."
@@ -464,51 +464,51 @@ msgstr ""
 #: templates/admin.php:381
 #: templates/admin.php:384
 #: templates/woocommerce-product-data.php:778
-#: src/pixvisualize/edit.js:905
-#: src/pixvisualize/edit.js:908
+#: src/pixvisualize/edit.js:981
+#: src/pixvisualize/edit.js:984
 msgid "Container Shadow"
 msgstr ""
 
 #: inc/Elementor/PixVisualizeWidget.php:538
-#: src/pixvisualize/edit.js:929
+#: src/pixvisualize/edit.js:1005
 msgid "Container Shadow Color"
 msgstr ""
 
 #: inc/Elementor/PixVisualizeWidget.php:550
-#: src/pixvisualize/edit.js:944
+#: src/pixvisualize/edit.js:1020
 msgid "Container Shadow Horizontal Offset"
 msgstr ""
 
 #: inc/Elementor/PixVisualizeWidget.php:572
-#: src/pixvisualize/edit.js:962
+#: src/pixvisualize/edit.js:1038
 msgid "Container Shadow Vertical Offset"
 msgstr ""
 
 #: inc/Elementor/PixVisualizeWidget.php:594
-#: src/pixvisualize/edit.js:980
+#: src/pixvisualize/edit.js:1056
 msgid "Container Shadow Blur Radius"
 msgstr ""
 
 #: inc/Elementor/PixVisualizeWidget.php:616
-#: src/pixvisualize/edit.js:998
+#: src/pixvisualize/edit.js:1074
 msgid "Container Shadow Spread Radius"
 msgstr ""
 
 #: inc/Elementor/PixVisualizeWidget.php:638
-#: src/pixvisualize/edit.js:1016
+#: src/pixvisualize/edit.js:1092
 msgid "Container Shadow Opacity"
 msgstr ""
 
 #: inc/Elementor/PixVisualizeWidget.php:663
 #: templates/admin.php:419
-#: src/pixvisualize/edit.js:1036
+#: src/pixvisualize/edit.js:1112
 msgid "Container Border"
 msgstr ""
 
 #: inc/Elementor/PixVisualizeWidget.php:670
 #: templates/admin.php:422
 #: templates/woocommerce-product-data.php:814
-#: src/pixvisualize/edit.js:1039
+#: src/pixvisualize/edit.js:1115
 msgid "Show Border"
 msgstr ""
 
@@ -521,54 +521,54 @@ msgid "FREE: show a default 2px solid gray border."
 msgstr ""
 
 #: inc/Elementor/PixVisualizeWidget.php:683
-#: src/pixvisualize/edit.js:1059
+#: src/pixvisualize/edit.js:1135
 msgid "Border Width"
 msgstr ""
 
 #: inc/Elementor/PixVisualizeWidget.php:702
 #: templates/admin.php:442
-#: src/pixvisualize/edit.js:1102
+#: src/pixvisualize/edit.js:1178
 msgid "Border Color"
 msgstr ""
 
 #: inc/Elementor/PixVisualizeWidget.php:712
 #: templates/admin.php:432
-#: src/pixvisualize/edit.js:1074
+#: src/pixvisualize/edit.js:1150
 msgid "Border Style"
 msgstr ""
 
 #: inc/Elementor/PixVisualizeWidget.php:715
 #: templates/admin.php:434
 #: templates/woocommerce-product-data.php:832
-#: src/pixvisualize/edit.js:1078
+#: src/pixvisualize/edit.js:1154
 msgid "Solid"
 msgstr ""
 
 #: inc/Elementor/PixVisualizeWidget.php:716
 #: templates/admin.php:435
 #: templates/woocommerce-product-data.php:833
-#: src/pixvisualize/edit.js:1082
+#: src/pixvisualize/edit.js:1158
 msgid "Dashed"
 msgstr ""
 
 #: inc/Elementor/PixVisualizeWidget.php:717
 #: templates/admin.php:436
 #: templates/woocommerce-product-data.php:834
-#: src/pixvisualize/edit.js:1086
+#: src/pixvisualize/edit.js:1162
 msgid "Dotted"
 msgstr ""
 
 #: inc/Elementor/PixVisualizeWidget.php:718
 #: templates/admin.php:437
 #: templates/woocommerce-product-data.php:835
-#: src/pixvisualize/edit.js:1090
+#: src/pixvisualize/edit.js:1166
 msgid "Double"
 msgstr ""
 
 #: inc/Elementor/PixVisualizeWidget.php:729
 #: templates/admin.php:447
 #: templates/woocommerce-product-data.php:840
-#: src/pixvisualize/edit.js:1120
+#: src/pixvisualize/edit.js:1196
 msgid "Rounded Corners"
 msgstr ""
 
@@ -583,22 +583,22 @@ msgid "FREE: round all corners with the default 16px radius."
 msgstr ""
 
 #: inc/Elementor/PixVisualizeWidget.php:742
-#: src/pixvisualize/edit.js:1140
+#: src/pixvisualize/edit.js:1216
 msgid "Top Left Radius"
 msgstr ""
 
 #: inc/Elementor/PixVisualizeWidget.php:761
-#: src/pixvisualize/edit.js:1158
+#: src/pixvisualize/edit.js:1234
 msgid "Top Right Radius"
 msgstr ""
 
 #: inc/Elementor/PixVisualizeWidget.php:780
-#: src/pixvisualize/edit.js:1172
+#: src/pixvisualize/edit.js:1248
 msgid "Bottom Right Radius"
 msgstr ""
 
 #: inc/Elementor/PixVisualizeWidget.php:799
-#: src/pixvisualize/edit.js:1186
+#: src/pixvisualize/edit.js:1262
 msgid "Bottom Left Radius"
 msgstr ""
 
@@ -609,34 +609,34 @@ msgstr ""
 #: inc/Elementor/PixVisualizeWidget.php:831
 #: templates/admin.php:129
 #: templates/woocommerce-product-data.php:440
-#: src/pixvisualize/edit.js:370
+#: src/pixvisualize/edit.js:458
 msgid "Before Label Position"
 msgstr ""
 
 #: inc/Elementor/PixVisualizeWidget.php:841
 #: templates/admin.php:139
 #: templates/woocommerce-product-data.php:449
-#: src/pixvisualize/edit.js:383
+#: src/pixvisualize/edit.js:471
 msgid "After Label Position"
 msgstr ""
 
 #: inc/Elementor/PixVisualizeWidget.php:852
 #: templates/woocommerce-product-data.php:865
-#: src/pixvisualize/edit.js:1204
+#: src/pixvisualize/edit.js:1280
 msgid "Label Typography & Style"
 msgstr ""
 
 #: inc/Elementor/PixVisualizeWidget.php:859
 #: templates/admin.php:475
 #: templates/woocommerce-product-data.php:868
-#: src/pixvisualize/edit.js:1211
+#: src/pixvisualize/edit.js:1287
 msgid "Label Background"
 msgstr ""
 
 #: inc/Elementor/PixVisualizeWidget.php:869
 #: templates/admin.php:480
 #: templates/woocommerce-product-data.php:873
-#: src/pixvisualize/edit.js:1228
+#: src/pixvisualize/edit.js:1304
 msgid "Text Color"
 msgstr ""
 
@@ -657,35 +657,35 @@ msgid "Padding Y"
 msgstr ""
 
 #: inc/Elementor/PixVisualizeWidget.php:956
-#: src/pixvisualize/edit.js:1117
+#: src/pixvisualize/edit.js:1193
 msgid "Border Radius"
 msgstr ""
 
 #: inc/Elementor/PixVisualizeWidget.php:987
 #: templates/admin.php:169
 #: templates/woocommerce-product-data.php:480
-#: src/pixvisualize/edit.js:446
+#: src/pixvisualize/edit.js:534
 msgid "Caption Background"
 msgstr ""
 
 #: inc/Elementor/PixVisualizeWidget.php:997
 #: templates/admin.php:174
 #: templates/woocommerce-product-data.php:485
-#: src/pixvisualize/edit.js:461
+#: src/pixvisualize/edit.js:549
 msgid "Caption Title Color"
 msgstr ""
 
 #: inc/Elementor/PixVisualizeWidget.php:1007
 #: templates/admin.php:179
 #: templates/woocommerce-product-data.php:490
-#: src/pixvisualize/edit.js:478
+#: src/pixvisualize/edit.js:566
 msgid "Caption Text Color"
 msgstr ""
 
 #: inc/Elementor/PixVisualizeWidget.php:1017
 #: templates/admin.php:184
 #: templates/woocommerce-product-data.php:495
-#: src/pixvisualize/edit.js:494
+#: src/pixvisualize/edit.js:582
 msgid "Caption Alignment"
 msgstr ""
 
@@ -695,7 +695,7 @@ msgstr ""
 #: templates/admin.php:264
 #: templates/woocommerce-product-data.php:497
 #: templates/woocommerce-product-data.php:676
-#: src/pixvisualize/edit.js:292
+#: src/pixvisualize/edit.js:295
 msgid "Left"
 msgstr ""
 
@@ -705,7 +705,7 @@ msgstr ""
 #: templates/admin.php:265
 #: templates/woocommerce-product-data.php:498
 #: templates/woocommerce-product-data.php:677
-#: src/pixvisualize/edit.js:293
+#: src/pixvisualize/edit.js:296
 msgid "Center"
 msgstr ""
 
@@ -715,56 +715,56 @@ msgstr ""
 #: templates/admin.php:266
 #: templates/woocommerce-product-data.php:499
 #: templates/woocommerce-product-data.php:678
-#: src/pixvisualize/edit.js:294
+#: src/pixvisualize/edit.js:297
 msgid "Right"
 msgstr ""
 
 #: inc/Elementor/PixVisualizeWidget.php:1031
 #: templates/admin.php:193
 #: templates/woocommerce-product-data.php:504
-#: src/pixvisualize/edit.js:505
+#: src/pixvisualize/edit.js:593
 msgid "Caption Title Size (px)"
 msgstr ""
 
 #: inc/Elementor/PixVisualizeWidget.php:1050
 #: templates/admin.php:198
 #: templates/woocommerce-product-data.php:509
-#: src/pixvisualize/edit.js:517
+#: src/pixvisualize/edit.js:605
 msgid "Caption Text Size (px)"
 msgstr ""
 
 #: inc/Elementor/PixVisualizeWidget.php:1069
 #: templates/admin.php:203
 #: templates/woocommerce-product-data.php:514
-#: src/pixvisualize/edit.js:529
+#: src/pixvisualize/edit.js:617
 msgid "Caption Padding X (px)"
 msgstr ""
 
 #: inc/Elementor/PixVisualizeWidget.php:1070
 #: templates/admin.php:205
 #: templates/woocommerce-product-data.php:516
-#: src/pixvisualize/edit.js:533
+#: src/pixvisualize/edit.js:621
 msgid "Left/right inner spacing of the caption."
 msgstr ""
 
 #: inc/Elementor/PixVisualizeWidget.php:1089
 #: templates/admin.php:209
 #: templates/woocommerce-product-data.php:520
-#: src/pixvisualize/edit.js:545
+#: src/pixvisualize/edit.js:633
 msgid "Caption Padding Y (px)"
 msgstr ""
 
 #: inc/Elementor/PixVisualizeWidget.php:1090
 #: templates/admin.php:211
 #: templates/woocommerce-product-data.php:522
-#: src/pixvisualize/edit.js:549
+#: src/pixvisualize/edit.js:637
 msgid "Top/bottom inner spacing of the caption: controls its height."
 msgstr ""
 
 #: inc/Elementor/PixVisualizeWidget.php:1116
 #: templates/admin.php:511
 #: templates/woocommerce-product-data.php:905
-#: src/pixvisualize/edit.js:1320
+#: src/pixvisualize/edit.js:1396
 msgid "Interactions"
 msgstr ""
 
@@ -772,20 +772,20 @@ msgstr ""
 #: inc/Elementor/PixVisualizeWidget.php:1131
 #: templates/admin.php:514
 #: templates/woocommerce-product-data.php:908
-#: src/pixvisualize/edit.js:1324
-#: src/pixvisualize/edit.js:1327
+#: src/pixvisualize/edit.js:1400
+#: src/pixvisualize/edit.js:1403
 msgid "Move on Hover"
 msgstr ""
 
 #: inc/Elementor/PixVisualizeWidget.php:1141
-#: src/pixvisualize/edit.js:1345
+#: src/pixvisualize/edit.js:1421
 msgid "Auto-Slide"
 msgstr ""
 
 #: inc/Elementor/PixVisualizeWidget.php:1148
 #: templates/admin.php:519
 #: templates/woocommerce-product-data.php:914
-#: src/pixvisualize/edit.js:1348
+#: src/pixvisualize/edit.js:1424
 msgid "Auto-Slide Animation"
 msgstr ""
 
@@ -797,8 +797,8 @@ msgstr ""
 #: inc/Elementor/PixVisualizeWidget.php:1186
 #: templates/admin.php:529
 #: templates/woocommerce-product-data.php:925
-#: src/pixvisualize/edit.js:1388
-#: src/pixvisualize/edit.js:1391
+#: src/pixvisualize/edit.js:1464
+#: src/pixvisualize/edit.js:1467
 msgid "Magnifier"
 msgstr ""
 
@@ -820,72 +820,72 @@ msgstr ""
 
 #: inc/Elementor/PixVisualizeWidget.php:1264
 #: templates/admin.php:34
-#: src/pixvisualize/edit.js:1431
+#: src/pixvisualize/edit.js:1507
 msgid "PixVisualize Pro"
 msgstr ""
 
 #: inc/Elementor/PixVisualizeWidget.php:1290
-#: src/pixvisualize/edit.js:143
+#: src/pixvisualize/edit.js:146
 msgid "Advanced Elementor widget with full styling & live preview"
 msgstr ""
 
 #: inc/Elementor/PixVisualizeWidget.php:1291
-#: src/pixvisualize/edit.js:147
+#: src/pixvisualize/edit.js:150
 msgid "Advanced Gutenberg controls"
 msgstr ""
 
 #: inc/Elementor/PixVisualizeWidget.php:1292
-#: src/pixvisualize/edit.js:148
+#: src/pixvisualize/edit.js:151
 msgid "WooCommerce product gallery integration"
 msgstr ""
 
 #: inc/Elementor/PixVisualizeWidget.php:1293
-#: src/pixvisualize/edit.js:149
+#: src/pixvisualize/edit.js:152
 msgid "Generate, save, edit & reuse shortcodes"
 msgstr ""
 
 #: inc/Elementor/PixVisualizeWidget.php:1294
-#: src/pixvisualize/edit.js:150
+#: src/pixvisualize/edit.js:153
 msgid "Hover, Auto-Scan & Magnifier interactions"
 msgstr ""
 
 #: inc/Elementor/PixVisualizeWidget.php:1295
-#: src/pixvisualize/edit.js:151
+#: src/pixvisualize/edit.js:154
 msgid "Vertical orientation"
 msgstr ""
 
 #: inc/Elementor/PixVisualizeWidget.php:1296
-#: src/pixvisualize/edit.js:152
+#: src/pixvisualize/edit.js:155
 msgid "Responsive controls for every breakpoint"
 msgstr ""
 
 #: inc/Elementor/PixVisualizeWidget.php:1297
-#: src/pixvisualize/edit.js:153
+#: src/pixvisualize/edit.js:156
 msgid "Custom handles & SVG icons"
 msgstr ""
 
 #: inc/Elementor/PixVisualizeWidget.php:1298
-#: src/pixvisualize/edit.js:154
+#: src/pixvisualize/edit.js:157
 msgid "Advanced separator & handle styling"
 msgstr ""
 
 #: inc/Elementor/PixVisualizeWidget.php:1299
-#: src/pixvisualize/edit.js:155
+#: src/pixvisualize/edit.js:158
 msgid "Fully customizable Before/After labels"
 msgstr ""
 
 #: inc/Elementor/PixVisualizeWidget.php:1300
-#: src/pixvisualize/edit.js:156
+#: src/pixvisualize/edit.js:159
 msgid "Custom captions with advanced styling"
 msgstr ""
 
 #: inc/Elementor/PixVisualizeWidget.php:1301
-#: src/pixvisualize/edit.js:157
+#: src/pixvisualize/edit.js:160
 msgid "Advanced borders, shadows & corner radius controls"
 msgstr ""
 
 #: inc/Elementor/PixVisualizeWidget.php:1311
-#: src/pixvisualize/edit.js:1437
+#: src/pixvisualize/edit.js:1513
 msgid "Unlock advanced features to take your comparisons further:"
 msgstr ""
 
@@ -893,14 +893,14 @@ msgstr ""
 #: templates/admin.php:36
 #: templates/admin.php:50
 #: templates/admin.php:690
-#: src/pixvisualize/edit.js:1463
+#: src/pixvisualize/edit.js:1539
 msgid "Go Pro"
 msgstr ""
 
 #: inc/Elementor/PixVisualizeWidget.php:1315
 #: templates/admin.php:37
 #: templates/admin.php:864
-#: src/pixvisualize/edit.js:1472
+#: src/pixvisualize/edit.js:1548
 msgid "View Pro demo"
 msgstr ""
 
@@ -909,22 +909,21 @@ msgstr ""
 #: templates/admin.php:306
 #: templates/woocommerce-product-data.php:699
 #: templates/woocommerce-product-data.php:709
-#: src/pixvisualize/edit.js:308
+#: src/pixvisualize/edit.js:321
 msgid "Inherit (desktop)"
 msgstr ""
 
 #: inc/Elementor/PixVisualizeWidget.php:1349
 #: templates/admin.php:220
 #: templates/woocommerce-product-data.php:640
-#: src/pixvisualize/edit.js:574
-#: src/pixvisualize/edit.js:590
+#: src/pixvisualize/edit.js:665
 msgid "Horizontal"
 msgstr ""
 
 #: inc/Elementor/PixVisualizeWidget.php:1353
 #: templates/admin.php:221
 #: templates/woocommerce-product-data.php:641
-#: src/pixvisualize/edit.js:581
+#: src/pixvisualize/edit.js:669
 msgid "Vertical"
 msgstr ""
 
@@ -932,7 +931,7 @@ msgstr ""
 #: templates/admin.php:131
 #: templates/admin.php:141
 #: templates/woocommerce-product-data.php:344
-#: src/pixvisualize/edit.js:298
+#: src/pixvisualize/edit.js:302
 msgid "Top Left"
 msgstr ""
 
@@ -940,7 +939,7 @@ msgstr ""
 #: templates/admin.php:132
 #: templates/admin.php:142
 #: templates/woocommerce-product-data.php:345
-#: src/pixvisualize/edit.js:299
+#: src/pixvisualize/edit.js:304
 msgid "Top Right"
 msgstr ""
 
@@ -948,7 +947,7 @@ msgstr ""
 #: templates/admin.php:133
 #: templates/admin.php:143
 #: templates/woocommerce-product-data.php:346
-#: src/pixvisualize/edit.js:300
+#: src/pixvisualize/edit.js:308
 msgid "Bottom Left"
 msgstr ""
 
@@ -956,11 +955,11 @@ msgstr ""
 #: templates/admin.php:134
 #: templates/admin.php:144
 #: templates/woocommerce-product-data.php:347
-#: src/pixvisualize/edit.js:302
+#: src/pixvisualize/edit.js:312
 msgid "Bottom Right"
 msgstr ""
 
-#: inc/Elementor/PixVisualizeWidget.php:1832
+#: inc/Elementor/PixVisualizeWidget.php:1889
 #: templates/admin.php:561
 #: templates/woocommerce-product-data.php:396
 msgid "Select your Before and After images to display the comparison slider."
@@ -970,24 +969,24 @@ msgstr ""
 msgid "Dashboard"
 msgstr ""
 
-#: inc/Pages/Dashboard.php:75
+#: inc/Pages/Dashboard.php:76
 #: templates/admin.php:679
 msgid "Settings Manager"
 msgstr ""
 
-#: inc/Pages/Dashboard.php:92
+#: inc/Pages/Dashboard.php:93
 msgid "Slider in the block editor."
 msgstr ""
 
-#: inc/Pages/Dashboard.php:93
+#: inc/Pages/Dashboard.php:94
 msgid "Drag-and-drop widget with live preview."
 msgstr ""
 
-#: inc/Pages/Dashboard.php:94
+#: inc/Pages/Dashboard.php:95
 msgid "Embed anywhere, plus the visual generator."
 msgstr ""
 
-#: inc/Pages/Dashboard.php:95
+#: inc/Pages/Dashboard.php:96
 msgid "Gallery on single product pages."
 msgstr ""
 
@@ -1052,15 +1051,15 @@ msgstr ""
 
 #: templates/admin.php:95
 #: templates/admin.php:103
-#: src/js/pixvisualize-admin.js:855
+#: src/js/pixvisualize-admin.js:911
 msgid "No image selected"
 msgstr ""
 
 #: templates/admin.php:96
 #: templates/admin.php:104
 #: templates/woocommerce-picker.php:35
-#: src/js/pixvisualize-admin.js:863
-#: assets/js/pixvisualize-woocommerce-metabox.js:150
+#: src/js/pixvisualize-admin.js:919
+#: assets/js/pixvisualize-woocommerce-metabox.js:212
 msgid "Select Image"
 msgstr ""
 
@@ -1096,7 +1095,7 @@ msgstr ""
 
 #: templates/admin.php:159
 #: templates/woocommerce-product-data.php:470
-#: src/pixvisualize/edit.js:422
+#: src/pixvisualize/edit.js:510
 msgid "Bold title displayed below the slider."
 msgstr ""
 
@@ -1107,7 +1106,7 @@ msgstr ""
 
 #: templates/admin.php:165
 #: templates/woocommerce-product-data.php:476
-#: src/pixvisualize/edit.js:433
+#: src/pixvisualize/edit.js:521
 msgid "Small text displayed under the caption title."
 msgstr ""
 
@@ -1132,7 +1131,7 @@ msgstr ""
 
 #: templates/admin.php:262
 #: templates/woocommerce-product-data.php:674
-#: src/pixvisualize/edit.js:644
+#: src/pixvisualize/edit.js:720
 msgid "Alignment"
 msgstr ""
 
@@ -1157,7 +1156,7 @@ msgid "Handle"
 msgstr ""
 
 #: templates/admin.php:333
-#: src/pixvisualize/edit.js:739
+#: src/pixvisualize/edit.js:815
 msgid "Shape of the cursor that separates the two images."
 msgstr ""
 
@@ -1175,7 +1174,7 @@ msgstr ""
 
 #: templates/admin.php:357
 #: templates/woocommerce-product-data.php:752
-#: src/pixvisualize/edit.js:835
+#: src/pixvisualize/edit.js:911
 msgid "Inner spacing between the icon and the edge of the handle background, in px."
 msgstr ""
 
@@ -1193,7 +1192,7 @@ msgid "Thickness of the vertical bar (independent control)."
 msgstr ""
 
 #: templates/admin.php:385
-#: src/pixvisualize/edit.js:911
+#: src/pixvisualize/edit.js:987
 msgid "A soft shadow is applied to the whole slider."
 msgstr ""
 
@@ -1260,7 +1259,7 @@ msgid "Label Font Size (px)"
 msgstr ""
 
 #: templates/admin.php:490
-#: src/pixvisualize/edit.js:1255
+#: src/pixvisualize/edit.js:1331
 msgid "Label Font Weight"
 msgstr ""
 
@@ -1281,7 +1280,7 @@ msgid "Label Border Radius (px)"
 msgstr ""
 
 #: templates/admin.php:515
-#: src/pixvisualize/edit.js:1330
+#: src/pixvisualize/edit.js:1406
 msgid "On hover, the cursor moves under the mouse, without clicking."
 msgstr ""
 
@@ -1293,18 +1292,18 @@ msgstr ""
 
 #: templates/admin.php:524
 #: templates/woocommerce-product-data.php:919
-#: src/pixvisualize/edit.js:1370
+#: src/pixvisualize/edit.js:1446
 msgid "Auto-Slide Duration (ms)"
 msgstr ""
 
 #: templates/admin.php:530
-#: src/pixvisualize/edit.js:1394
+#: src/pixvisualize/edit.js:1470
 msgid "A magnifier enlarges the hovered area of the image."
 msgstr ""
 
 #: templates/admin.php:534
 #: templates/woocommerce-product-data.php:931
-#: src/pixvisualize/edit.js:1410
+#: src/pixvisualize/edit.js:1486
 msgid "Magnifier Zoom (x)"
 msgstr ""
 
@@ -1323,7 +1322,7 @@ msgid "3. Get Shortcode"
 msgstr ""
 
 #: templates/admin.php:574
-#: src/js/pixvisualize-admin.js:1208
+#: src/js/pixvisualize-admin.js:1264
 msgid "Copy Shortcode"
 msgstr ""
 
@@ -1988,7 +1987,7 @@ msgid "Divider position on phones: 0 = fully \"Before\", 100 = fully \"After\"."
 msgstr ""
 
 #: templates/woocommerce-product-data.php:718
-#: src/pixvisualize/edit.js:729
+#: src/pixvisualize/edit.js:805
 msgid "Appearance"
 msgstr ""
 
@@ -2072,7 +2071,7 @@ msgid "Font Weight (400–900)"
 msgstr ""
 
 #: templates/woocommerce-product-data.php:885
-#: src/pixvisualize/edit.js:1259
+#: src/pixvisualize/edit.js:1335
 msgid "Thickness of the label text (400 = normal, 700 = bold)."
 msgstr ""
 
@@ -2093,7 +2092,7 @@ msgid "Follow the cursor position over the image."
 msgstr ""
 
 #: templates/woocommerce-product-data.php:921
-#: src/pixvisualize/edit.js:1374
+#: src/pixvisualize/edit.js:1450
 msgid ""
 "How long the auto-slide takes to sweep from 100% to 0% then back to the "
 "initial position."
@@ -2104,7 +2103,7 @@ msgid "Show a zoomed lens around the cursor while hovering the comparison."
 msgstr ""
 
 #: templates/woocommerce-product-data.php:933
-#: src/pixvisualize/edit.js:1414
+#: src/pixvisualize/edit.js:1490
 msgid "Zoom factor of the magnifier lens."
 msgstr ""
 
@@ -2122,62 +2121,65 @@ msgid ""
 "\"Product data\" section."
 msgstr ""
 
-#: src/js/pixvisualize-admin.js:864
-#: assets/js/pixvisualize-woocommerce-metabox.js:152
+#: src/js/pixvisualize-admin.js:920
+#: assets/js/pixvisualize-woocommerce-metabox.js:214
 msgid "Use this image"
 msgstr ""
 
-#: src/js/pixvisualize-admin.js:1024
-msgid "No valid [pixvisualize …] shortcode found."
+#: src/js/pixvisualize-admin.js:1080
+msgid "No valid [pixvisualize â€¦] shortcode found."
 msgstr ""
 
-#: src/js/pixvisualize-admin.js:1042
-msgid "The shortcode needs before=\"…\" and after=\"…\" images."
+#: src/js/pixvisualize-admin.js:1098
+msgid "The shortcode needs before=\"â€¦\" and after=\"â€¦\" images."
 msgstr ""
 
-#: src/js/pixvisualize-admin.js:1075
+#: src/js/pixvisualize-admin.js:1131
 msgid "Shortcode loaded into the generator."
 msgstr ""
 
-#: src/js/pixvisualize-admin.js:1093
+#: src/js/pixvisualize-admin.js:1149
 msgid "Reset the generator to its default values?"
 msgstr ""
 
-#: src/js/pixvisualize-admin.js:1207
+#: src/js/pixvisualize-admin.js:1263
 msgid "Edit"
 msgstr ""
 
-#: src/js/pixvisualize-admin.js:1209
+#: src/js/pixvisualize-admin.js:1265
 msgid "Delete"
 msgstr ""
 
-#: src/js/pixvisualize-admin.js:1231
-#: src/js/pixvisualize-admin.js:1379
-#: src/js/pixvisualize-admin.js:1388
+#: src/js/pixvisualize-admin.js:1287
+#: src/js/pixvisualize-admin.js:1435
+#: src/js/pixvisualize-admin.js:1444
 msgid "Shortcode"
 msgstr ""
 
-#: src/js/pixvisualize-admin.js:1238
+#: src/js/pixvisualize-admin.js:1294
 msgid "Rename this shortcode"
 msgstr ""
 
-#: src/js/pixvisualize-admin.js:1339
+#: src/js/pixvisualize-admin.js:1395
 msgid "Delete this shortcode from the list?"
 msgstr ""
 
-#: src/js/pixvisualize-admin.js:1434
+#: src/js/pixvisualize-admin.js:1490
 msgid "Copied!"
 msgstr ""
 
 #: src/pixvisualize/components/CompareSlider.jsx:251
+#: src/pixvisualize/components/CompareSliderFree.jsx:57
 msgid "Please select both images for the comparator."
 msgstr ""
 
-#: src/pixvisualize/components/Handle.jsx:83
+#: src/pixvisualize/components/Handle.jsx:88
+#: src/pixvisualize/components/HandleFree.jsx:24
 msgid "Image comparison slider"
 msgstr ""
 
 #: src/pixvisualize/components/ImageLayer.jsx:6
+#: src/pixvisualize/components/ImageLayerFree.jsx:6
 msgid "Comparison Image"
 msgstr ""
 
@@ -2189,156 +2191,160 @@ msgstr ""
 msgid "Select"
 msgstr ""
 
-#: src/pixvisualize/edit.js:283
+#: src/pixvisualize/edit.js:286
 msgid "1/1 (Square)"
 msgstr ""
 
-#: src/pixvisualize/edit.js:353
+#: src/pixvisualize/edit.js:441
 msgid "The labels are visible on the slider."
 msgstr ""
 
-#: src/pixvisualize/edit.js:357
+#: src/pixvisualize/edit.js:445
 msgid "The labels are hidden on the slider."
 msgstr ""
 
-#: src/pixvisualize/edit.js:406
+#: src/pixvisualize/edit.js:494
 msgid "The title / text block is visible below the slider."
 msgstr ""
 
-#: src/pixvisualize/edit.js:410
+#: src/pixvisualize/edit.js:498
 msgid "The title / text block below the slider is hidden."
 msgstr ""
 
-#: src/pixvisualize/edit.js:633
+#: src/pixvisualize/edit.js:655
+msgid "Layout"
+msgstr ""
+
+#: src/pixvisualize/edit.js:709
 msgid "The block keeps a custom size (width matched to the ratio)."
 msgstr ""
 
-#: src/pixvisualize/edit.js:653
+#: src/pixvisualize/edit.js:729
 msgid ""
 "Starting position of the divider: 0% = fully \"Before\", 100% = fully "
 "\"After\"."
 msgstr ""
 
-#: src/pixvisualize/edit.js:674
+#: src/pixvisualize/edit.js:750
 msgid ""
 "Divider position on tablets (768px–1024px): 0% = fully \"Before\", 100% = "
 "fully \"After\"."
 msgstr ""
 
-#: src/pixvisualize/edit.js:690
+#: src/pixvisualize/edit.js:766
 msgid ""
 "Divider position on phones (below 768px): 0% = fully \"Before\", 100% = "
 "fully \"After\"."
 msgstr ""
 
-#: src/pixvisualize/edit.js:782
+#: src/pixvisualize/edit.js:858
 msgid ""
 "Paste <svg viewBox=\"…\">…</svg> only: XML prolog, DOCTYPE, metadata and "
 "width/height are removed automatically. Use fill=\"currentColor\" so the "
 "icon inherits Handle Arrows Color. Without an SVG, the Circle style is used."
 msgstr ""
 
-#: src/pixvisualize/edit.js:892
+#: src/pixvisualize/edit.js:968
 msgid "No shadow is applied to the cursor."
 msgstr ""
 
-#: src/pixvisualize/edit.js:915
+#: src/pixvisualize/edit.js:991
 msgid "No shadow is applied to the slider."
 msgstr ""
 
-#: src/pixvisualize/edit.js:948
+#: src/pixvisualize/edit.js:1024
 msgid "Horizontal distance of the shadow, in px."
 msgstr ""
 
-#: src/pixvisualize/edit.js:966
+#: src/pixvisualize/edit.js:1042
 msgid "Vertical distance of the shadow, in px."
 msgstr ""
 
-#: src/pixvisualize/edit.js:984
+#: src/pixvisualize/edit.js:1060
 msgid "Blur softness of the shadow, in px."
 msgstr ""
 
-#: src/pixvisualize/edit.js:1002
+#: src/pixvisualize/edit.js:1078
 msgid "How far the shadow spreads, in px."
 msgstr ""
 
-#: src/pixvisualize/edit.js:1020
+#: src/pixvisualize/edit.js:1096
 msgid "Shadow opacity, from 0 (transparent) to 100 (opaque)."
 msgstr ""
 
-#: src/pixvisualize/edit.js:1042
+#: src/pixvisualize/edit.js:1118
 msgid "A 2px solid gray border is applied to the container."
 msgstr ""
 
-#: src/pixvisualize/edit.js:1046
+#: src/pixvisualize/edit.js:1122
 msgid "No border is applied to the container."
 msgstr ""
 
-#: src/pixvisualize/edit.js:1060
+#: src/pixvisualize/edit.js:1136
 msgid "Thickness of the container border, in px."
 msgstr ""
 
-#: src/pixvisualize/edit.js:1123
+#: src/pixvisualize/edit.js:1199
 msgid "A 16px radius is applied to all corners."
 msgstr ""
 
-#: src/pixvisualize/edit.js:1127
+#: src/pixvisualize/edit.js:1203
 msgid "The container corners stay square."
 msgstr ""
 
-#: src/pixvisualize/edit.js:1144
+#: src/pixvisualize/edit.js:1220
 msgid "Corner radius of the container, in px."
 msgstr ""
 
-#: src/pixvisualize/edit.js:1239
+#: src/pixvisualize/edit.js:1315
 msgid "Label Font Size"
 msgstr ""
 
-#: src/pixvisualize/edit.js:1243
+#: src/pixvisualize/edit.js:1319
 msgid "Font size of the \"Before\" / \"After\" captions, in px."
 msgstr ""
 
-#: src/pixvisualize/edit.js:1272
+#: src/pixvisualize/edit.js:1348
 msgid "Label Padding (horizontal)"
 msgstr ""
 
-#: src/pixvisualize/edit.js:1276
+#: src/pixvisualize/edit.js:1352
 msgid "Left/right inner spacing of the label, in px."
 msgstr ""
 
-#: src/pixvisualize/edit.js:1288
+#: src/pixvisualize/edit.js:1364
 msgid "Label Padding (vertical)"
 msgstr ""
 
-#: src/pixvisualize/edit.js:1292
+#: src/pixvisualize/edit.js:1368
 msgid "Top/bottom inner spacing of the label, in px."
 msgstr ""
 
-#: src/pixvisualize/edit.js:1304
+#: src/pixvisualize/edit.js:1380
 msgid "Label Border Radius"
 msgstr ""
 
-#: src/pixvisualize/edit.js:1334
+#: src/pixvisualize/edit.js:1410
 msgid "The cursor only moves by clicking and dragging."
 msgstr ""
 
-#: src/pixvisualize/edit.js:1354
+#: src/pixvisualize/edit.js:1430
 msgid "The cursor automatically sweeps the images on load."
 msgstr ""
 
-#: src/pixvisualize/edit.js:1358
+#: src/pixvisualize/edit.js:1434
 msgid "No animation on load."
 msgstr ""
 
-#: src/pixvisualize/edit.js:1398
+#: src/pixvisualize/edit.js:1474
 msgid "No magnifier effect on hover."
 msgstr ""
 
-#: src/pixvisualize/edit.js:1480
+#: src/pixvisualize/edit.js:1556
 msgid "Pro license active — install Pro"
 msgstr ""
 
-#: src/pixvisualize/edit.js:1489
+#: src/pixvisualize/edit.js:1565
 msgid ""
 "Your Pro license is active on the Free code. Install pixvisualize-pro to "
 "unlock Hover, Auto-Scan and Magnifier on the site."

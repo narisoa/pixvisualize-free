@@ -4,7 +4,7 @@ Tags: before-after, image-comparison, gutenberg, elementor, woocommerce
 Requires at least: 6.8
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.0.26
+Stable tag: 1.0.27
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -82,6 +82,9 @@ Nothing without your consent. On activation, an opt-in screen (skippable) offers
 
 == Upgrade Notice ==
 
+= 1.0.27 =
+Security update: fixes a possible stored XSS through the custom handle SVG. Custom SVGs are now sanitized on save (PHP allowlist) and again before rendering (JS). Recommended for all sites.
+
 = 1.0.26 =
 Documentation update: clearer Free/Pro split, pricing and demo links, refreshed screenshots. No code change.
 
@@ -158,6 +161,12 @@ Maintenance release. Recommended update: commercial docs cleanup plus WooCommerc
 Maintenance release. Recommended update: fixes Pro activation when Free is still active.
 
 == Changelog ==
+
+= 1.0.27 =
+* Security: fixed a possible stored XSS through the custom handle SVG. All SVG inputs (Gutenberg, Elementor, shortcode, WooCommerce) are sanitized with a single allowlist (`pixvisualize_sanitize_svg()`), and a second client-side barrier cleans SVG before it reaches the DOM.
+* Security: the WooCommerce image picker now builds its preview with DOM APIs instead of `innerHTML`.
+* Hardening: annotated verified nonce reads and the sanitized SVG input to silence false positives from static analysis.
+* No feature or slider behavior change.
 
 = 1.0.26 =
 * Documentation: Free/Pro split clarified; all Pro features and Pro usage instructions now live under "Upgrade to Pro".

@@ -17,7 +17,7 @@ final class Init {
      * @return array
      */
     public static function getServices() {
-        $services = [
+        $services = array(
             Pages\Dashboard::class,
             Base\Enqueue::class,
             Base\SettingsLinks::class,
@@ -25,7 +25,7 @@ final class Init {
             Base\CheckoutNotice::class,
             Base\PixVisualizeController::class,
             Base\ElementorController::class
-        ];
+        );
         return $services;
     }
 

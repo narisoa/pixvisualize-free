@@ -1,6 +1,7 @@
 import React from 'react';
 import { __ } from '@wordpress/i18n';
 import { clamp } from '../utils/clamp';
+import { sanitizeSvg } from '../utils/sanitizeSvg';
 
 const Handle = ( {
 	position,
@@ -16,7 +17,11 @@ const Handle = ( {
 	separator = { thickness: 2, color: '#ffffff', shadow: true },
 } ) => {
 	const isVertical = orientation === 'vertical';
-	const resolvedStyle = handleStyle === 'custom' && ! handleIconSvg ? 'circle' : handleStyle;
+	const safeIconSvg = React.useMemo(
+		() => sanitizeSvg( handleIconSvg ),
+		[ handleIconSvg ]
+	);
+	const resolvedStyle = handleStyle === 'custom' && ! safeIconSvg ? 'circle' : handleStyle;
 	const isTransparent = resolvedStyle === 'transparent';
 	// Circle diameter (with background) or glyph box (without background).
 	const circleSize = Number.isFinite( handleSize )
@@ -112,7 +117,7 @@ const Handle = ( {
 						// absolutely positioned by its CSS class).
 						zIndex: 2,
 					} }
-					dangerouslySetInnerHTML={ { __html: handleIconSvg } }
+					dangerouslySetInnerHTML={ { __html: safeIconSvg } }
 				/>
 			) }
 			{ resolvedStyle !== 'line' && (

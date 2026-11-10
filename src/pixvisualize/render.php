@@ -4,11 +4,12 @@ defined( 'ABSPATH' ) || exit;
 /**
  * PHP file to use when rendering the block type on the server to show on the front end.
  */
+/** @var array<string, mixed> $attributes */
 $beforeImage = $attributes['beforeImage'] ?? '';
 $afterImage = $attributes['afterImage'] ?? '';
 $initialPosition = $attributes['initialPosition'] ?? 50;
-$beforeLabel = ( $attributes['beforeLabel'] ?: 'Before' );
-$afterLabel = ( $attributes['afterLabel'] ?: 'After' );
+$beforeLabel = ( $attributes['beforeLabel'] ?? '' ?: 'Before' );
+$afterLabel = ( $attributes['afterLabel'] ?? '' ?: 'After' );
 $showLabels = $attributes['showLabels'] ?? true;
 $aspectRatio = $attributes['aspectRatio'] ?? '16/9';
 $height = $attributes['height'] ?? 450;
@@ -16,7 +17,9 @@ $fullWidth = $attributes['fullWidth'] ?? false;
 $alignment = $attributes['alignment'] ?? 'center';
 $orientation = 'horizontal';
 $handleStyle = $attributes['handleStyle'] ?? 'circle';
-$handleIconSvg = $attributes['handleIconSvg'] ?? '';
+// The custom SVG is injected with dangerouslySetInnerHTML in the React view:
+// sanitize every render so a stored block can never carry a script payload.
+$handleIconSvg = ( function_exists( 'pixvisualize_sanitize_svg' ) ? pixvisualize_sanitize_svg( $attributes['handleIconSvg'] ?? '' ) : '' );
 $handleSize = $attributes['handleSize'] ?? 24;
 $handleBackground = $attributes['handleBackground'] ?? '';
 $handleArrowColor = $attributes['handleArrowColor'] ?? '#666666';

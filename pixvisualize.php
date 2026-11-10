@@ -12,7 +12,7 @@
 Plugin Name: PixVisualize
 Plugin URI: https://i-naridigit.com/products/pixvisualize/
 Description: Before/After Image Comparison Slider for Gutenberg, Elementor, plus Pro shortcodes and WooCommerce. Fast, responsive, Pro-ready.
-Version: 1.0.26
+Version: 1.0.27
 Requires at least: 6.8
 Requires PHP: 7.4
 Author: i-NariDigit
@@ -51,13 +51,16 @@ if ( function_exists( 'pixvisualize_fs' ) ) {
 	 * DO NOT REMOVE THIS IF, IT IS ESSENTIAL FOR THE
 	 * `function_exists` CALL ABOVE TO PROPERLY WORK.
 	 */
-	if ( ! function_exists( 'pixvisualize_fs' ) ) {
+	if ( ! function_exists( 'pixvisualize_fs' ) ) { // @phpstan-ignore booleanNot.alwaysTrue
 		require_once dirname( __FILE__ ) . '/inc/FreemiusIntegration.php';
 	}
 
 	if ( function_exists( 'pixvisualize_fs' ) ) {
 		pixvisualize_fs()->set_basename( false, __FILE__ );
 	}
+
+// Shared SVG allowlist used by every handle-icon input path (stored XSS guard).
+require_once dirname( __FILE__ ) . '/inc/svg-sanitizer.php';
 
 /**
  * Plugin activation. Default settings are created once.
@@ -77,6 +80,7 @@ register_deactivation_hook( __FILE__, 'pixvisualize_deactivate' );
 
 // Composer autoloader with built-in fallback.
 if ( file_exists( dirname( __FILE__ ) . '/vendor/autoload.php' ) ) {
+	/** @psalm-suppress MissingFile Optional Composer autoloader; a PSR-4 fallback follows. */
 	require_once dirname( __FILE__ ) . '/vendor/autoload.php';
 } else {
 	// Fallback PSR-4 autoloader (no Composer required)

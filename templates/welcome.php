@@ -1,4 +1,7 @@
-<?php defined( 'ABSPATH' ) || exit; ?>
+<?php
+defined( 'ABSPATH' ) || exit;
+/** @var \Inc\Base\Welcome $this */
+?>
 <div class="wrap">
 	<div class="pc-pane pc-welcome">
 		<div class="pc-welcome__hero">

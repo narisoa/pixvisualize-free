@@ -14,11 +14,12 @@ use Inc\Base\BaseController;
  * type and never touches the block settings stored on the posts, so the
  * slider configuration always stays intact.
  */
-class PixVisualizeController extends BaseController
-{
-	public function register()
-	{
-		if ( ! $this->activated( 'pixvisualize_block_manager' ) ) return;
+class PixVisualizeController extends BaseController {
+
+	public function register() {
+		if ( ! $this->activated( 'pixvisualize_block_manager' ) ) {
+			return;
+		}
 
 		add_action( 'init', array( $this, 'registerBlock' ) );
 		add_filter( 'block_type_metadata_settings', array( $this, 'translateBlockMetadata' ), 10, 2 );
@@ -30,8 +31,7 @@ class PixVisualizeController extends BaseController
 	 * possible sur de l'inline JS). Modele 2 plans : 'free' | 'pro'.
 	 * 'pro' = licence + code premium (pas de faux Pro sur code Free).
 	 */
-	public function injectEditorPlan()
-	{
+	public function injectEditorPlan() {
 		$handle = function_exists( 'generate_block_asset_handle' )
 			? generate_block_asset_handle( 'create-block/pixvisualize', 'editorScript' )
 			: 'create-block-pixvisualize-editor-script';
@@ -40,9 +40,9 @@ class PixVisualizeController extends BaseController
 			return;
 		}
 
-		$plan = function_exists( 'pixvisualize_get_plan' ) ? pixvisualize_get_plan() : 'free';
-		$upgrade_url = function_exists( 'pixvisualize_fs' ) ? pixvisualize_fs()->get_upgrade_url() : '';
-		$demo_url = function_exists( 'pixvisualize_get_demo_url' ) ? pixvisualize_get_demo_url() : 'https://i-naridigit.com/demo/pixvisualize/';
+		$plan          = function_exists( 'pixvisualize_get_plan' ) ? pixvisualize_get_plan() : 'free';
+		$upgrade_url   = function_exists( 'pixvisualize_fs' ) ? pixvisualize_fs()->get_upgrade_url() : '';
+		$demo_url      = function_exists( 'pixvisualize_get_demo_url' ) ? pixvisualize_get_demo_url() : 'https://i-naridigit.com/demo/pixvisualize/';
 		$needs_install = function_exists( 'pixvisualize_needs_premium_install' ) && pixvisualize_needs_premium_install();
 
 		wp_add_inline_script(
@@ -64,8 +64,7 @@ class PixVisualizeController extends BaseController
 	 * @param array $metadata Block metadata.
 	 * @return array
 	 */
-	public function translateBlockMetadata( $settings, $metadata )
-	{
+	public function translateBlockMetadata( $settings, $metadata ) {
 		if ( isset( $metadata['name'] ) && 'create-block/pixvisualize' === $metadata['name'] ) {
 			$settings['title']       = _x( 'PixVisualize', 'block title', 'pixvisualize' );
 			$settings['description'] = _x( 'A modern image comparison slider block.', 'block description', 'pixvisualize' );
@@ -74,8 +73,7 @@ class PixVisualizeController extends BaseController
 		return $settings;
 	}
 
-	public function registerBlock()
-	{
+	public function registerBlock() {
 		$build_name = function_exists( 'pixvisualize_get_build_dir' ) ? pixvisualize_get_build_dir() : 'build';
 		$build_dir  = $this->plugin_path . $build_name;
 
@@ -109,8 +107,7 @@ class PixVisualizeController extends BaseController
 	 * Register the translations of the block editor script so the JS strings
 	 * (wp.i18n) are localized like the PHP ones.
 	 */
-	private function setScriptTranslations()
-	{
+	private function setScriptTranslations() {
 		$handle = generate_block_asset_handle( 'create-block/pixvisualize', 'editorScript' );
 		wp_set_script_translations( $handle, 'pixvisualize', $this->plugin_path . 'languages/' );
 	}

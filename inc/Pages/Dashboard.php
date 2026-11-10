@@ -12,8 +12,8 @@ use Inc\Base\BaseController;
 use Inc\Api\Callbacks\AdminCallbacks;
 use Inc\Api\Callbacks\ManagerCallbacks;
 
-class Dashboard extends BaseController
-{
+class Dashboard extends BaseController {
+
 	public $settings;
 
 	public $callbacks;
@@ -22,8 +22,7 @@ class Dashboard extends BaseController
 
 	public $pages = array();
 
-	public function register()
-	{
+	public function register() {
 		$this->settings = new SettingsApi();
 
 		$this->callbacks = new AdminCallbacks();
@@ -39,60 +38,56 @@ class Dashboard extends BaseController
 		$this->settings->addPages( $this->pages )->withSubPage( __( 'Dashboard', 'pixvisualize' ) )->register();
 	}
 
-	public function setPages()
-	{
+	public function setPages() {
 		$this->pages = array(
 			array(
 				'page_title' => __( 'PixVisualize', 'pixvisualize' ),
 				'menu_title' => __( 'PixVisualize', 'pixvisualize' ),
 				'capability' => 'manage_options',
-				'menu_slug' => 'pixvisualize',
-				'callback' => array( $this->callbacks, 'adminDashboard' ),
-				'icon_url' => $this->plugin_url . 'assets/images/admin-icon.svg',
-				'position' => 110
-			)
+				'menu_slug'  => 'pixvisualize',
+				'callback'   => array( $this->callbacks, 'adminDashboard' ),
+				'icon_url'   => $this->plugin_url . 'assets/images/admin-icon.svg',
+				'position'   => 110,
+			),
 		);
 	}
 
-	public function setSettings()
-	{
+	public function setSettings() {
 		$args = array(
 			array(
 				'option_group'      => 'pixvisualize_settings',
 				'option_name'       => 'pixvisualize',
 				'type'              => 'array',
-				'sanitize_callback' => array( $this->callbacks_mngr, 'checkboxSanitize' )
-			)
+				'sanitize_callback' => array( $this->callbacks_mngr, 'checkboxSanitize' ),
+			),
 		);
 
 		$this->settings->setSettings( $args );
 	}
 
-	public function setSections()
-	{
+	public function setSections() {
 		$args = array(
 			array(
-				'id' => 'pixvisualize_index',
-				'title' => __( 'Settings Manager', 'pixvisualize' ),
+				'id'       => 'pixvisualize_index',
+				'title'    => __( 'Settings Manager', 'pixvisualize' ),
 				'callback' => array( $this->callbacks_mngr, 'adminSectionManager' ),
-				'page' => 'pixvisualize'
-			)
+				'page'     => 'pixvisualize',
+			),
 		);
 
 		$this->settings->setSections( $args );
 	}
 
-	public function setFields()
-	{
+	public function setFields() {
 		$args = array();
 
 		// WordPress.org compliant: no locked rows. Pro toggles appear only when usable.
 		$show_pro_toggles = function_exists( 'pixvisualize_can_use_pro' ) && pixvisualize_can_use_pro();
 
 		$descs = array(
-			'pixvisualize_block_manager' => __( 'Slider in the block editor.', 'pixvisualize' ),
-			'pixvisualize_elementor_manager' => __( 'Drag-and-drop widget with live preview.', 'pixvisualize' ),
-			'pixvisualize_shortcode_manager' => __( 'Embed anywhere, plus the visual generator.', 'pixvisualize' ),
+			'pixvisualize_block_manager'       => __( 'Slider in the block editor.', 'pixvisualize' ),
+			'pixvisualize_elementor_manager'   => __( 'Drag-and-drop widget with live preview.', 'pixvisualize' ),
+			'pixvisualize_shortcode_manager'   => __( 'Embed anywhere, plus the visual generator.', 'pixvisualize' ),
 			'pixvisualize_woocommerce_manager' => __( 'Gallery on single product pages.', 'pixvisualize' ),
 		);
 
@@ -107,16 +102,16 @@ class Dashboard extends BaseController
 			}
 
 			$args[] = array(
-				'id' => $key,
-				'title' => $title,
+				'id'       => $key,
+				'title'    => $title,
 				'callback' => array( $this->callbacks_mngr, 'checkboxField' ),
-				'page' => 'pixvisualize',
-				'section' => 'pixvisualize_index',
-				'args' => array(
+				'page'     => 'pixvisualize',
+				'section'  => 'pixvisualize_index',
+				'args'     => array(
 					'option_name' => 'pixvisualize',
-					'label_for' => $key,
-					'class' => 'ui-toggle'
-				)
+					'label_for'   => $key,
+					'class'       => 'ui-toggle',
+				),
 			);
 		}
 

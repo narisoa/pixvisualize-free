@@ -57,7 +57,14 @@ const Magnifier = ( {
 		orientation === 'vertical'
 			? ( pointer.y / pointer.height ) * 100
 			: ( pointer.x / pointer.width ) * 100;
-	const imageSrc = visiblePercent <= position ? beforeImage : afterImage;
+	// Vertical shows the After image on top (clipped from the top), so the
+	// image under the cursor is the opposite of the horizontal case. The
+	// magnifier must always zoom the image actually visible at the pointer.
+	const beforeVisible =
+		orientation === 'vertical'
+			? visiblePercent > position
+			: visiblePercent <= position;
+	const imageSrc = beforeVisible ? beforeImage : afterImage;
 
 	return (
 		<div

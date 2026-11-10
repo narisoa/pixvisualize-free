@@ -1,6 +1,7 @@
 <?php
 
 defined( 'ABSPATH' ) || exit;
+/** @var \Inc\Api\Callbacks\AdminCallbacks $this */
 ?>
 <div class="wrap">
 	<h1><img src="<?php 
@@ -97,7 +98,7 @@ esc_html_e( 'Manage Settings', 'pixvisualize' );
 		<?php 
 ?>
 		<li><a href="#tab-<?php 
-echo esc_html( $about_num );
+echo esc_html( (string) $about_num );
 ?>"><span class="dashicons dashicons-info-outline" aria-hidden="true"></span><?php 
 esc_html_e( 'About', 'pixvisualize' );
 ?></a></li>
@@ -105,7 +106,7 @@ esc_html_e( 'About', 'pixvisualize' );
 if ( !$is_pro ) {
     ?>
 			<li><a href="#tab-<?php 
-    echo esc_html( $gopro_num );
+    echo esc_html( (string) $gopro_num );
     ?>"><span class="dashicons dashicons-star-filled" aria-hidden="true"></span><?php 
     esc_html_e( 'Go Pro', 'pixvisualize' );
     ?></a></li>
@@ -140,7 +141,7 @@ submit_button();
 ?>
 
 		<div id="tab-<?php 
-echo esc_html( $about_num );
+echo esc_html( (string) $about_num );
 ?>" class="tab-pane">
 			<div class="pc-pane">
 				<h2><?php 
@@ -288,7 +289,7 @@ if ( $is_pro ) {
 if ( !$is_pro ) {
     ?>
 		<div id="tab-<?php 
-    echo esc_html( $gopro_num );
+    echo esc_html( (string) $gopro_num );
     ?>" class="tab-pane">
 			<div class="pc-pane">
 				<h2><?php 
